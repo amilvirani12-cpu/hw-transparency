@@ -1,0 +1,3397 @@
+{
+ "files": {
+  "CT7HJ2483CF0": {
+   "date": "2023-07-05",
+   "item": "Action (Consent) - Treasurer&#039;s Report (MD)",
+   "meeting": "CTARAM6CEF06",
+   "path": "archive/treasurer/2023-07-05_treasurer report 5-23.pdf"
+  },
+  "CT7HJ548408A": {
+   "date": "2023-07-05",
+   "item": "Action (Consent) - Treasurer&#039;s Report (MD)",
+   "meeting": "CTARAM6CEF06",
+   "path": "archive/treasurer/2023-07-05_Treasurer Report enclosure 5-23 Bank Adjustments.pdf"
+  },
+  "CT7PJA64D113": {
+   "date": "2023-07-05",
+   "item": "Action - Central Treasurers",
+   "meeting": "CT7JDY4B03E8",
+   "path": "archive/treasurer/2023-07-05_Schedule of Treasurers for 7.6.2023.pdf"
+  },
+  "CURG3J4130D9": {
+   "date": "2023-08-23",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/treasurer/2023-08-23_Bank Adjustments (6-2023).pdf"
+  },
+  "CURGHE43D804": {
+   "date": "2023-08-23",
+   "item": "Reports - Revenue Status Report",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/revenue-status/2023-08-23_Revenue Status Report July 2023 - A Fund.pdf"
+  },
+  "CURGHQ43DACE": {
+   "date": "2023-08-23",
+   "item": "Reports - Revenue Status Report",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/revenue-status/2023-08-23_Revenue Status Report July 2023 -  H Fund.pdf"
+  },
+  "CURK724F4961": {
+   "date": "2023-08-23",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/treasurer/2023-08-23_Treasurer Report June 2023.pdf"
+  },
+  "CURPLK616A8C": {
+   "date": "2023-08-23",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/budget-status/2023-08-23_Budget Status Report - Capital (July).PDF"
+  },
+  "CURPLM616A8F": {
+   "date": "2023-08-23",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CTARC46D49E9",
+   "path": "archive/budget-status/2023-08-23_Budget Status Report - General (July).PDF"
+  },
+  "CVFPGG608944": {
+   "date": "2023-09-13",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/revenue-status/2023-09-13_Revenue Status Report A (August).pdf"
+  },
+  "CVFPGK608946": {
+   "date": "2023-09-13",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/revenue-status/2023-09-13_Revenue Status Report C (August).pdf"
+  },
+  "CVFPGM608948": {
+   "date": "2023-09-13",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/revenue-status/2023-09-13_Revenue Status Report H (August).pdf"
+  },
+  "CVGKU6536DCD": {
+   "date": "2023-09-13",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/budget-status/2023-09-13_Budget Status Report C  (August).PDF"
+  },
+  "CVGKW753CEBF": {
+   "date": "2023-09-13",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/budget-status/2023-09-13_Budget Status Report H (August).PDF"
+  },
+  "CVGKX853F55E": {
+   "date": "2023-09-13",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CUGS6765AAAC",
+   "path": "archive/budget-status/2023-09-13_Budget Status Report A (August).PDF"
+  },
+  "CWCKC3510564": {
+   "date": "2023-10-11",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/treasurer/2023-10-11_Treasurer's Report (July 2023).pdf"
+  },
+  "CWCKFE51A53E": {
+   "date": "2023-10-11",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/revenue-status/2023-10-11_September 2023_Revenue Status_A Fund.pdf"
+  },
+  "CWCKFH51A901": {
+   "date": "2023-10-11",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/revenue-status/2023-10-11_September 2023_Revenue Status_C Fund.pdf"
+  },
+  "CWCKFK51AB2C": {
+   "date": "2023-10-11",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/revenue-status/2023-10-11_September 2023_Revenue Status_H Fund.pdf"
+  },
+  "CWCKFN51ADF1": {
+   "date": "2023-10-11",
+   "item": "Reports - Revenue Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/revenue-status/2023-10-11_September 2023_Revenue Status_V Fund.pdf"
+  },
+  "CWCKGH51CDBE": {
+   "date": "2023-10-11",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/budget-status/2023-10-11_September 2023_Budget Status_A Fund.pdf"
+  },
+  "CWCKGK51CF8F": {
+   "date": "2023-10-11",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/budget-status/2023-10-11_September 2023_Budget Status_C Fund.pdf"
+  },
+  "CWCKGM51D16B": {
+   "date": "2023-10-11",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/budget-status/2023-10-11_September 2023_Budget Status_F Fund.pdf"
+  },
+  "CWCKGT51D44E": {
+   "date": "2023-10-11",
+   "item": "Reports - Budget Status Report(s)",
+   "meeting": "CVPMF75ACA77",
+   "path": "archive/budget-status/2023-10-11_September 2023_Budget Status_H Fund.pdf"
+  },
+  "CWJQ7X671786": {
+   "date": "2023-10-18",
+   "item": "Action (Consent) - Treasurer&#039;s Report for July 2023. ",
+   "meeting": "CVEPJP643E0E",
+   "path": "archive/treasurer/2023-10-18_Treasurer's Report (July 2023).pdf"
+  },
+  "CWKLCD55D2A7": {
+   "date": "2023-10-18",
+   "item": "Presentation - BOE Annual Facilities Tour - Franklin Early Childhood Center",
+   "meeting": "CW9QA865C584",
+   "path": "archive/facilities-tours/2023-10-18_FECC BOE Facilities Tour 10-18-2023.pdf"
+  },
+  "CX6GSQ453B46": {
+   "date": "2023-11-08",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/treasurer/2023-11-08_Treasurer Report - August.pdf"
+  },
+  "CX6GSS453D68": {
+   "date": "2023-11-08",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/treasurer/2023-11-08_Treasurer Report - September.pdf"
+  },
+  "CX6H8Y46F261": {
+   "date": "2023-11-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/revenue-status/2023-11-08_October 2023_Revenue Status_C Fund.pdf"
+  },
+  "CX6H9546F838": {
+   "date": "2023-11-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/revenue-status/2023-11-08_October 2023_Revenue Status_ F Fund.pdf"
+  },
+  "CX6H9946FB27": {
+   "date": "2023-11-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/revenue-status/2023-11-08_October 2023_Revenue Status_H Fund.pdf"
+  },
+  "CX6KD74F5A41": {
+   "date": "2023-11-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/revenue-status/2023-11-08_October 2023_Revenue Status_A Fund.PDF"
+  },
+  "CX7JJM4D6D6D": {
+   "date": "2023-11-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/budget-status/2023-11-08_October 2023_Budget Status_A FUND.PDF"
+  },
+  "CX7JJP4D6D6F": {
+   "date": "2023-11-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/budget-status/2023-11-08_October 2023_Budget Status_C FUND.PDF"
+  },
+  "CX7JJR4D6D72": {
+   "date": "2023-11-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/budget-status/2023-11-08_October 2023_Budget Status_F FUND.PDF"
+  },
+  "CX7JJT4D6D74": {
+   "date": "2023-11-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CVENNZ60D354",
+   "path": "archive/budget-status/2023-11-08_October 2023_Budget Status_H FUND.PDF"
+  },
+  "CXDMC258DBD0": {
+   "date": "2023-11-15",
+   "item": "Action (Consent) - Treasurer&#039;s Reports",
+   "meeting": "CWJK7H507E1C",
+   "path": "archive/treasurer/2023-11-15_Treasurer Report - August.pdf"
+  },
+  "CXDMC458DEC3": {
+   "date": "2023-11-15",
+   "item": "Action (Consent) - Treasurer&#039;s Reports",
+   "meeting": "CWJK7H507E1C",
+   "path": "archive/treasurer/2023-11-15_Treasurer Report - September.pdf"
+  },
+  "CXEKN551B786": {
+   "date": "2023-11-15",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Middle School",
+   "meeting": "CW9QBU6651CA",
+   "path": "archive/facilities-tours/2023-11-15_WMS BOE Facility Tour 11-15-2023.pdf"
+  },
+  "CY8KU55184DC": {
+   "date": "2023-12-13",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/treasurer/2023-12-13_Treasurer Report - October 2023.pdf"
+  },
+  "CYAJVX4F15C1": {
+   "date": "2023-12-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/budget-status/2023-12-13_November 2023_Budget Status_A FUND.PDF"
+  },
+  "CYAJW24F17D2": {
+   "date": "2023-12-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/budget-status/2023-12-13_November 2023_Budget Status_C FUND.PDF"
+  },
+  "CYAJW44F1974": {
+   "date": "2023-12-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/budget-status/2023-12-13_November 2023_Budget Status_F FUND.PDF"
+  },
+  "CYAJW64F1B6E": {
+   "date": "2023-12-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/budget-status/2023-12-13_November 2023_Budget Status_H FUND.PDF"
+  },
+  "CYAJX94F3EC5": {
+   "date": "2023-12-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/revenue-status/2023-12-13_November 2023_Revenue Status_A FUND.PDF"
+  },
+  "CYAJXB4F40D0": {
+   "date": "2023-12-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/revenue-status/2023-12-13_November 2023_Revenue Status_C FUND.PDF"
+  },
+  "CYAJXF4F432D": {
+   "date": "2023-12-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/revenue-status/2023-12-13_November 2023_Revenue Status_F FUND.PDF"
+  },
+  "CYAJXH4F44D0": {
+   "date": "2023-12-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CWVQC7689D23",
+   "path": "archive/revenue-status/2023-12-13_November 2023_Revenue Status_H FUND.PDF"
+  },
+  "CYERZG6CB158": {
+   "date": "2023-12-20",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CVEPHB641B62",
+   "path": "archive/treasurer/2023-12-20_Treasurer Report - October 2023.pdf"
+  },
+  "CYHPFT644131": {
+   "date": "2023-12-20",
+   "item": "Presentation - BOE Annual Facilities Tour - G.W. Hewlett High School",
+   "meeting": "CW9QCL6684EE",
+   "path": "archive/facilities-tours/2023-12-20_HS BOE Facility Tour 12-20-2023.pdf"
+  },
+  "CZ5JD54C9F47": {
+   "date": "2024-01-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/revenue-status/2024-01-10_December 2023_Revenue Status_A Fund.PDF"
+  },
+  "CZ5JD74CA16E": {
+   "date": "2024-01-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/revenue-status/2024-01-10_December 2023_Revenue Status_C Fund.PDF"
+  },
+  "CZ5JD94CA449": {
+   "date": "2024-01-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/revenue-status/2024-01-10_December 2023_Revenue Status_F Fund.PDF"
+  },
+  "CZ5JDB4CA6CB": {
+   "date": "2024-01-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/revenue-status/2024-01-10_December 2023_Revenue Status_H Fund.PDF"
+  },
+  "CZ5K7F4F1DD2": {
+   "date": "2024-01-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/budget-status/2024-01-10_December 2023_Budget Status_C Fund.PDF"
+  },
+  "CZ5K7K4F213D": {
+   "date": "2024-01-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/budget-status/2024-01-10_December 2023_Budget Status_F Fund.PDF"
+  },
+  "CZ5K7M4F2340": {
+   "date": "2024-01-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/budget-status/2024-01-10_December 2023_Budget Status_H Fund.PDF"
+  },
+  "CZ5MNF5B96B7": {
+   "date": "2024-01-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/budget-status/2024-01-10_December 2023_Budget Status_A Fund.PDF"
+  },
+  "CZ7HD547EF9F": {
+   "date": "2024-01-10",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CXRMCM5A6AF6",
+   "path": "archive/treasurer/2024-01-10_Treasurer Report_November 2023.pdf"
+  },
+  "CZARFB6CD05E": {
+   "date": "2024-01-17",
+   "item": "Presentation - BOE Annual Facilities Tour - Hewlett Elementary School",
+   "meeting": "CYPQPQ69A511",
+   "path": "archive/facilities-tours/2024-01-17_HES BOE Facility Tour 1-17-2024.pdf"
+  },
+  "CZDJCX4C988E": {
+   "date": "2024-01-17",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CXRM9B5A1791",
+   "path": "archive/treasurer/2024-01-17_Treasurer Report_November 2023.pdf"
+  },
+  "CZXM2D590109": {
+   "date": "2024-02-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/revenue-status/2024-02-07_January 2024_Revenue Status_A Fund.PDF"
+  },
+  "CZXM2G5902B7": {
+   "date": "2024-02-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/revenue-status/2024-02-07_January 2024_Revenue Status_C Fund.PDF"
+  },
+  "CZXM2J590505": {
+   "date": "2024-02-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/revenue-status/2024-02-07_January 2024_Revenue Status_F Fund.PDF"
+  },
+  "CZXM2L5906DB": {
+   "date": "2024-02-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/revenue-status/2024-02-07_January 2024_Revenue Status_H Fund.PDF"
+  },
+  "CZYHSD49E0C0": {
+   "date": "2024-02-07",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/budget-status/2024-02-07_January 2024_Budget Status_A Fund.PDF"
+  },
+  "CZYHSF49E2A6": {
+   "date": "2024-02-07",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/budget-status/2024-02-07_January 2024_Budget Status_C Fund.PDF"
+  },
+  "CZYHSK49E705": {
+   "date": "2024-02-07",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/budget-status/2024-02-07_January 2024_Budget Status_F Fund.PDF"
+  },
+  "CZYHSM49E9A8": {
+   "date": "2024-02-07",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/budget-status/2024-02-07_January 2024_Budget Status_H Fund.PDF"
+  },
+  "D23RAL6C8F91": {
+   "date": "2024-02-07",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CYPQSA6A3742",
+   "path": "archive/treasurer/2024-02-07_December 2023_Treasurer's Report.pdf"
+  },
+  "D27JS54E862B": {
+   "date": "2024-02-14",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CYPQT66A530A",
+   "path": "archive/treasurer/2024-02-14_December 2023_Treasurer's Report.pdf"
+  },
+  "D29M2P592261": {
+   "date": "2024-02-14",
+   "item": "Presentation - BOE Annual Facilities Tour - Ogden Elementary School",
+   "meeting": "CYPQW36A889C",
+   "path": "archive/facilities-tours/2024-02-14_OES BOE Facility Tour 2-14-2024.pdf"
+  },
+  "D32KBJ4FDB6B": {
+   "date": "2024-03-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/revenue-status/2024-03-13_February 2024_Revenue Status_A Fund.PDF"
+  },
+  "D32KBL4FE53D": {
+   "date": "2024-03-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/revenue-status/2024-03-13_February 2024_Revenue Status_C Fund.PDF"
+  },
+  "D32KBP4FE78C": {
+   "date": "2024-03-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/revenue-status/2024-03-13_February 2024_Revenue Status_H Fund.PDF"
+  },
+  "D32LSB575FB1": {
+   "date": "2024-03-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/revenue-status/2024-03-13_February 2024_Revenue Status_F Fund.PDF"
+  },
+  "D33R6S688F02": {
+   "date": "2024-03-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/budget-status/2024-03-13_February 2024_Budget Status_A Fund.PDF"
+  },
+  "D33RD2691A3D": {
+   "date": "2024-03-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/budget-status/2024-03-13_February 2024_Budget Status_C Fund.PDF"
+  },
+  "D33RD5691C38": {
+   "date": "2024-03-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/budget-status/2024-03-13_February 2024_Budget Status_F Fund.PDF"
+  },
+  "D33RD9691F0E": {
+   "date": "2024-03-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/budget-status/2024-03-13_February 2024_Budget Status_H Fund.PDF"
+  },
+  "D34J3X4B4155": {
+   "date": "2024-03-13",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CYPQWR6AB0D8",
+   "path": "archive/treasurer/2024-03-13_January 2024_Treasurer's Report.pdf"
+  },
+  "D36M9Q5814CA": {
+   "date": "2024-03-20",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "CYPQY66ADFE7",
+   "path": "archive/treasurer/2024-03-20_January 2024_Treasurer's Report.pdf"
+  },
+  "D3CJR64D698C": {
+   "date": "2024-03-20",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Education Center",
+   "meeting": "CYPQX96ABDEB",
+   "path": "archive/facilities-tours/2024-03-20_WEC BOE Facility Tour 3-13-2024.pdf"
+  },
+  "D3ZF5Q3D7A2B": {
+   "date": "2024-04-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/revenue-status/2024-04-10_March 2024_Revenue Status_A Fund.PDF"
+  },
+  "D3ZF5S3D7A2D": {
+   "date": "2024-04-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/revenue-status/2024-04-10_March 2024_Revenue Status_C Fund.PDF"
+  },
+  "D3ZF5U3D7A2F": {
+   "date": "2024-04-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/revenue-status/2024-04-10_March 2024_Revenue Status_F Fund.PDF"
+  },
+  "D3ZF5W3D7A31": {
+   "date": "2024-04-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/revenue-status/2024-04-10_March 2024_Revenue Status_H Fund.PDF"
+  },
+  "D3ZR3D6BD395": {
+   "date": "2024-04-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/budget-status/2024-04-10_March 2024_Budget Status_A Fund.PDF"
+  },
+  "D3ZR3F6BD53C": {
+   "date": "2024-04-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/budget-status/2024-04-10_March 2024_Budget Status_C Fund.PDF"
+  },
+  "D3ZR3H6BD75E": {
+   "date": "2024-04-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/budget-status/2024-04-10_March 2024_Budget Status_F Fund.PDF"
+  },
+  "D3ZR3N6BD9C2": {
+   "date": "2024-04-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/budget-status/2024-04-10_March 2024_Budget Status_H Fund.PDF"
+  },
+  "D42HMP4930FA": {
+   "date": "2024-04-10",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D34S9R7134BE",
+   "path": "archive/treasurer/2024-04-10_February 2024_Treasurer's Report.pdf"
+  },
+  "D45JKN4D93F7": {
+   "date": "2024-04-16",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KJM51F218",
+   "path": "archive/treasurer/2024-04-16_February 2024_Treasurer's Report.pdf"
+  },
+  "D4UJA84BD49B": {
+   "date": "2024-05-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/budget-status/2024-05-08_April 2024_Budget Status_C Fund.PDF"
+  },
+  "D4UJAC4BD655": {
+   "date": "2024-05-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/budget-status/2024-05-08_April 2024_Budget Status_F Fund.PDF"
+  },
+  "D4UJAK4BD841": {
+   "date": "2024-05-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/budget-status/2024-05-08_April 2024_Budget Status_H Fund.PDF"
+  },
+  "D4UJB84C0B35": {
+   "date": "2024-05-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/revenue-status/2024-05-08_March 2024_Revenue Status_C Fund.PDF"
+  },
+  "D4UJBB4C0D19": {
+   "date": "2024-05-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/revenue-status/2024-05-08_March 2024_Revenue Status_F  Fund.PDF"
+  },
+  "D4UJBD4C0EFF": {
+   "date": "2024-05-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/revenue-status/2024-05-08_March 2024_Revenue Status_H Fund.PDF"
+  },
+  "D4ULES53D027": {
+   "date": "2024-05-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/budget-status/2024-05-08_April 2024_Budget Status_A Fund.PDF"
+  },
+  "D4ULWG5889F8": {
+   "date": "2024-05-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/revenue-status/2024-05-08_March 2024_Revenue Status_A Fund.PDF"
+  },
+  "D4VNGS5FE513": {
+   "date": "2024-05-08",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KPF524CCC",
+   "path": "archive/treasurer/2024-05-08_March 2024_Treasurer Report.pdf"
+  },
+  "D53J9G4C169E": {
+   "date": "2024-05-15",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KL251F849",
+   "path": "archive/treasurer/2024-05-15_March 2024_Treasurer Report.pdf"
+  },
+  "D5PMBR59546C": {
+   "date": "2024-06-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/revenue-status/2024-06-05_May 2024_Revenue Status_A Fund.PDF"
+  },
+  "D5PMBT595648": {
+   "date": "2024-06-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/revenue-status/2024-06-05_May 2024_Revenue Status_C Fund.PDF"
+  },
+  "D5PMBV5958EF": {
+   "date": "2024-06-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/revenue-status/2024-06-05_May 2024_Revenue Status_F Fund.PDF"
+  },
+  "D5PMCW595AB9": {
+   "date": "2024-06-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/revenue-status/2024-06-05_May 2024_Revenue Status_H Fund.PDF"
+  },
+  "D5QGU3456F7D": {
+   "date": "2024-06-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/budget-status/2024-06-05_May 2024_Budget Status_A Fund.PDF"
+  },
+  "D5QGU545711E": {
+   "date": "2024-06-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/budget-status/2024-06-05_May 2024_Budget Status_C Fund.PDF"
+  },
+  "D5QGU7457410": {
+   "date": "2024-06-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/budget-status/2024-06-05_May 2024_Budget Status_F Fund.PDF"
+  },
+  "D5QGU94575EC": {
+   "date": "2024-06-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KPV525082",
+   "path": "archive/budget-status/2024-06-05_May 2024_Budget Status_H Fund.PDF"
+  },
+  "D5SNNS5F742C": {
+   "date": "2024-06-05",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KPV525082",
+   "path": "archive/treasurer/2024-06-05_April 2024_Treasurer Report.pdf"
+  },
+  "D5WJBN4BB3E6": {
+   "date": "2024-06-12",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KLX51FB6D",
+   "path": "archive/treasurer/2024-06-12_April 2024_Treasurer Report.pdf"
+  },
+  "D6CNJV5FFD97": {
+   "date": "2024-06-26",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D45KQA52537E",
+   "path": "archive/treasurer/2024-06-26_May 2024_Treasurer Report.pdf"
+  },
+  "D6EGLT445FF4": {
+   "date": "2024-06-26",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/budget-status/2024-06-26_June 2024_ Budget Status_C.PDF"
+  },
+  "D6EGLZ4461B7": {
+   "date": "2024-06-26",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/budget-status/2024-06-26_June 2024_ Budget Status_F.PDF"
+  },
+  "D6EGM844639E": {
+   "date": "2024-06-26",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/budget-status/2024-06-26_June 2024_ Budget Status_H.PDF"
+  },
+  "D6EHA5477E60": {
+   "date": "2024-06-26",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/revenue-status/2024-06-26_June 2024_Revenue Status_A Fund.PDF"
+  },
+  "D6EHA7478017": {
+   "date": "2024-06-26",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/revenue-status/2024-06-26_June 2024_Revenue Status_C Fund.PDF"
+  },
+  "D6EHAA47829B": {
+   "date": "2024-06-26",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/revenue-status/2024-06-26_June 2024_Revenue Status_F Fund.PDF"
+  },
+  "D6EHXB4A992F": {
+   "date": "2024-06-26",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/revenue-status/2024-06-26_June 2024_Revenue Status_H Fund.PDF"
+  },
+  "D6EJ934C06C0": {
+   "date": "2024-06-26",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "D45KV752F070",
+   "path": "archive/treasurer/2024-06-26_Schedule of Treasurers_2024-25.pdf"
+  },
+  "D6ELAD558DCE": {
+   "date": "2024-06-26",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D45KQA52537E",
+   "path": "archive/budget-status/2024-06-26_June 2024_Budget Status_A Fund.PDF"
+  },
+  "D6LJ4H4B5C56": {
+   "date": "2024-07-01",
+   "item": "Action - Schedule of Central Treasurers",
+   "meeting": "D6EJMV4DE82B",
+   "path": "archive/treasurer/2024-07-01_Schedule of Treasurers_2024-25.pdf"
+  },
+  "D6LJWY4F3CC9": {
+   "date": "2024-07-01",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D6EJLW4DC400",
+   "path": "archive/treasurer/2024-07-01_May 2024_Treasurer Report.pdf"
+  },
+  "D7QPUA664787": {
+   "date": "2024-08-21",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/treasurer/2024-08-21_June 2024_Treasurer Report.pdf"
+  },
+  "D84PLE64BAF9": {
+   "date": "2024-08-21",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/budget-status/2024-08-21_July 2024_Budget Status_A Fund.PDF"
+  },
+  "D84PLG64BC6B": {
+   "date": "2024-08-21",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/budget-status/2024-08-21_July 2024_Budget Status_C Fund.PDF"
+  },
+  "D84PLK64BE20": {
+   "date": "2024-08-21",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/budget-status/2024-08-21_July 2024_Budget Status_F Fund.PDF"
+  },
+  "D84PLM64BFDA": {
+   "date": "2024-08-21",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/budget-status/2024-08-21_July 2024_Budget Status_H Fund.PDF"
+  },
+  "D84PLS64D0E3": {
+   "date": "2024-08-21",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D6SHYQ4ACFCA",
+   "path": "archive/revenue-status/2024-08-21_July 2024_Revenue Status_A Fund.PDF"
+  },
+  "D8TPCQ640006": {
+   "date": "2024-09-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/budget-status/2024-09-11_August 2024_Budget Status_A Fund.PDF"
+  },
+  "D8TPCU640207": {
+   "date": "2024-09-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/budget-status/2024-09-11_August 2024_Budget Status_C Fund.PDF"
+  },
+  "D8TPCW6403C3": {
+   "date": "2024-09-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/budget-status/2024-09-11_August 2024_Budget Status_F Fund.PDF"
+  },
+  "D8TPCY640594": {
+   "date": "2024-09-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/budget-status/2024-09-11_August 2024_Budget Status_H Fund.PDF"
+  },
+  "D8TPD6640EC8": {
+   "date": "2024-09-11",
+   "item": "Action (Consent) - Revenue Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/revenue-status/2024-09-11_August 2024_Revenue Status_A Fund.PDF"
+  },
+  "D8TPD86410D6": {
+   "date": "2024-09-11",
+   "item": "Action (Consent) - Revenue Status Reports",
+   "meeting": "D6SQAJ663120",
+   "path": "archive/revenue-status/2024-09-11_August 2024_Revenue Status_CM Fund.PDF"
+  },
+  "D9LPMH627D6E": {
+   "date": "2024-10-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/budget-status/2024-10-09_September 2024_Budget Status_A FUND.PDF"
+  },
+  "D9LPMP627F92": {
+   "date": "2024-10-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/budget-status/2024-10-09_September 2024_Budget Status_C FUND.PDF"
+  },
+  "D9LPMR6281DF": {
+   "date": "2024-10-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/budget-status/2024-10-09_September 2024_Budget Status_F FUND.PDF"
+  },
+  "D9LPMT628476": {
+   "date": "2024-10-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/budget-status/2024-10-09_September 2024_Budget Status_H FUND.PDF"
+  },
+  "D9MLQJ54BC7C": {
+   "date": "2024-10-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/revenue-status/2024-10-09_September 2024_Revenue Status_A Fund.PDF"
+  },
+  "D9MLQL54BE13": {
+   "date": "2024-10-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/revenue-status/2024-10-09_September 2024_Revenue Status_C Fund.PDF"
+  },
+  "D9MLQN54BFF4": {
+   "date": "2024-10-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/revenue-status/2024-10-09_September 2024_Revenue Status_CM Fund.PDF"
+  },
+  "D9MLV4563BFC": {
+   "date": "2024-10-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/revenue-status/2024-10-09_September 2024_Revenue Status_H Fund.PDF"
+  },
+  "D9NGGK43BFCB": {
+   "date": "2024-10-09",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7WPZ86701CE",
+   "path": "archive/treasurer/2024-10-09_July 2024_Treasurer Report.pdf"
+  },
+  "D9WHDG47F997": {
+   "date": "2024-10-16",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7HL845543FF",
+   "path": "archive/treasurer/2024-10-16_July 2024_Treasurer Report.pdf"
+  },
+  "D9WNXT621A6C": {
+   "date": "2024-10-16",
+   "item": "Presentation - BOE Annual Facilities Tour - Franklin Early Childhood Center",
+   "meeting": "D9WNU3619117",
+   "path": "archive/facilities-tours/2024-10-16_FECC Tour of Facilities_10.2024.pdf"
+  },
+  "DALNYS62408C": {
+   "date": "2024-11-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/budget-status/2024-11-13_October 2024_Budget Status_ Fund A.PDF"
+  },
+  "DALNYU62425B": {
+   "date": "2024-11-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/budget-status/2024-11-13_October 2024_Budget Status_ Fund C.PDF"
+  },
+  "DALNYV624424": {
+   "date": "2024-11-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/budget-status/2024-11-13_October 2024_Budget Status_ Fund F.PDF"
+  },
+  "DALNZ4624C7A": {
+   "date": "2024-11-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/budget-status/2024-11-13_October 2024_Budget Status_ Fund H.PDF"
+  },
+  "DAPJV64EE51D": {
+   "date": "2024-11-13",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/treasurer/2024-11-13_August 2024_Treasurer Report.pdf"
+  },
+  "DAPMJA5B70BD": {
+   "date": "2024-11-13",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/treasurer/2024-11-13_Schedule of Treasurers for 2024-25 (updated 11.2024).pdf"
+  },
+  "DARHRD49B962": {
+   "date": "2024-11-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/revenue-status/2024-11-13_October 2024_Revenue Status_A Fund.PDF"
+  },
+  "DARHRF49BD9D": {
+   "date": "2024-11-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/revenue-status/2024-11-13_October 2024_Revenue Status_C Fund.PDF"
+  },
+  "DARHRK49C151": {
+   "date": "2024-11-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/revenue-status/2024-11-13_October 2024_Revenue Status_CM Fund.PDF"
+  },
+  "DARHRN49C4C4": {
+   "date": "2024-11-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7HLC755DD35",
+   "path": "archive/revenue-status/2024-11-13_October 2024_Revenue Status_H Fund.PDF"
+  },
+  "DAXQRD6A8AA8": {
+   "date": "2024-11-20",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7HLDM559818",
+   "path": "archive/treasurer/2024-11-20_August 2024_Treasurer Report.pdf"
+  },
+  "DAXR8N6CB2CF": {
+   "date": "2024-11-20",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "D7HLDM559818",
+   "path": "archive/treasurer/2024-11-20_Schedule of Treasurers for 2024-25 (updated 11.2024).pdf"
+  },
+  "DB2QWF6B48E8": {
+   "date": "2024-11-20",
+   "item": "Presentation - BOE Annual Facilities Tour - Ogden Elementary School",
+   "meeting": "DB2QB768780E",
+   "path": "archive/facilities-tours/2024-11-20_OES BOE Facilities Tour_11-20-2024.pdf"
+  },
+  "DBLQ24661413": {
+   "date": "2024-12-11",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/treasurer/2024-12-11_September 2024_Treasurer Report.pdf"
+  },
+  "DBLQ3L6674E0": {
+   "date": "2024-12-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/revenue-status/2024-12-11_November 2024_Revenue Status Report_A Fund.PDF"
+  },
+  "DBLQ3N66789C": {
+   "date": "2024-12-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/revenue-status/2024-12-11_November 2024_Revenue Status Report_C Fund.PDF"
+  },
+  "DBLQ3Q667A8A": {
+   "date": "2024-12-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/revenue-status/2024-12-11_November 2024_Revenue Status Report_CM Fund.PDF"
+  },
+  "DBMKEZ5195F2": {
+   "date": "2024-12-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/revenue-status/2024-12-11_November 2024_Revenue Status Report_F Fund.PDF"
+  },
+  "DBMKF3519816": {
+   "date": "2024-12-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/revenue-status/2024-12-11_November 2024_Revenue Status Report_H Fund.PDF"
+  },
+  "DBMQ9N683B79": {
+   "date": "2024-12-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/budget-status/2024-12-11_November 2024_Budget Status_A Fund.PDF"
+  },
+  "DBMQ9Q683D88": {
+   "date": "2024-12-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/budget-status/2024-12-11_November 2024_Budget Status_C Fund.PDF"
+  },
+  "DBMQ9S683F6A": {
+   "date": "2024-12-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/budget-status/2024-12-11_November 2024_Budget Status_F Fund.PDF"
+  },
+  "DBMQ9U684111": {
+   "date": "2024-12-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "D7WQ2B672A40",
+   "path": "archive/budget-status/2024-12-11_November 2024_Budget Status_H Fund.PDF"
+  },
+  "DBVHFV485458": {
+   "date": "2024-12-18",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "D7HLDG560E10",
+   "path": "archive/treasurer/2024-12-18_September 2024_Treasurer Report.pdf"
+  },
+  "DBVPY566CDAE": {
+   "date": "2024-12-18",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Middle School",
+   "meeting": "DBDL5954D901",
+   "path": "archive/facilities-tours/2024-12-18_WMS BOE Facilities Tour 12-18-2024.pdf"
+  },
+  "DC3JQS4E5426": {
+   "date": "2025-01-08",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/treasurer/2025-01-08_October 2025_Treasurer Report.pdf"
+  },
+  "DC4MRJ5C7FD0": {
+   "date": "2025-01-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/budget-status/2025-01-08_December 2024_Budget Status_A Fund.PDF"
+  },
+  "DC4MRM5C81C6": {
+   "date": "2025-01-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/budget-status/2025-01-08_December 2024_Budget Status_C Fund.PDF"
+  },
+  "DC4MRM5C841E": {
+   "date": "2025-01-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/budget-status/2025-01-08_December 2024_Budget Status_F Fund.PDF"
+  },
+  "DC4MRQ5C862A": {
+   "date": "2025-01-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/budget-status/2025-01-08_December 2024_Budget Status_H Fund.PDF"
+  },
+  "DC4MS85C9AA5": {
+   "date": "2025-01-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/revenue-status/2025-01-08_December 2024_Revenue Status_A Fund.PDF"
+  },
+  "DC4MSA5C9C84": {
+   "date": "2025-01-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/revenue-status/2025-01-08_December 2024_Revenue Status_C Fund.PDF"
+  },
+  "DC4MSB5C9E63": {
+   "date": "2025-01-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/revenue-status/2025-01-08_December 2024_Revenue Status_CM Fund.PDF"
+  },
+  "DC4MSD5CA00C": {
+   "date": "2025-01-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/revenue-status/2025-01-08_December 2024_Revenue Status_F Fund.PDF"
+  },
+  "DC4MSE5CA1CE": {
+   "date": "2025-01-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DBDLA8558DE9",
+   "path": "archive/revenue-status/2025-01-08_December 2024_Revenue Status_H Fund.PDF"
+  },
+  "DCPS2W709FB7": {
+   "date": "2025-01-15",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "DBDLAR5596F6",
+   "path": "archive/treasurer/2025-01-15_October 2025_Treasurer Report.pdf"
+  },
+  "DCQT6N6E96BD": {
+   "date": "2025-01-15",
+   "item": "Presentation - BOE Annual Facilities Tour - G.W. Hewlett High School",
+   "meeting": "DBDLAP55920E",
+   "path": "archive/facilities-tours/2025-01-15_HHS BOE Facilities Tour_1-15-2025.pdf"
+  },
+  "DDBS8Q7036F6": {
+   "date": "2025-02-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/revenue-status/2025-02-05_January 2025_Revenue Status_A Fund.PDF"
+  },
+  "DDBS8S7038BE": {
+   "date": "2025-02-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/revenue-status/2025-02-05_January 2025_Revenue Status_C Fund.PDF"
+  },
+  "DDBS8U703A9C": {
+   "date": "2025-02-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/revenue-status/2025-02-05_January 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DDBS8W703CE2": {
+   "date": "2025-02-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/revenue-status/2025-02-05_January 2025_Revenue Status_F Fund.PDF"
+  },
+  "DDBS8Y703E98": {
+   "date": "2025-02-05",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/revenue-status/2025-02-05_January 2025-Revenue Status_H Fund.PDF"
+  },
+  "DDCKDP51643B": {
+   "date": "2025-02-05",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/treasurer/2025-02-05_November 2024_Treasurer Report.pdf"
+  },
+  "DDCKPL52D83B": {
+   "date": "2025-02-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/budget-status/2025-02-05_January 2025_Budget Status_A Fund.PDF"
+  },
+  "DDCKPN52D9E3": {
+   "date": "2025-02-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/budget-status/2025-02-05_January 2025_Budget Status_C Fund.PDF"
+  },
+  "DDCKPQ52DC62": {
+   "date": "2025-02-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/budget-status/2025-02-05_January 2025_Budget Status_F Fund.PDF"
+  },
+  "DDCKPU52DE54": {
+   "date": "2025-02-05",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DCYJLQ4DBD55",
+   "path": "archive/budget-status/2025-02-05_January 2025_Budget Status_H Fund.PDF"
+  },
+  "DDLJ5J4B8082": {
+   "date": "2025-02-12",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DCPN295DC6A9",
+   "path": "archive/treasurer/2025-02-12_November 2024_Treasurer Report.pdf"
+  },
+  "DDNL3D54914F": {
+   "date": "2025-02-12",
+   "item": "Presentation - BOE Annual Facilities Tour - Hewlett Elementary School",
+   "meeting": "DCPMY85D7CA9",
+   "path": "archive/facilities-tours/2025-02-12_HES BOE Facilities Tour_ 2-12-2025.pdf"
+  },
+  "DEFLWF588839": {
+   "date": "2025-03-12",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/treasurer/2025-03-12_December 2024_Treasurer Report.pdf"
+  },
+  "DEFLXL58B445": {
+   "date": "2025-03-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/budget-status/2025-03-12_February 2025_Budget Status_A Fund.PDF"
+  },
+  "DEFLXY58C250": {
+   "date": "2025-03-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/budget-status/2025-03-12_February 2025_Budget Status_C Fund.PDF"
+  },
+  "DEFLYF58CFA3": {
+   "date": "2025-03-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/budget-status/2025-03-12_February 2025_Budget Status_F Fund.PDF"
+  },
+  "DEFLYW58DE8E": {
+   "date": "2025-03-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/budget-status/2025-03-12_February 2025_Budget Status_H Fund.PDF"
+  },
+  "DEFM3E5915ED": {
+   "date": "2025-03-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/revenue-status/2025-03-12_February 2025_Revenue Status_A Fund.PDF"
+  },
+  "DEFM3G5917E0": {
+   "date": "2025-03-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/revenue-status/2025-03-12_February 2025_Revenue Status_C Fund.PDF"
+  },
+  "DEFM4H5919DE": {
+   "date": "2025-03-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/revenue-status/2025-03-12_February 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DEFM4K591BA5": {
+   "date": "2025-03-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/revenue-status/2025-03-12_February 2025_Revenue Status_F Fund.PDF"
+  },
+  "DEFM4M591D30": {
+   "date": "2025-03-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DDCJVK4F096B",
+   "path": "archive/revenue-status/2025-03-12_February 2025_Revenue Status_H Fund.PDF"
+  },
+  "DENKH551733C": {
+   "date": "2025-03-19",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DDFRW66FEFA7",
+   "path": "archive/treasurer/2025-03-19_December 2024_Treasurer Report.pdf"
+  },
+  "DFAK6E50533A": {
+   "date": "2025-04-09",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/treasurer/2025-04-09_January 2025_Treasurer Report.pdf"
+  },
+  "DFBJ584B7768": {
+   "date": "2025-04-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/budget-status/2025-04-09_March 2025_Budget Status_A Fund.PDF"
+  },
+  "DFBJ5A4B7948": {
+   "date": "2025-04-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/budget-status/2025-04-09_March 2025_Budget Status_C Fund.PDF"
+  },
+  "DFBJ5C4B7B03": {
+   "date": "2025-04-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/budget-status/2025-04-09_March 2025_Budget Status_F Fund.PDF"
+  },
+  "DFBJ5E4B7CE9": {
+   "date": "2025-04-09",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/budget-status/2025-04-09_March 2025_Budget Status_H Fund.PDF"
+  },
+  "DFBNNK60C1B6": {
+   "date": "2025-04-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/revenue-status/2025-04-09_March 2025_Revenue Status_A Fund.PDF"
+  },
+  "DFBNNM60C32C": {
+   "date": "2025-04-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/revenue-status/2025-04-09_March 2025_Revenue Status_C Fund.PDF"
+  },
+  "DFBNNP60C504": {
+   "date": "2025-04-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/revenue-status/2025-04-09_March 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DFBNNR60C6C0": {
+   "date": "2025-04-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/revenue-status/2025-04-09_March 2025_Revenue Status_F Fund.PDF"
+  },
+  "DFBNNT60C8C4": {
+   "date": "2025-04-09",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DF3KNH52AFA2",
+   "path": "archive/revenue-status/2025-04-09_March 2025_Revenue Status_H Fund.PDF"
+  },
+  "DFKPKU65037D": {
+   "date": "2025-04-23",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DF3L4454AE01",
+   "path": "archive/treasurer/2025-04-23_January 2025_Treasurer Report.pdf"
+  },
+  "DG6PP9658B14": {
+   "date": "2025-05-07",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/treasurer/2025-05-07_Treasurer Report_February 2025.pdf"
+  },
+  "DG8NKZ5FFCDD": {
+   "date": "2025-05-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/revenue-status/2025-05-07_April 2025_Revenue Status Report _A Fund.PDF"
+  },
+  "DG8NL75FFE87": {
+   "date": "2025-05-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/revenue-status/2025-05-07_April 2025_Revenue Status Report _C Fund.PDF"
+  },
+  "DG8NL960003D": {
+   "date": "2025-05-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/revenue-status/2025-05-07_April 2025_Revenue Status Report _CM Fund.PDF"
+  },
+  "DG8NLC600250": {
+   "date": "2025-05-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/revenue-status/2025-05-07_April 2025_Revenue Status Report _F Fund.PDF"
+  },
+  "DG8NLE600422": {
+   "date": "2025-05-07",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/revenue-status/2025-05-07_April 2025_Revenue Status Report _H Fund.PDF"
+  },
+  "DG9QM469EA17": {
+   "date": "2025-05-07",
+   "item": " - Budget Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/budget-status/2025-05-07_April 2025_Budget Status_A Fund.PDF"
+  },
+  "DG9QM669EB86": {
+   "date": "2025-05-07",
+   "item": " - Budget Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/budget-status/2025-05-07_April 2025_Budget Status_C Fund.PDF"
+  },
+  "DG9QM869ED3C": {
+   "date": "2025-05-07",
+   "item": " - Budget Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/budget-status/2025-05-07_April 2025_Budget Status_F Fund.PDF"
+  },
+  "DG9QMA69EEB5": {
+   "date": "2025-05-07",
+   "item": " - Budget Status Reports",
+   "meeting": "DFBN5B5E3B71",
+   "path": "archive/budget-status/2025-05-07_April 2025_Budget Status_H Fund.PDF"
+  },
+  "DGEKN952A5E9": {
+   "date": "2025-05-14",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DFMKXA53E567",
+   "path": "archive/treasurer/2025-05-14_Treasurer Report_February 2025.pdf"
+  },
+  "DH6HR749B410": {
+   "date": "2025-06-04",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/treasurer/2025-06-04_March 2025_Treasurer Report.pdf"
+  },
+  "DH6HSJ49E5FB": {
+   "date": "2025-06-04",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/budget-status/2025-06-04_May 2025_Budget Status_A Fund.PDF"
+  },
+  "DH6HSL49E785": {
+   "date": "2025-06-04",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/budget-status/2025-06-04_May 2025_Budget Status_C Fund.PDF"
+  },
+  "DH6HSN49E924": {
+   "date": "2025-06-04",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/budget-status/2025-06-04_May 2025_Budget Status_F Fund.PDF"
+  },
+  "DH6HSS49EAAC": {
+   "date": "2025-06-04",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/budget-status/2025-06-04_May 2025_Budget Status_H Fund.PDF"
+  },
+  "DH6J424B4A82": {
+   "date": "2025-06-04",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/revenue-status/2025-06-04_May 2025_Revenue Status_A Fund.PDF"
+  },
+  "DH6J444B4C53": {
+   "date": "2025-06-04",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/revenue-status/2025-06-04_May 2025_Revenue Status_C Fund.PDF"
+  },
+  "DH6J464B4E13": {
+   "date": "2025-06-04",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/revenue-status/2025-06-04_May 2025_Revenue Status_H Fund.PDF"
+  },
+  "DH6J484B5004": {
+   "date": "2025-06-04",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/revenue-status/2025-06-04_May 2025-Revenue Status_CM Fund.PDF"
+  },
+  "DH6JSM4E9831": {
+   "date": "2025-06-04",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DG9JZQ4FA35A",
+   "path": "archive/revenue-status/2025-06-04_May 2025_Revenue Status_F Fund.PDF"
+  },
+  "DHCHTA49FDCB": {
+   "date": "2025-06-11",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DGANJ6601CE8",
+   "path": "archive/treasurer/2025-06-11_March 2025_Treasurer Report.pdf"
+  },
+  "DHHNB75F0552": {
+   "date": "2025-06-25",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DHPGU5455691",
+   "path": "archive/treasurer/2025-06-25_April 2025_Treasurer Report.pdf"
+  },
+  "DHQPFH64687A": {
+   "date": "2025-06-25",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "DHPGSL453A0D",
+   "path": "archive/treasurer/2025-06-25_Schedule of Central Treasurers_2025-2026.pdf"
+  },
+  "DHQQUW6AA316": {
+   "date": "2025-06-25",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/revenue-status/2025-06-25_June 2025_Revenue Status Report_A Fund.PDF"
+  },
+  "DHQQUY6AA4F7": {
+   "date": "2025-06-25",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/revenue-status/2025-06-25_June 2025_Revenue Status Report_C Fund.PDF"
+  },
+  "DHQQV26AA712": {
+   "date": "2025-06-25",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/revenue-status/2025-06-25_June 2025_Revenue Status Report_CM Fund.PDF"
+  },
+  "DHQQV46AA909": {
+   "date": "2025-06-25",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/revenue-status/2025-06-25_June 2025_Revenue Status Report_F Fund.PDF"
+  },
+  "DHQQV66AAACA": {
+   "date": "2025-06-25",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/revenue-status/2025-06-25_June 2025_Revenue Status Report_H Fund.PDF"
+  },
+  "DHRGDS4357E7": {
+   "date": "2025-06-25",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/budget-status/2025-06-25_June 2025_Budget Status_A Fund.PDF"
+  },
+  "DHRGDU4359AE": {
+   "date": "2025-06-25",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/budget-status/2025-06-25_June 2025_Budget Status_C Fund.PDF"
+  },
+  "DHRGDW435B6E": {
+   "date": "2025-06-25",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/budget-status/2025-06-25_June 2025_Budget Status_F Fund.PDF"
+  },
+  "DHRGDY435D29": {
+   "date": "2025-06-25",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DHPGU5455691",
+   "path": "archive/budget-status/2025-06-25_June 2025_Budget Status_H Fund.PDF"
+  },
+  "DHXQ8M6813CF": {
+   "date": "2025-07-01",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DHPKQC52F5E1",
+   "path": "archive/treasurer/2025-07-01_April 2025_Treasurer Report.pdf"
+  },
+  "DHYNE65F8406": {
+   "date": "2025-07-01",
+   "item": "Action - Schedule of Central Treasurers",
+   "meeting": "DHPGVD458788",
+   "path": "archive/treasurer/2025-07-01_Schedule of Central Treasurers_2025-2026.pdf"
+  },
+  "DKFH78471240": {
+   "date": "2025-08-20",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/treasurer/2025-08-20_May 2025_Treasurer Report.pdf"
+  },
+  "DKGKWH53DB16": {
+   "date": "2025-08-20",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/budget-status/2025-08-20_July 2025_Budget Status_A Fund.PDF"
+  },
+  "DKGKWK53DC99": {
+   "date": "2025-08-20",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/budget-status/2025-08-20_July 2025_Budget Status_C Fund.PDF"
+  },
+  "DKGKWM53DEFE": {
+   "date": "2025-08-20",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/budget-status/2025-08-20_July 2025_Budget Status_F Fund.PDF"
+  },
+  "DKGKWP53E0C0": {
+   "date": "2025-08-20",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/budget-status/2025-08-20_July 2025_Budget Status_H Fund.PDF"
+  },
+  "DKGKX853F58B": {
+   "date": "2025-08-20",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/revenue-status/2025-08-20_July 2025_Revenue Status_A Fund.PDF"
+  },
+  "DKGKXA53F7C1": {
+   "date": "2025-08-20",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/revenue-status/2025-08-20_July 2025-Revenue Status_CM Fund.PDF"
+  },
+  "DKGKXC53F976": {
+   "date": "2025-08-20",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/revenue-status/2025-08-20_July 2025-Revenue Status_F Fund.PDF"
+  },
+  "DKGKXE53FB3C": {
+   "date": "2025-08-20",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DJ7P3E62A17E",
+   "path": "archive/revenue-status/2025-08-20_July 2025-Revenue Status_H Fund.PDF"
+  },
+  "DL5HZ64ADAD0": {
+   "date": "2025-09-10",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DKYPEB643977",
+   "path": "archive/treasurer/2025-09-10_June 2025_Treasurer Report.pdf"
+  },
+  "DL6HDX480D7D": {
+   "date": "2025-09-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/budget-status/2025-09-10_August 2025_Budget Status_A Fund.PDF"
+  },
+  "DL6HDZ480F64": {
+   "date": "2025-09-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/budget-status/2025-09-10_August 2025_Budget Status_C Fund.PDF"
+  },
+  "DL6HE3481131": {
+   "date": "2025-09-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/budget-status/2025-09-10_August 2025_Budget Status_F Fund.PDF"
+  },
+  "DL6HE54812E1": {
+   "date": "2025-09-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/budget-status/2025-09-10_August 2025_Budget Status_H Fund.PDF"
+  },
+  "DL7J6G4A2252": {
+   "date": "2025-09-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/revenue-status/2025-09-10_August 2025_Revenue Status_A Fund.PDF"
+  },
+  "DL7J6L4A23E8": {
+   "date": "2025-09-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/revenue-status/2025-09-10_August 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DL7J6N4A2569": {
+   "date": "2025-09-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/revenue-status/2025-09-10_August 2025_Revenue Status_F Fund.PDF"
+  },
+  "DL7J6Q4A280D": {
+   "date": "2025-09-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPEB643977",
+   "path": "archive/revenue-status/2025-09-10_August 2025_Revenue Status_H Fund.PDF"
+  },
+  "DLCH7X472941": {
+   "date": "2025-09-17",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DKYPS265F4C1",
+   "path": "archive/treasurer/2025-09-17_June 2025_Treasurer Report.pdf"
+  },
+  "DLRGCG432671": {
+   "date": "2025-10-08",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/treasurer/2025-10-08_July 2025_Treasurer Report.pdf"
+  },
+  "DLZQFF69168A": {
+   "date": "2025-10-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/revenue-status/2025-10-08_September 2025_Revenue Status_A Fund.PDF"
+  },
+  "DLZQFH691846": {
+   "date": "2025-10-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/revenue-status/2025-10-08_September 2025_Revenue Status_C Fund.PDF"
+  },
+  "DLZQFK691A3B": {
+   "date": "2025-10-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/revenue-status/2025-10-08_September 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DLZQFN691C15": {
+   "date": "2025-10-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/revenue-status/2025-10-08_September 2025_Revenue Status_F Fund.PDF"
+  },
+  "DLZQFS691DC2": {
+   "date": "2025-10-08",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/revenue-status/2025-10-08_September 2025_Revenue Status_H Fund.PDF"
+  },
+  "DM2HGP48746C": {
+   "date": "2025-10-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/budget-status/2025-10-08_September 2025_Budget Status_A Fund.PDF"
+  },
+  "DM2HGS487692": {
+   "date": "2025-10-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/budget-status/2025-10-08_September 2025_Budget Status_C Fund.PDF"
+  },
+  "DM2HGW487892": {
+   "date": "2025-10-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/budget-status/2025-10-08_September 2025_Budget Status_F Fund.PDF"
+  },
+  "DM2HH2487A6F": {
+   "date": "2025-10-08",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPL2650FA1",
+   "path": "archive/budget-status/2025-10-08_September 2025_Budget Status_H Fund.PDF"
+  },
+  "DM9L7T55309B": {
+   "date": "2025-10-22",
+   "item": "Presentation - BOE Annual Facilities Tour - Hewlett Elementary School",
+   "meeting": "DM9L6654B68C",
+   "path": "archive/facilities-tours/2025-10-22_HES BOE Facilities Tour_10-22-25.pdf"
+  },
+  "DM9QPU6A4F5E": {
+   "date": "2025-10-22",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "DKYPT6661E83",
+   "path": "archive/treasurer/2025-10-22_July 2025_Treasurer Report.pdf"
+  },
+  "DN3KKL5241B9": {
+   "date": "2025-11-12",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/treasurer/2025-11-12_August 2025_Treasurer Report.pdf"
+  },
+  "DN3KMM528EC0": {
+   "date": "2025-11-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/revenue-status/2025-11-12_October 2025_Revenue Status Report_A Fund.PDF"
+  },
+  "DN3KMP529076": {
+   "date": "2025-11-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/revenue-status/2025-11-12_October 2025_Revenue Status Report_C Fund.PDF"
+  },
+  "DN3KMR52921D": {
+   "date": "2025-11-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/revenue-status/2025-11-12_October 2025_Revenue Status Report_F Fund.PDF"
+  },
+  "DN3KMT5293D5": {
+   "date": "2025-11-12",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/revenue-status/2025-11-12_October 2025_Revenue Status Report_H Fund.PDF"
+  },
+  "DN5JQ94E197D": {
+   "date": "2025-11-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/budget-status/2025-11-12_October 2025_Budget Status_A Fund.PDF"
+  },
+  "DN5JQC4E1B2C": {
+   "date": "2025-11-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/budget-status/2025-11-12_October 2025_Budget Status_C Fund.PDF"
+  },
+  "DN5JQF4E1CB8": {
+   "date": "2025-11-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/budget-status/2025-11-12_October 2025_Budget Status_F Fund.PDF"
+  },
+  "DN5JQH4E1E70": {
+   "date": "2025-11-12",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLK6523A4",
+   "path": "archive/budget-status/2025-11-12_October 2025_Budget Status_H Fund.PDF"
+  },
+  "DNDJ2U4AE54B": {
+   "date": "2025-11-19",
+   "item": "Action (Consent) - Treasurer&#039;s Report",
+   "meeting": "DKYPU766379E",
+   "path": "archive/treasurer/2025-11-19_August 2025_Treasurer Report.pdf"
+  },
+  "DNEHKU48EBC8": {
+   "date": "2025-11-19",
+   "item": "Presentation - BOE Annual Facilities Tour - Ogden Elementary School",
+   "meeting": "DMVKCM513CD1",
+   "path": "archive/facilities-tours/2025-11-19_BOE OES Facilities Tour_11-19-2025.pdf"
+  },
+  "DNEHLC48FDAA": {
+   "date": "2025-11-19",
+   "item": "Presentation - BOE Annual Facilities Tour - Ogden Elementary School",
+   "meeting": "DMVKCM513CD1",
+   "path": "archive/facilities-tours/2025-11-19_OES Walk Through_New Playground-Main Entrance-Cafeteria-Courtyard_11-19-2025.pdf"
+  },
+  "DNXRX970170C": {
+   "date": "2025-12-10",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DKYPLY652586",
+   "path": "archive/treasurer/2025-12-10_September 2025_Treasurer Report.pdf"
+  },
+  "DNYKCE51343E": {
+   "date": "2025-12-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/budget-status/2025-12-10_November 2025_Budget Status_A Fund.PDF"
+  },
+  "DNYKCG5135DA": {
+   "date": "2025-12-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/budget-status/2025-12-10_November 2025_Budget Status_C Fund.PDF"
+  },
+  "DNYKCL51379B": {
+   "date": "2025-12-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/budget-status/2025-12-10_November 2025_Budget Status_F Fund.PDF"
+  },
+  "DNYKCN513936": {
+   "date": "2025-12-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/budget-status/2025-12-10_November 2025_Budget Status_H Fund.PDF"
+  },
+  "DNYMTC5CC432": {
+   "date": "2025-12-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/revenue-status/2025-12-10_November 2025_Revenue Status_A Fund.PDF"
+  },
+  "DNYMTE5CC603": {
+   "date": "2025-12-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/revenue-status/2025-12-10_November 2025_Revenue Status_C Fund.PDF"
+  },
+  "DNYMTG5CC7C0": {
+   "date": "2025-12-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/revenue-status/2025-12-10_November 2025_Revenue Status_CM Fund.PDF"
+  },
+  "DNYMTJ5CC9B6": {
+   "date": "2025-12-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/revenue-status/2025-12-10_November 2025_Revenue Status_F Fund.PDF"
+  },
+  "DNYMTM5CCB5D": {
+   "date": "2025-12-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DKYPLY652586",
+   "path": "archive/revenue-status/2025-12-10_November 2025_Revenue Status_H Fund.PDF"
+  },
+  "DP8MGW5AC567": {
+   "date": "2025-12-17",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DKYPV966642E",
+   "path": "archive/treasurer/2025-12-17_September 2025_Treasurer Report.pdf"
+  },
+  "DPAJXU4F5C8E": {
+   "date": "2025-12-17",
+   "item": "Presentation - BOE Annual Facilities Tour - Franklin Early Childhood Center",
+   "meeting": "DNYN5L5E45B4",
+   "path": "archive/facilities-tours/2025-12-17_FECC Tour of Facilities_12.17.25.pdf"
+  },
+  "DQ2L6V55149C": {
+   "date": "2026-01-14",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/treasurer/2026-01-14_October 2025_Treasurer Report.pdf"
+  },
+  "DQ2L785521F5": {
+   "date": "2026-01-14",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/revenue-status/2026-01-14_December 2025_Revenue Status Report_A Fund.PDF"
+  },
+  "DQ2L7A5523AB": {
+   "date": "2026-01-14",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/revenue-status/2026-01-14_December 2025_Revenue Status Report_C Fund.PDF"
+  },
+  "DQ2L7C5526CB": {
+   "date": "2026-01-14",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/revenue-status/2026-01-14_December 2025_Revenue Status Report_CM Fund.PDF"
+  },
+  "DQ2L7F5529F6": {
+   "date": "2026-01-14",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/revenue-status/2026-01-14_December 2025_Revenue Status Report_F Fund.PDF"
+  },
+  "DQ2L7W553C04": {
+   "date": "2026-01-14",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/revenue-status/2026-01-14_December 2025_Revenue Status Report_H Fund.PDF"
+  },
+  "DQ3QQU6A74CE": {
+   "date": "2026-01-14",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/budget-status/2026-01-14_December 2025_Budget Status_A Fund.PDF"
+  },
+  "DQ3QQW6A76BC": {
+   "date": "2026-01-14",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/budget-status/2026-01-14_December 2025_Budget Status_C Fund.PDF"
+  },
+  "DQ3QQY6A7868": {
+   "date": "2026-01-14",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/budget-status/2026-01-14_December 2025_Budget Status_F Fund.PDF"
+  },
+  "DQ3QR26A7B04": {
+   "date": "2026-01-14",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DNYPHP64A655",
+   "path": "archive/budget-status/2026-01-14_December 2025_Budget Status_H Fund.PDF"
+  },
+  "DQAJQD4E4374": {
+   "date": "2026-01-21",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DNYPLD64FF1A",
+   "path": "archive/treasurer/2026-01-21_October 2025_Treasurer Report.pdf"
+  },
+  "DQBK4E500838": {
+   "date": "2026-01-21",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Middle School",
+   "meeting": "DNYPJ864C08C",
+   "path": "archive/facilities-tours/2026-01-21_WMS Tour of Facilities_1.21.2026.pdf"
+  },
+  "DQQQN769DCD3": {
+   "date": "2026-02-11",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/treasurer/2026-02-11_November 2025_Treasurer Report.pdf"
+  },
+  "DQXR376BEB71": {
+   "date": "2026-02-11",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/treasurer/2026-02-11_December 2025_Treasurer Report.pdf"
+  },
+  "DQYQ4867463E": {
+   "date": "2026-02-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/budget-status/2026-02-11_January 2026_Budget Status_A Fund.PDF"
+  },
+  "DQYQ4B67492D": {
+   "date": "2026-02-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/budget-status/2026-02-11_January 2026_Budget Status_C Fund.PDF"
+  },
+  "DQYQ4F674BA5": {
+   "date": "2026-02-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/budget-status/2026-02-11_January 2026_Budget Status_F Fund.PDF"
+  },
+  "DQYQ4J674D7E": {
+   "date": "2026-02-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/budget-status/2026-02-11_January 2026_Budget Status_H Fund.PDF"
+  },
+  "DQZRZP6F5B6A": {
+   "date": "2026-02-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/revenue-status/2026-02-11_January 2026_Revenue Status Report _A Fund.pdf"
+  },
+  "DQZRZR6F5D8E": {
+   "date": "2026-02-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/revenue-status/2026-02-11_January 2026_Revenue Status Report _C Fund.pdf"
+  },
+  "DQZS266F602C": {
+   "date": "2026-02-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/revenue-status/2026-02-11_January 2026_Revenue Status Report _CM Fund.pdf"
+  },
+  "DQZS286F628A": {
+   "date": "2026-02-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/revenue-status/2026-02-11_January 2026_Revenue Status Report _F Fund.pdf"
+  },
+  "DQZS2A6F643C": {
+   "date": "2026-02-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQMVV5D038D",
+   "path": "archive/revenue-status/2026-02-11_January 2026_Revenue Status Report _H Fund.pdf"
+  },
+  "DR8L7Z553BC4": {
+   "date": "2026-02-25",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "DPGKCN513BAE",
+   "path": "archive/treasurer/2026-02-25_November 2025_Treasurer Report.pdf"
+  },
+  "DR8L84553BC7": {
+   "date": "2026-02-25",
+   "item": "Reports - Treasurer&#039;s Reports",
+   "meeting": "DPGKCN513BAE",
+   "path": "archive/treasurer/2026-02-25_December 2025_Treasurer Report.pdf"
+  },
+  "DR8MYK5D8698": {
+   "date": "2026-02-25",
+   "item": "Presentation - BOE Annual Facilities Tour - Hewlett High School",
+   "meeting": "DPGKDS516362",
+   "path": "archive/facilities-tours/2026-02-25_G.W Hewlett High School Tour of Facilities_2.25.2026.pdf"
+  },
+  "DRTQR66A8292": {
+   "date": "2026-03-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/budget-status/2026-03-11_February 2026_Budget Status_A Fund.PDF"
+  },
+  "DRTQRA6A8579": {
+   "date": "2026-03-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/budget-status/2026-03-11_February 2026_Budget Status_C Fund.PDF"
+  },
+  "DRTQS46A8767": {
+   "date": "2026-03-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/budget-status/2026-03-11_February 2026_Budget Status_F Fund.PDF"
+  },
+  "DRTQS66A89B1": {
+   "date": "2026-03-11",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/budget-status/2026-03-11_February 2026_Budget Status_H Fund.PDF"
+  },
+  "DRTQUN6B05CA": {
+   "date": "2026-03-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/revenue-status/2026-03-11_February 2026_Revenue Status_A Fund.PDF"
+  },
+  "DRTQUQ6B07A7": {
+   "date": "2026-03-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/revenue-status/2026-03-11_February 2026_Revenue Status_C Fund.PDF"
+  },
+  "DRTQUS6B094A": {
+   "date": "2026-03-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/revenue-status/2026-03-11_February 2026_Revenue Status_CM Fund.PDF"
+  },
+  "DRTQUU6B0B1E": {
+   "date": "2026-03-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/revenue-status/2026-03-11_February 2026_Revenue Status_F Fund.PDF"
+  },
+  "DRTQUW6B0CD2": {
+   "date": "2026-03-11",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DPGKC7512DE9",
+   "path": "archive/revenue-status/2026-03-11_February 2026_Revenue Status_H Fund.PDF"
+  },
+  "DS5JQN4E4F61": {
+   "date": "2026-03-18",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Education Center",
+   "meeting": "DQQMVR5CFFA0",
+   "path": "archive/facilities-tours/2026-03-18_Woodmere Education Center Tour of Facilities Part 1_3.18.2026.pdf"
+  },
+  "DS5JS64E8837": {
+   "date": "2026-03-18",
+   "item": "Presentation - BOE Annual Facilities Tour - Woodmere Education Center",
+   "meeting": "DQQMVR5CFFA0",
+   "path": "archive/facilities-tours/2026-03-18_Woodmere Education Center Tour of Facilities Part 2_3.18.2026.pdf"
+  },
+  "DSKJWY4F3CF4": {
+   "date": "2026-04-15",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/budget-status/2026-04-15_March 2026_Budget Status_A Fund.PDF"
+  },
+  "DSKJX24F3EAF": {
+   "date": "2026-04-15",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/budget-status/2026-04-15_March 2026_Budget Status_C Fund.PDF"
+  },
+  "DSKJX44F4071": {
+   "date": "2026-04-15",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/budget-status/2026-04-15_March 2026_Budget Status_F Fund.PDF"
+  },
+  "DSKJX64F4223": {
+   "date": "2026-04-15",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/budget-status/2026-04-15_March 2026_Budget Status_H Fund.PDF"
+  },
+  "DSPNE55F84A7": {
+   "date": "2026-04-15",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/revenue-status/2026-04-15_March 2026_Revenue Status Report_A Fund.pdf"
+  },
+  "DSPNE75F865E": {
+   "date": "2026-04-15",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/revenue-status/2026-04-15_March 2026_Revenue Status Report_C Fund.pdf"
+  },
+  "DSPNEA5F881F": {
+   "date": "2026-04-15",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/revenue-status/2026-04-15_March 2026_Revenue Status Report_CM Fund.pdf"
+  },
+  "DSPNEC5F89E0": {
+   "date": "2026-04-15",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/revenue-status/2026-04-15_March 2026_Revenue Status Report_F Fund.pdf"
+  },
+  "DSPNEE5F8C22": {
+   "date": "2026-04-15",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/revenue-status/2026-04-15_March 2026_Revenue Status Report_H Fund.pdf"
+  },
+  "DSQR3Q6C0E52": {
+   "date": "2026-04-15",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQN6M5E3EBB",
+   "path": "archive/treasurer/2026-04-15_January 2026_Treasurer Report.pdf"
+  },
+  "DT4NHK5FF938": {
+   "date": "2026-04-22",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQN545E33FA",
+   "path": "archive/treasurer/2026-04-22_January 2026_Treasurer Report.pdf"
+  },
+  "DTNKN3523E4D": {
+   "date": "2026-05-13",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/treasurer/2026-05-13_February 2026_Treasurer Report.pdf"
+  },
+  "DTRSXL74D3C3": {
+   "date": "2026-05-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/budget-status/2026-05-13_April 2026_Budget Status_A Fund.PDF"
+  },
+  "DTRSXN74D5A6": {
+   "date": "2026-05-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/budget-status/2026-05-13_April 2026_Budget Status_C Fund.PDF"
+  },
+  "DTRSXP74D754": {
+   "date": "2026-05-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/budget-status/2026-05-13_April 2026_Budget Status_F Fund.PDF"
+  },
+  "DTRSXS74D8E4": {
+   "date": "2026-05-13",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/budget-status/2026-05-13_April 2026_Budget Status_H Fund.PDF"
+  },
+  "DTSLVF586388": {
+   "date": "2026-05-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/revenue-status/2026-05-13_April 2026_Revenue Status Report_A Fund.PDF"
+  },
+  "DTSLVV5864E7": {
+   "date": "2026-05-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/revenue-status/2026-05-13_April 2026_Revenue Status Report_C Fund.PDF"
+  },
+  "DTSLVX5868B2": {
+   "date": "2026-05-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/revenue-status/2026-05-13_April 2026_Revenue Status Report_F Fund.PDF"
+  },
+  "DTSLXU586729": {
+   "date": "2026-05-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/revenue-status/2026-05-13_April 2026_Revenue Status Report_CM Fund.PDF"
+  },
+  "DTSLXZ586B91": {
+   "date": "2026-05-13",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNAF5EF972",
+   "path": "archive/revenue-status/2026-05-13_April 2026_Revenue Status Report_H Fund.PDF"
+  },
+  "DTZKNQ52B489": {
+   "date": "2026-05-20",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQNAV5EFEA1",
+   "path": "archive/treasurer/2026-05-20_February 2026_Treasurer Report.pdf"
+  },
+  "DUNRXZ703302": {
+   "date": "2026-06-10",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/treasurer/2026-06-10_March 2026_Treasurer Report.pdf"
+  },
+  "DUNS2L70944A": {
+   "date": "2026-06-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/budget-status/2026-06-10_May 2026_Budget Status_A Fund.PDF"
+  },
+  "DUNS2N709635": {
+   "date": "2026-06-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/budget-status/2026-06-10_May 2026_Budget Status_C Fund.PDF"
+  },
+  "DUNS2Q70980B": {
+   "date": "2026-06-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/budget-status/2026-06-10_May 2026_Budget Status_F Fund.PDF"
+  },
+  "DUNS2S7099DB": {
+   "date": "2026-06-10",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/budget-status/2026-06-10_May 2026_Budget Status_H Fund.PDF"
+  },
+  "DUPTVE7931FD": {
+   "date": "2026-06-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/revenue-status/2026-06-10_May 2026_Revenue Status_A Fund.PDF"
+  },
+  "DUPTVF79339D": {
+   "date": "2026-06-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/revenue-status/2026-06-10_May 2026_Revenue Status_C Fund.PDF"
+  },
+  "DUPTVH793556": {
+   "date": "2026-06-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/revenue-status/2026-06-10_May 2026_Revenue Status_CM Fund.PDF"
+  },
+  "DUPTVJ79373C": {
+   "date": "2026-06-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/revenue-status/2026-06-10_May 2026_Revenue Status_F Fund.PDF"
+  },
+  "DUPTVL793899": {
+   "date": "2026-06-10",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DQQNGK5F3A91",
+   "path": "archive/revenue-status/2026-06-10_May 2026_Revenue Status_H Fund.PDF"
+  },
+  "DUVJB64AF06F": {
+   "date": "2026-06-17",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DQQNFR5F38C3",
+   "path": "archive/treasurer/2026-06-17_March 2026_Treasurer Report.pdf"
+  },
+  "DVBSDV723BCC": {
+   "date": "2026-07-01",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/treasurer/2026-07-01_April 2026_Treasurer Report.pdf"
+  },
+  "DVBSG2728C4E": {
+   "date": "2026-07-01",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/budget-status/2026-07-01_June 2026_Budget Status_A Fund.PDF"
+  },
+  "DVBSG4728DFA": {
+   "date": "2026-07-01",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/budget-status/2026-07-01_June 2026_Budget Status_C Fund.PDF"
+  },
+  "DVBSG6728F8F": {
+   "date": "2026-07-01",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/budget-status/2026-07-01_June 2026_Budget Status_F Fund.PDF"
+  },
+  "DVBSG8729131": {
+   "date": "2026-07-01",
+   "item": "Reports - Budget Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/budget-status/2026-07-01_June 2026_Budget Status_H Fund.PDF"
+  },
+  "DVBSJB72E200": {
+   "date": "2026-07-01",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/revenue-status/2026-07-01_June 2026_Revenue Status_A Fund.PDF"
+  },
+  "DVBSJE72E3B1": {
+   "date": "2026-07-01",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/revenue-status/2026-07-01_June 2026_Revenue Status_C Fund.PDF"
+  },
+  "DVBSJG72E583": {
+   "date": "2026-07-01",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/revenue-status/2026-07-01_June 2026_Revenue Status_CM Fund.PDF"
+  },
+  "DVBSJJ72E74B": {
+   "date": "2026-07-01",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/revenue-status/2026-07-01_June 2026_Revenue Status_F Fund.PDF"
+  },
+  "DVBSJL72E8CA": {
+   "date": "2026-07-01",
+   "item": "Reports - Revenue Status Reports",
+   "meeting": "DURQ6F67A2C3",
+   "path": "archive/revenue-status/2026-07-01_June 2026_Revenue Status_H Fund.PDF"
+  },
+  "DVCGTF455812": {
+   "date": "2026-07-01",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "DURQNH6906E9",
+   "path": "archive/treasurer/2026-07-01_Schedule of Central Treasurers_2026-2027.pdf"
+  },
+  "DVCHRK49C155": {
+   "date": "2026-07-01",
+   "item": "Action (Consent) - Annual Appointments of District Clerk, Assistant District Clerk, Interim District Treasurer and Deput",
+   "meeting": "DV6SE9724B28",
+   "path": "archive/treasurer/2026-07-01_Board Service Personnel - Schedule of Annual Appointments_7.1.2026 Special Meeting.pdf"
+  }
+ },
+ "meetings": {
+  "CT7JDY4B03E8": {
+   "date": "2023-07-05",
+   "final": true,
+   "name": "Organizational Meeting"
+  },
+  "CTARAM6CEF06": {
+   "date": "2023-07-05",
+   "final": true,
+   "name": "Regular Meeting"
+  },
+  "CTARC46D49E9": {
+   "date": "2023-08-23",
+   "final": true,
+   "name": "Regular Meeting at 5:00 PM"
+  },
+  "CTGPJ264BA34": {
+   "date": "2023-07-13",
+   "final": true,
+   "name": "SPECIAL MEETING OF THE BOARD OF EDUCATION"
+  },
+  "CTWR956CDA95": {
+   "date": "2023-08-09",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CUGRZW6536AC": {
+   "date": "2023-09-20",
+   "final": true,
+   "name": "Regular Meeting at 7:30 PM"
+  },
+  "CUGS6765AAAC": {
+   "date": "2023-09-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CUHNU95E6034": {
+   "date": "2023-08-10",
+   "final": true,
+   "name": "Special Meeting Of the Board of Education"
+  },
+  "CV5M6959AE8C": {
+   "date": "2023-08-31",
+   "final": true,
+   "name": "Special Meeting of the Board of Education at 7:00 AM"
+  },
+  "CVEL7D546A57": {
+   "date": "2023-09-11",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CVENNZ60D354": {
+   "date": "2023-11-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CVEPHB641B62": {
+   "date": "2023-12-20",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CVEPJP643E0E": {
+   "date": "2023-10-18",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CVPH7H471DEB": {
+   "date": "2023-01-01",
+   "final": true,
+   "name": "2023: January through June, Archived Agendas, Meeting Packets and Minutes"
+  },
+  "CVPMF75ACA77": {
+   "date": "2023-10-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CVVRGM6DEA2B": {
+   "date": "2023-09-27",
+   "final": true,
+   "name": "BOARD OF EDUCATION SPECIAL MEETING at 8:00 AM"
+  },
+  "CW2MMT5BF6D0": {
+   "date": "2023-10-04",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CW9Q7M652791": {
+   "date": "2023-10-04",
+   "final": true,
+   "name": "AUDIT COMMITTEE MEETING AT 8:00 AM"
+  },
+  "CW9QA865C584": {
+   "date": "2023-10-18",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT FRANKLIN EARLY CHILDHOOD CENTER, 7:00 PM"
+  },
+  "CW9QBU6651CA": {
+   "date": "2023-11-15",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT WOODMERE MIDDLE SCHOOL AT 7:00 PM"
+  },
+  "CW9QCL6684EE": {
+   "date": "2023-12-20",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT G.W. HEWLETT HIGH SCHOOL, 7:00 PM"
+  },
+  "CWBJ2E4B0DAE": {
+   "date": "2023-10-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CWJK7H507E1C": {
+   "date": "2023-11-15",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CWKLGK564F91": {
+   "date": "2023-11-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CWKLH7566762": {
+   "date": "2023-12-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CWVQC7689D23": {
+   "date": "2023-12-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CWWJCC48D650": {
+   "date": "2023-11-03",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CXRM9B5A1791": {
+   "date": "2024-01-17",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CXRMCM5A6AF6": {
+   "date": "2024-01-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CXTMYY5D9905": {
+   "date": "2023-12-04",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CYBT4E6E9E82": {
+   "date": "2023-12-18",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CYPQPQ69A511": {
+   "date": "2024-01-17",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT HEWLETT ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "CYPQSA6A3742": {
+   "date": "2024-02-07",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CYPQT66A530A": {
+   "date": "2024-02-14",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CYPQW36A889C": {
+   "date": "2024-02-14",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT OGDEN ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "CYPQWR6AB0D8": {
+   "date": "2024-03-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "CYPQX96ABDEB": {
+   "date": "2024-03-20",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT WOODMERE EDUCATION CENTER, 7:00 PM"
+  },
+  "CYPQY66ADFE7": {
+   "date": "2024-03-20",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "CYQKXL5404D3": {
+   "date": "2024-01-24",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "CZ4N8C5C59B2": {
+   "date": "2024-01-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CZ4N8W5C7590": {
+   "date": "2024-02-07",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CZ4N975C8357": {
+   "date": "2024-03-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CZ4N9L5C9360": {
+   "date": "2024-03-21",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "CZ4N9S5CA0B0": {
+   "date": "2024-03-26",
+   "final": true,
+   "name": "BOARD OF EDUCATION - PUBLIC BUDGET FORUM, 6:30 PM"
+  },
+  "CZ4NH55DB79C": {
+   "date": "2024-04-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 6:45 PM"
+  },
+  "CZ4NHZ5DDDF0": {
+   "date": "2024-05-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION - ANNUAL BUDGET HEARING, 6:45 PM"
+  },
+  "D2FGCE4325CE": {
+   "date": "2024-03-07",
+   "final": true,
+   "name": "AUDIT COMMITTEE MEETING AT 8:00 AM"
+  },
+  "D2FSPQ714555": {
+   "date": "2024-02-28",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D34S9R7134BE": {
+   "date": "2024-04-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D35RAT6C51A1": {
+   "date": "2024-04-10",
+   "final": true,
+   "name": "PUBLIC HEARING, 6:30 PM"
+  },
+  "D3CTEL6C1C77": {
+   "date": "2024-03-21",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D3LNQA5DF733": {
+   "date": "2024-04-15",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D45KJM51F218": {
+   "date": "2024-04-16",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "D45KL251F849": {
+   "date": "2024-05-15",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "D45KLX51FB6D": {
+   "date": "2024-06-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "D45KPF524CCC": {
+   "date": "2024-05-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D45KPV525082": {
+   "date": "2024-06-05",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D45KQA52537E": {
+   "date": "2024-06-26",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING (REGULAR MEETING), 5:20 PM"
+  },
+  "D45KSY5283C1": {
+   "date": "2024-05-21",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 10:30 PM"
+  },
+  "D45KV752F070": {
+   "date": "2024-06-26",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING (ORGANIZATION MEETING), 5:00 PM"
+  },
+  "D4FFD43E8D25": {
+   "date": "2024-05-08",
+   "final": true,
+   "name": "PUBLIC HEARING, 6:30 PM"
+  },
+  "D4GGWM45D0CE": {
+   "date": "2024-06-05",
+   "final": true,
+   "name": "PUBLIC HEARING at 6:15 PM, Code of Conduct Policy"
+  },
+  "D5AJS34E2377": {
+   "date": "2024-05-22",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D64NF65FACE5": {
+   "date": "2024-06-17",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D6EJLW4DC400": {
+   "date": "2024-07-01",
+   "final": true,
+   "name": "Regular Meeting at 5:20 PM"
+  },
+  "D6EJMV4DE82B": {
+   "date": "2024-07-01",
+   "final": true,
+   "name": "Organizational Meeting at 5:00 PM"
+  },
+  "D6SHYQ4ACFCA": {
+   "date": "2024-08-21",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 5:00 PM"
+  },
+  "D6SPRJ65E1BA": {
+   "date": "2024-09-18",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 7:30 PM"
+  },
+  "D6SQAJ663120": {
+   "date": "2024-09-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D6YKQF52F8D4": {
+   "date": "2024-07-31",
+   "final": true,
+   "name": "Special Meeting of the Board of Education 8:00 AM"
+  },
+  "D7HL845543FF": {
+   "date": "2024-10-16",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 7:30 PM"
+  },
+  "D7HLC755DD35": {
+   "date": "2024-11-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D7HLDG560E10": {
+   "date": "2024-12-18",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 7:30 PM"
+  },
+  "D7HLDM559818": {
+   "date": "2024-11-20",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 7:30 PM"
+  },
+  "D7WPZ86701CE": {
+   "date": "2024-10-09",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D7WQ2B672A40": {
+   "date": "2024-12-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "D8JN5V5E08C4": {
+   "date": "2024-08-29",
+   "final": true,
+   "name": "Board of Education Special Meeting at 6:00 PM, Offices of Sheldon, May, and Associates, 255 Merrick Road, Rockville Cent"
+  },
+  "D8LJAX4C4E36": {
+   "date": "2024-08-29",
+   "final": true,
+   "name": "Board of Education Emergency Meeting at 4:00 PM, Woodmere Education Center"
+  },
+  "D8RP83623B7B": {
+   "date": "2024-09-04",
+   "final": true,
+   "name": "Board of Education Special Meeting at 7:30 PM, Woodmere Education Center"
+  },
+  "D8SPU86646EC": {
+   "date": "2024-09-09",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D8TJJX4D7A01": {
+   "date": "2024-09-24",
+   "final": true,
+   "name": "Board of Education Special Meeting at 7:00 PM, Woodmere Education Center"
+  },
+  "D9AMWF5D3A12": {
+   "date": "2024-09-30",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "D9EL7A55223D": {
+   "date": "2024-10-07",
+   "final": true,
+   "name": "AUDIT COMMITTEE MEETING AT 8:00 AM"
+  },
+  "D9WNU3619117": {
+   "date": "2024-10-16",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT FRANKLIN EARLY CHILDHOOD CENTER, 7:00 PM"
+  },
+  "DA4KUS537A85": {
+   "date": "2024-10-30",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DABL2N5477BB": {
+   "date": "2024-10-25",
+   "final": true,
+   "name": "Board of Education Special Meeting at 8:15 AM, Woodmere Education Center"
+  },
+  "DADHPT4980CE": {
+   "date": "2024-10-28",
+   "final": true,
+   "name": "Board of Education Special Meeting at 8:30 AM, Woodmere Education Center"
+  },
+  "DAHJRT4E67BD": {
+   "date": "2024-11-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DASN8S5EBD20": {
+   "date": "2024-11-25",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DB2QB768780E": {
+   "date": "2024-11-20",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT OGDEN ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "DBDL5954D901": {
+   "date": "2024-12-18",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT WOODMERE MIDDLE SCHOOL, 7:00 PM"
+  },
+  "DBDLA8558DE9": {
+   "date": "2025-01-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DBDLAP55920E": {
+   "date": "2025-01-15",
+   "final": true,
+   "name": "TOUR OF FACILITIES, 7:00 PM, G.W. HEWLETT HIGH SCHOOL"
+  },
+  "DBDLAR5596F6": {
+   "date": "2025-01-15",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM, G.W. HEWLETT HS"
+  },
+  "DBDMPG5C1A69": {
+   "date": "2024-11-27",
+   "final": true,
+   "name": "Board of Education Special Meeting at 8:15 AM, Woodmere Education Center"
+  },
+  "DBNMU65CE3A2": {
+   "date": "2024-12-18",
+   "final": true,
+   "name": "PUBLIC HEARING at 7:25 PM, Use of Repair Reserve"
+  },
+  "DBVN745E0947": {
+   "date": "2025-01-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DC2KKE523C58": {
+   "date": "2025-01-17",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DCPMY85D7CA9": {
+   "date": "2025-02-12",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT HEWLETT ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "DCPN295DC6A9": {
+   "date": "2025-02-12",
+   "final": true,
+   "name": "Board of Education Regular Meeting, 7:30 PM, Hewlett Elementary School"
+  },
+  "DCYJLQ4DBD55": {
+   "date": "2025-02-05",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DCYJMD4DD673": {
+   "date": "2025-02-05",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DD5N8S5EBD66": {
+   "date": "2025-01-24",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DD6NWA61E3C0": {
+   "date": "2025-02-05",
+   "final": true,
+   "name": "PUBLIC HEARING at 6:15 PM, Use of Repair Reserve"
+  },
+  "DDBR6T6C845F": {
+   "date": "2025-01-30",
+   "final": true,
+   "name": "Special Policy Committee Meeting - Policy #4710 - Grading Systems"
+  },
+  "DDCJVK4F096B": {
+   "date": "2025-03-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DDFM7559CE5E": {
+   "date": "2025-02-26",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DDFRTY6F9D98": {
+   "date": "2025-03-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DDFRUL6FB426": {
+   "date": "2025-03-20",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DDFRW66FEFA7": {
+   "date": "2025-03-19",
+   "final": true,
+   "name": "Board of Education Regular Meeting, 7:30 PM"
+  },
+  "DE8PPM659AAF": {
+   "date": "2025-03-05",
+   "final": true,
+   "name": "AUDIT COMMITTEE MEETING AT 8:15 AM"
+  },
+  "DEQN9M5EDD17": {
+   "date": "2025-03-25",
+   "final": true,
+   "name": "BOARD OF EDUCATION - PUBLIC BUDGET FORUM, 6:30 PM"
+  },
+  "DEUMJ65AC30D": {
+   "date": "2025-03-31",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DF3KKK524091": {
+   "date": "2025-04-09",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 6:45 PM"
+  },
+  "DF3KNH52AFA2": {
+   "date": "2025-04-09",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DF3L4454AE01": {
+   "date": "2025-04-23",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING, 7:30 PM"
+  },
+  "DF4RET6DAF79": {
+   "date": "2025-03-27",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 8:15 AM"
+  },
+  "DF7HPC497045": {
+   "date": "2025-04-28",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DFBN5B5E3B71": {
+   "date": "2025-05-07",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DFCJYW4F86E9": {
+   "date": "2025-04-03",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 8:45 AM"
+  },
+  "DFMKXA53E567": {
+   "date": "2025-05-14",
+   "final": true,
+   "name": "Board of Education Regular Meeting, 7:30 PM"
+  },
+  "DG8PU766454E": {
+   "date": "2025-05-07",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 6:30 PM"
+  },
+  "DG8PV8666B93": {
+   "date": "2025-05-07",
+   "final": true,
+   "name": "PUBLIC HEARING, 6:55 PM"
+  },
+  "DG9JZQ4FA35A": {
+   "date": "2025-06-04",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM (3)"
+  },
+  "DGANJ6601CE8": {
+   "date": "2025-06-11",
+   "final": true,
+   "name": "Board of Education Regular Meeting, 7:30 PM"
+  },
+  "DGANL65F2083": {
+   "date": "2025-05-07",
+   "final": true,
+   "name": "ANNUAL BUDGET HEARING, 6:45 PM"
+  },
+  "DGDLXF55277F": {
+   "date": "2025-05-23",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DGQPYR669D7E": {
+   "date": "2025-05-20",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING TO ACCEPT RESULTS OF THE BALLOT"
+  },
+  "DGWGTE453259": {
+   "date": "2025-05-23",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 8:45 am"
+  },
+  "DH3N3A5DEEFD": {
+   "date": "2025-06-13",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DH6M26591502": {
+   "date": "2025-06-04",
+   "final": true,
+   "name": "BOARD OF EDUCATION SPECIAL MEETING, 7:00 PM (2)"
+  },
+  "DH6M3W5956FA": {
+   "date": "2025-06-04",
+   "final": true,
+   "name": "PUBLIC HEARING, CODE OF CONDUCT POLICY, 7:00 PM (1)"
+  },
+  "DHPGSL453A0D": {
+   "date": "2025-06-25",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING (ORGANIZATION MEETING), 5:00 PM (#2)"
+  },
+  "DHPGU5455691": {
+   "date": "2025-06-25",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING (REGULAR MEETING), (#3)"
+  },
+  "DHPGVD458788": {
+   "date": "2025-07-01",
+   "final": true,
+   "name": "ORGANIZATIONAL MEETING at 5:00 PM"
+  },
+  "DHPKQC52F5E1": {
+   "date": "2025-07-01",
+   "final": true,
+   "name": "BOARD OF EDUCATION REGULAR MEETING (following the Organization Meeting)"
+  },
+  "DHQL9J55799C": {
+   "date": "2025-07-16",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DHRQDU68DB8C": {
+   "date": "2025-06-25",
+   "final": true,
+   "name": "CANCELLED: BOARD OF EDUCATION - SPECIAL MEETING at 5:00 PM (#1)"
+  },
+  "DHRRZW706CD6": {
+   "date": "2025-06-20",
+   "final": true,
+   "name": "CANCELLED:: BOARD OF EDUCATION - SPECIAL MEETING, 8:15 AM (2)"
+  },
+  "DHZJ854BE57B": {
+   "date": "2025-06-27",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 9:00 AM"
+  },
+  "DJ7P3E62A17E": {
+   "date": "2025-08-20",
+   "final": true,
+   "name": "Board of Education Regular Meeting at 5:00 PM"
+  },
+  "DJEP4D62C877": {
+   "date": "2025-07-23",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 9:00 AM"
+  },
+  "DJNT4P759455": {
+   "date": "2025-08-20",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DK2LMD57362C": {
+   "date": "2025-08-04",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 4:45 PM"
+  },
+  "DKWMCX5AA7F2": {
+   "date": "2025-08-27",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 9:00 AM"
+  },
+  "DKYPEB643977": {
+   "date": "2025-09-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DKYPL2650FA1": {
+   "date": "2025-10-08",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DKYPLK6523A4": {
+   "date": "2025-11-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM (3)"
+  },
+  "DKYPLY652586": {
+   "date": "2025-12-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING (3)"
+  },
+  "DKYPS265F4C1": {
+   "date": "2025-09-17",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DKYPT6661E83": {
+   "date": "2025-10-22",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DKYPU766379E": {
+   "date": "2025-11-19",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DKYPV966642E": {
+   "date": "2025-12-17",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DKYQNE69CC8A": {
+   "date": "2026-06-10",
+   "final": false,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 7:00 PM"
+  },
+  "DKYRUR6FBA7B": {
+   "date": "2025-09-08",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DLCJF84CEEF0": {
+   "date": "2025-10-16",
+   "final": true,
+   "name": "AUDIT COMMITTEE MEETING AT 8:15 AM"
+  },
+  "DM7KGG514A44": {
+   "date": "2025-10-06",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DM9L6654B68C": {
+   "date": "2025-10-22",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT HEWLETT ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "DMALBH55C41F": {
+   "date": "2025-10-22",
+   "final": true,
+   "name": "BOARD OF EDUCATION SPECIAL MEETING, 6:30 PM"
+  },
+  "DMQR7N6CA350": {
+   "date": "2025-11-10",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DMVKCM513CD1": {
+   "date": "2025-11-19",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT OGDEN ELEMENTARY SCHOOL, 7:00 PM"
+  },
+  "DMVKH351E3EA": {
+   "date": "2025-11-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM (2)"
+  },
+  "DMVKHW52044D": {
+   "date": "2025-12-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM (1)"
+  },
+  "DMVKL75259F3": {
+   "date": "2025-11-12",
+   "final": true,
+   "name": "BOARD OF EDUCATION - PUBLIC HEARING, 6:30 PM, District-Wide Safety Plan"
+  },
+  "DNES98718DAF": {
+   "date": "2025-12-05",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DNYN5L5E45B4": {
+   "date": "2025-12-17",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT FRANKLIN EARLY CHILDHOOD CENTER, 7:00 PM"
+  },
+  "DNYN855EA4E7": {
+   "date": "2025-12-10",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING (2)"
+  },
+  "DNYPHP64A655": {
+   "date": "2026-01-14",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DNYPJ864C08C": {
+   "date": "2026-01-21",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT WOODMERE MIDDLE SCHOOL, 7:00 PM"
+  },
+  "DNYPLD64FF1A": {
+   "date": "2026-01-21",
+   "final": true,
+   "name": "Board of Education Regular Meeting 7:30 PM"
+  },
+  "DPEM8F5A00A6": {
+   "date": "2026-01-14",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DPGKC7512DE9": {
+   "date": "2026-03-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DPGKCK5134DD": {
+   "date": "2026-02-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM, Meeting #3"
+  },
+  "DPGKCN513BAE": {
+   "date": "2026-02-25",
+   "final": true,
+   "name": "Board of Education Regular Meeting at G.W. Hewlett High School"
+  },
+  "DPGKDS516362": {
+   "date": "2026-02-25",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT G.W. HEWLETT HIGH SCHOOL, 7:00 PM"
+  },
+  "DPGL76552077": {
+   "date": "2026-01-09",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DQQMUY5CFB54": {
+   "date": "2026-03-18",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DQQMVR5CFFA0": {
+   "date": "2026-03-18",
+   "final": true,
+   "name": "TOUR OF FACILITIES AT WOODMERE EDUCATION CENTER, 7:00 PM"
+  },
+  "DQQMVV5D038D": {
+   "date": "2026-02-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, Meeting #4"
+  },
+  "DQQN4J5E1D9C": {
+   "date": "2026-03-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DQQN545E33FA": {
+   "date": "2026-04-22",
+   "final": true,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DQQN6F5E3A9E": {
+   "date": "2026-03-24",
+   "final": true,
+   "name": "BOARD OF EDUCATION - PUBLIC BUDGET FORUM, 6:30 PM"
+  },
+  "DQQN6M5E3EBB": {
+   "date": "2026-04-15",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DQQN7D5E8277": {
+   "date": "2026-04-01",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING at 8:15 AM"
+  },
+  "DQQNAF5EF972": {
+   "date": "2026-05-13",
+   "final": true,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DQQNAV5EFEA1": {
+   "date": "2026-05-20",
+   "final": false,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DQQNFR5F38C3": {
+   "date": "2026-06-17",
+   "final": false,
+   "name": "Board of Education Regular Meeting"
+  },
+  "DQQNG25FC7B3": {
+   "date": "2026-02-11",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING following Public Hearing, Meeting #2"
+  },
+  "DQQNGK5F3A91": {
+   "date": "2026-06-10",
+   "final": false,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
+  "DQQNUD5FFD45": {
+   "date": "2026-02-11",
+   "final": true,
+   "name": "PUBLIC HEARING at 6:20 PM, Use of Repair Reserve, Meeting #1"
+  },
+  "DQR3EJ0684D5": {
+   "date": "2026-01-30",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING at 8:30 AM"
+  },
+  "DQXQJ8697F97": {
+   "date": "2026-02-06",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DR6HDY481079": {
+   "date": "2026-03-06",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DS9LS957EB9F": {
+   "date": "2026-03-19",
+   "final": true,
+   "name": "BOARD OF EDUCATION - BUDGET DEVELOPMENT SESSION, 6:30 PM"
+  },
+  "DSANWG61EB41": {
+   "date": "2026-05-06",
+   "final": true,
+   "name": "ANNUAL BUDGET HEARING, 6:30 PM"
+  },
+  "DSCRXD701CDA": {
+   "date": "2026-03-25",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DSKL2V5480A4": {
+   "date": "2026-03-30",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DSQM6Q59BFEE": {
+   "date": "2026-04-15",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING at 6:45 PM - ADOPTION OF PROPOSED BUDGET"
+  },
+  "DSQP96637BDC": {
+   "date": "2026-04-13",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DT5QD768C309": {
+   "date": "2026-04-28",
+   "final": true,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING at 8:15 AM"
+  },
+  "DTLPKG64FE1A": {
+   "date": "2026-07-08",
+   "final": false,
+   "name": "ORGANIZATIONAL MEETING at 5:00 PM"
+  },
+  "DTLPRF65DDC1": {
+   "date": "2026-07-08",
+   "final": false,
+   "name": "BOARD OF EDUCATION REGULAR MEETING (following the Organization Meeting)"
+  },
+  "DTLUSC7D70DC": {
+   "date": "2026-05-13",
+   "final": true,
+   "name": "PUBLIC HEARING, 7:00 PM"
+  },
+  "DTRFDV3EAD2A": {
+   "date": "2026-05-08",
+   "final": true,
+   "name": "Policy Committee Meeting"
+  },
+  "DUGMBG5A7198": {
+   "date": "2026-06-01",
+   "final": false,
+   "name": "Policy Committee Meeting"
+  },
+  "DUPN9M5EDDE0": {
+   "date": "2026-06-29",
+   "final": false,
+   "name": "Policy Committee Meeting"
+  },
+  "DURQ6F67A2C3": {
+   "date": "2026-07-01",
+   "final": false,
+   "name": "BOARD OF EDUCATION WORK MEETING (REGULAR MEETING), (#3)"
+  },
+  "DURQNH6906E9": {
+   "date": "2026-07-01",
+   "final": false,
+   "name": "BOARD OF EDUCATION WORK MEETING (ORGANIZATION MEETING), 5:00 PM (#2)"
+  },
+  "DV6SE9724B28": {
+   "date": "2026-07-01",
+   "final": false,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING, 5:00 PM (#1)"
+  }
+ }
+}

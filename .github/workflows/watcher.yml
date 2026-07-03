@@ -1,0 +1,38 @@
+name: BoardDocs Watcher
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # daily 7:00 AM ET (11:00 UTC)
+    - cron: "0 13 * * 0"   # extra Sunday 9:00 AM ET pass (district posts Sunday mornings)
+  workflow_dispatch: {}     # allows manual "Run workflow" button on GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run watcher
+        run: python watcher/watch_boarddocs.py
+
+      - name: Commit new documents
+        run: |
+          git config user.name "boarddocs-watcher"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No new documents."
+          else
+            git commit -m "watcher: new documents $(date -u +%Y-%m-%d)"
+            git push
+          fi
