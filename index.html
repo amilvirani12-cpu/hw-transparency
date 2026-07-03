@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hewlett-Woodmere UFSD — Independent Fiscal Dashboard</title>
+<meta name="description" content="Independent, resident-maintained dashboards tracking the Hewlett-Woodmere school district's budget, treasurer's reports, and facilities — built entirely from public records.">
+<style>
+  :root {
+    --navy: #1a2f4a;
+    --navy-light: #27446b;
+    --accent: #b8860b;
+    --paper: #f7f5f0;
+    --ink: #2a2a2a;
+    --muted: #6b6b6b;
+    --card-border: #e2ddd3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 1.9rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.6rem;
+  }
+  header .tagline {
+    color: #c9d4e4;
+    font-size: 1.05rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .rule {
+    width: 60px; height: 3px;
+    background: var(--accent);
+    margin: 1.1rem auto 0;
+  }
+  main {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 1rem;
+  }
+  .intro {
+    max-width: 46rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 1.02rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-top: 4px solid var(--navy);
+    padding: 1.6rem 1.5rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--navy);
+    margin-bottom: 0.55rem;
+  }
+  .card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    flex: 1;
+    margin-bottom: 1.1rem;
+  }
+  .card a.button {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.92rem;
+    font-family: Verdana, Geneva, sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .card a.button:hover { background: var(--navy-light); }
+  .card .secondary {
+    font-size: 0.85rem;
+    margin-top: 0.7rem;
+  }
+  .card .secondary a { color: var(--navy-light); }
+  footer {
+    margin-top: 3rem;
+    border-top: 1px solid var(--card-border);
+    padding: 1.8rem 1.5rem 2.2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  footer .disclaimer {
+    max-width: 46rem;
+    margin: 0 auto 0.8rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hewlett-Woodmere UFSD &mdash; Independent Fiscal Dashboard</h1>
+  <p class="tagline">Every number on this site comes from the district's own public records &mdash; presented so any resident can read them in minutes, not hours.</p>
+  <div class="rule"></div>
+</header>
+
+<main>
+  <p class="intro">
+    The Board of Education publishes hundreds of pages of financial reports before each meeting.
+    These dashboards turn those documents into charts and plain-language summaries, with every
+    figure traceable back to the exact page of the source PDF.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Budget at a Glance</h2>
+      <p>Monthly revenue and budget status for the General Fund, Capital Program, and grants —
+         money in, money out, spent vs. committed, with drill-down to every account line.</p>
+      <a class="button" href="budget/FY2026-June.html">June 2026 (latest)</a>
+      <div class="secondary">Archive: <a href="budget/FY2026-May.html">May 2026</a></div>
+    </div>
+
+    <div class="card">
+      <h2>Treasurer's Reports</h2>
+      <p>Bank accounts, cash balances, investments, and collateral tracked month over month —
+         with an exceptions log of anything that didn't reconcile cleanly.</p>
+      <a class="button" href="treasurer/">View dashboard</a>
+    </div>
+
+    <div class="card">
+      <h2>Facilities Tours</h2>
+      <p>Findings from the Board's building-by-building facilities tours across every school,
+         mapped and tracked across years.</p>
+      <a class="button" href="facilities/tours/">View dashboard</a>
+    </div>
+
+    <div class="card">
+      <h2>Building Condition Survey</h2>
+      <p>The state-mandated Building Condition Survey: system-by-system condition and estimated
+         costs for every district building.</p>
+      <a class="button" href="facilities/bcs/">View dashboard</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p class="disclaimer">
+    This is an independent, resident-maintained project. It is not affiliated with, endorsed by,
+    or produced by the Hewlett-Woodmere Union Free School District or its Board of Education.
+    All underlying documents are public records available on the district's
+    <a href="https://go.boarddocs.com/ny/hwps/Board.nsf/Public">BoardDocs site</a>.
+  </p>
+  <p>Corrections welcome &mdash; every figure cites its source document.</p>
+</footer>
+</body>
+</html>

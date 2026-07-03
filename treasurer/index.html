@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hewlett-Woodmere Treasurer's Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>
+  :root{
+    --navy:#12284c; --navy2:#1c3a6e; --accent:#c8a24b; --bg:#f4f6f9;
+    --card:#fff; --ink:#1f2733; --muted:#6b7683; --line:#e3e8ef;
+    --high:#c0392b; --med:#e08a1e; --low:#5a7d9a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--ink)}
+  header{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;
+         padding:20px 28px}
+  header h1{margin:0;font-size:20px;font-weight:650;letter-spacing:.2px}
+  header .sub{opacity:.8;font-size:13px;margin-top:4px}
+  .wrap{max-width:1240px;margin:0 auto;padding:20px 24px 60px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+        gap:14px;margin:18px 0 8px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;
+       padding:16px 18px;box-shadow:0 1px 2px rgba(16,32,64,.04)}
+  .kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;
+              letter-spacing:.6px}
+  .kpi .val{font-size:26px;font-weight:680;margin-top:6px}
+  .kpi .foot{font-size:12px;color:var(--muted);margin-top:4px}
+  .tabs{display:flex;gap:6px;margin:22px 0 14px;border-bottom:2px solid var(--line)}
+  .tab{padding:10px 18px;cursor:pointer;font-weight:600;color:var(--muted);
+       border-bottom:2px solid transparent;margin-bottom:-2px}
+  .tab.active{color:var(--navy);border-color:var(--accent)}
+  .panel{display:none}.panel.active{display:block}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:900px){.grid2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+        padding:14px 16px 6px;box-shadow:0 1px 2px rgba(16,32,64,.04);margin-bottom:18px}
+  .card h3{margin:2px 4px 8px;font-size:14px;font-weight:650}
+  .chart{width:100%;height:340px}
+  .chart.tall{height:420px}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+  select,input[type=text]{padding:8px 10px;border:1px solid var(--line);
+       border-radius:8px;font-size:13px;background:#fff;color:var(--ink)}
+  input[type=text]{min-width:220px}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;
+        border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);
+        vertical-align:top}
+  th{background:#eef2f7;cursor:pointer;user-select:none;white-space:nowrap;
+     font-weight:650;position:sticky;top:0}
+  th:hover{background:#e5ebf3}
+  tbody tr:hover{background:#f8fafc}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pos{color:#1a7f4b}.neg{color:#c0392b}
+  .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;
+        font-weight:700;color:#fff}
+  .pill.high{background:var(--high)}.pill.med{background:var(--med)}.pill.low{background:var(--low)}
+  .count{color:var(--muted);font-size:13px;margin-left:auto}
+  .detail{color:var(--muted);max-width:520px}
+  .footnote{color:var(--muted);font-size:12px;margin-top:26px;line-height:1.6}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px}
+  .bar-row .nm{width:230px;color:var(--ink)}
+  .bar-row .track{flex:1;background:#eef2f7;border-radius:6px;height:16px;overflow:hidden}
+  .bar-row .fill{height:100%;background:var(--navy2)}
+  .bar-row .n{width:34px;text-align:right;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Hewlett-Woodmere UFSD &middot; Treasurer's Report Dashboard</h1>
+  <div class="sub" id="hsub"></div>
+</header>
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+  <div class="tabs">
+    <div class="tab active" data-tab="overview">Overview</div>
+    <div class="tab" data-tab="exceptions">Exceptions</div>
+  </div>
+
+  <div class="panel active" id="overview">
+    <div class="grid2">
+      <div class="card"><h3>Fund balances over time</h3><div id="c_funds" class="chart"></div></div>
+      <div class="card"><h3>Cash vs. investments</h3><div id="c_cashinv" class="chart"></div></div>
+    </div>
+    <div class="card"><h3>Interest earned per bank per month</h3><div id="c_interest" class="chart tall"></div></div>
+    <div class="card"><h3>Collateral coverage % by depository (with required floors)</h3><div id="c_coll" class="chart tall"></div></div>
+  </div>
+
+  <div class="panel" id="exceptions">
+    <div class="card">
+      <h3>Exceptions by category</h3>
+      <div id="checkbars"></div>
+    </div>
+    <div class="controls">
+      <select id="fsev"><option value="">All severities</option>
+        <option value="high">High</option><option value="med">Medium</option><option value="low">Low</option></select>
+      <select id="fcheck"><option value="">All checks</option></select>
+      <select id="fmonth"><option value="">All months</option></select>
+      <input type="text" id="fsearch" placeholder="Search account, bank, GL, detail…">
+      <span class="count" id="ecount"></span>
+    </div>
+    <div style="max-height:620px;overflow:auto;border-radius:10px">
+    <table id="etable">
+      <thead><tr>
+        <th data-k="month">Month</th><th data-k="sev">Sev</th><th data-k="check">Check</th>
+        <th data-k="account">Account</th><th data-k="bank">Bank</th><th data-k="gl">GL</th>
+        <th data-k="expected" class="num">Expected</th><th data-k="actual" class="num">Actual</th>
+        <th data-k="delta" class="num">Delta</th><th data-k="detail">Detail</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="footnote" id="foot"></div>
+</div>
+
+<script>
+const DATA = {"as_of": "March 2026", "span": "January 2025 \u2013 March 2026", "n_months": 15, "labels": ["January 2025", "February 2025", "March 2025", "April 2025", "May 2025", "June 2025", "July 2025", "August 2025", "September 2025", "October 2025", "November 2025", "December 2025", "January 2026", "February 2026", "March 2026"], "funds": [{"name": "General Fund", "values": [27705714.26, 27759651.54, 27997981.77, 29404054.47, 29278635.05, 27961893.17, 29272434.91, 29896314.76, 24892024.16, 22486938.19, 22935414.53, 43557159.67, 37564530.63, 29658657.52, 23536331.97]}, {"name": "Special Aid", "values": [598616.55, 598616.55, 600026.55, 600026.55, 600026.55, 523122.55, 589871.7, 600026.55, 600026.55, 602526.55, 602526.55, 607447.61, 607447.61, 607447.61, 607447.61]}, {"name": "School Lunch", "values": [694085.3, 673413.3, 597010.23, 482351.1, 365260.45, 230250.5, 179572.18, 249348.85, 218772.59, 306349.0, 351895.72, 296057.74, 302369.06, 509598.11, 472731.68]}, {"name": "Capital", "values": [5791789.52, 5809985.33, 5830047.86, 5403737.3, 5203718.43, 5725783.59, 5745869.39, 5481758.73, 5499451.98, 5517196.67, 5534051.36, 5550959.11, 4606815.37, 4618827.13, 3903583.92]}, {"name": "Trust & Agency", "values": [4836560.1, 4893250.76, 1443879.37, 1555896.4, 1614721.07, 2057765.27, 1471467.42, 1340152.15, 1675085.6, 1850813.68, 1935827.77, 1977248.63, 2135154.36, 2216316.42, 2311568.98]}, {"name": "Expendable Trust", "values": [266331.44, 271646.42, 310462.43, 298500.81, 256401.46, 260301.46, 262801.46, 262801.46, 264736.46, 264951.59, 267619.47, 270060.28, 271192.22, 279653.33, 301119.07]}, {"name": "Compensating", "values": [200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0, 200000.0]}, {"name": "Flex", "values": [68964.31, 72709.22, 71600.75, 84079.38, 94348.28, 117530.2, 84644.73, 71906.28, 83057.91, 91299.33, 106267.53, 103703.91, 96697.74, 94385.44, 101342.13]}, {"name": "Investments", "values": [72064775.76, 60734950.35, 58625948.34, 53857790.65, 83703615.33, 73597307.12, 67299393.51, 60077197.06, 57958488.45, 58711451.44, 89263596.28, 58163531.53, 57362889.5, 53916675.43, 59338608.18]}], "cashinv": {"Cash": [40162061.48, 40279273.12, 37051008.96, 38028646.01, 37613111.29, 37076646.74, 37806661.79, 38102308.78, 33433155.25, 31320075.01, 31933602.93, 52562636.95, 45784206.99, 38184885.56, 31434125.36], "Investments": [72064775.76, 60734950.35, 58625948.34, 53857790.65, 83703615.33, 73597307.12, 67299393.51, 60077197.06, 57958488.45, 58711451.44, 89263596.28, 58163531.53, 57362889.5, 53916675.43, 59338608.18]}, "interest": [{"name": "CLASS", "values": [78681.86, 70787.95, 78050.13, 75364.29, 77767.18, 75370.55, 78140.68, 78348.55, 74641.27, 74858.27, 71103.62, 134365.75, 67306.99, 58071.31, 80735.75]}, {"name": "Capital One", "values": [97975.74, 80733.9, 46083.73, 35414.99, 30187.18, 62915.09, 74881.07, 57698.5, 45545.84, 138752.73, 17969.78, 52208.53, 29516.27, 14961.57, 10095.49]}, {"name": "Chase", "values": [948.07, 875.46, 838.45, 309.06, 343.23, 358.18, 401.0, 405.05, 386.33, 447.13, 422.06, 418.45, 419.82, 390.42, 444.71]}, {"name": "First Nat'l / Connect One", "values": [30169.27, 27342.7, 30365.63, 29486.42, 30569.98, 29723.79, 30826.74, 30932.16, 29717.28, 30379.23, 29495.76, 29256.52, 28718.22, 26016.13, 28889.17]}, {"name": "Flushing Bank", "values": [67600.4, 61270.97, 66741.84, 63798.5, 66154.12, 63260.49, 65003.28, 65227.25, 63076.05, 61609.32, 58392.85, 58360.46, 57269.39, 51741.21, 56769.96]}, {"name": "TD Bank", "values": [32145.71, 30161.37, 27245.46, 30325.02, 29408.08, 30496.17, 29569.03, 30665.84, 30751.17, 29820.52, 29252.01, 26332.71, 27304.58, 25247.82, 22800.47]}, {"name": "Valley National", "values": [43441.42, 39291.76, 43635.08, 42370.95, 43927.26, 42654.67, 44221.4, 44371.64, 43086.17, 41876.95, 38125.52, 39322.98, 36986.25, 33170.82, 36816.4]}], "collateral": [{"name": "CLASS", "values": [102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0, 102.0]}, {"name": "Capital One", "values": [105.66, 106.02, 106.35, 106.53, 105.68, 105.64, 105.74, 106.02, 106.19, 106.55, 105.58, 106.85, 107.05, 108.84, 107.2]}, {"name": "Chase", "values": [102.0, 102.01, null, null, 103.59, 121.64, 105.6, 108.73, 102.36, 105.48, 102.35, 105.18, 102.29, 102.24, 102.68]}, {"name": "First Nat'l / Connect One", "values": [105.46, 105.86, 105.56, 105.88, 105.6, 105.75, 105.23, 105.59, 105.78, 105.9, 105.59, 105.8, 105.49, 105.83, 105.64]}, {"name": "Flushing Bank", "values": [109.32, 108.95, 108.56, 108.18, 107.8, 107.43, 107.06, 106.69, 106.33, 105.98, 105.65, 105.33, 105.01, 104.73, 104.42]}, {"name": "TD Bank", "values": [121.9, 121.56, 121.25, 120.91, 120.58, 120.24, 119.91, 119.57, 119.23, 118.91, 118.59, 118.31, 118.01, 117.74, 117.5]}, {"name": "Valley National", "values": [105.0, 105.0, 105.0, 105.0, 105.0, 105.0, 105.55, 105.01, 105.0, 105.01, 105.0, 105.0, 105.0, 105.0, 105.0]}], "floors": [102.0, 105.0], "kpis": {"total_assets": 90772733.54, "assets_delta": -1328827.45, "n_accounts": 26, "n_banks": 8, "n_exceptions": 73, "n_high": 4}, "check_counts": {"within 0.5% of collateral floor": 38, "roll-forward (cash)": 12, "roll-forward (investment)": 12, "recurring deposit-in-transit": 5, "investment summary vs cash report (bank)": 2, "account changed sign": 2, "dormant account (zero every month)": 1, "GL under multiple bank names": 1}, "exceptions": [{"month": "January 2025", "sort_key": "2025-01", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "January 2025", "sort_key": "2025-01", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "January 2025", "sort_key": "2025-01", "check": "within 0.5% of collateral floor", "account": "FIRST NATIONAL BANK OF LI", "bank": "First Nat'l Bank of LI", "gl": "", "expected": 105.0, "actual": 105.46, "delta": 0.46, "detail": "coverage 105.46% vs required 105.00% (margin +0.46 pts)", "sev": "low"}, {"month": "January 2025", "sort_key": "2025-01", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "February 2025", "sort_key": "2025-02", "check": "recurring deposit-in-transit", "account": "A200-02", "bank": "Capital One", "gl": "", "expected": null, "actual": -209795.76, "delta": null, "detail": "exact amount -209,795.76 recurs in 2 months: January 2025, February 2025", "sev": "low"}, {"month": "February 2025", "sort_key": "2025-02", "check": "roll-forward (cash)", "account": "GENERAL FUND", "bank": "Capital One", "gl": "A200-04", "expected": 8126160.6, "actual": 8126080.6, "delta": -80.0, "detail": "beginning balance != prior ending (January 2025)", "sev": "med"}, {"month": "February 2025", "sort_key": "2025-02", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.01, "delta": 0.01, "detail": "coverage 102.01% vs required 102.00% (margin +0.01 pts)", "sev": "low"}, {"month": "February 2025", "sort_key": "2025-02", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "February 2025", "sort_key": "2025-02", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "March 2025", "sort_key": "2025-03", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "March 2025", "sort_key": "2025-03", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "April 2025", "sort_key": "2025-04", "check": "investment summary vs cash report (bank)", "account": "investments", "bank": "TD Bank", "gl": "", "expected": 11001508.58, "actual": 13083057.96, "delta": 2081549.38, "detail": "page-3 closing 13,083,057.96 vs page-1 investment ending 11,001,508.58", "sev": "high"}, {"month": "April 2025", "sort_key": "2025-04", "check": "roll-forward (cash)", "account": "A201-06/A231-14/A231-15", "bank": "Capital One", "gl": "", "expected": 7064879.07, "actual": 7065039.07, "delta": 160.0, "detail": "beginning balance != prior ending (March 2025)", "sev": "med"}, {"month": "April 2025", "sort_key": "2025-04", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Capital One", "gl": "A201-06", "expected": 6278600.44, "actual": 6278760.44, "delta": 160.0, "detail": "opening != prior closing (March 2025)", "sev": "med"}, {"month": "April 2025", "sort_key": "2025-04", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "April 2025", "sort_key": "2025-04", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (cash)", "account": "EXPENDABLE TRUST FUND", "bank": "Capital One", "gl": "CM200-01", "expected": 298500.81, "actual": 298520.81, "delta": 20.0, "detail": "beginning balance != prior ending (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (cash)", "account": "A201-06/A231-14/A231-15", "bank": "Capital One", "gl": "", "expected": 2131179.95, "actual": 2131219.95, "delta": 40.0, "detail": "beginning balance != prior ending (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Capital One", "gl": "A201-06", "expected": 1344901.32, "actual": 1344941.32, "delta": 40.0, "detail": "opening != prior closing (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (investment)", "account": "GENERAL RESERVES", "bank": "TD Bank", "gl": "A231-05", "expected": 6050901.18, "actual": 5010126.49, "delta": -1040774.69, "detail": "opening != prior closing (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (investment)", "account": "DEBT SERVICE", "bank": "TD Bank", "gl": "V231-02", "expected": 1040774.69, "actual": 0.0, "delta": -1040774.69, "detail": "opening != prior closing (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Chase", "gl": "A201-09", "expected": 7405.1, "actual": 7918.45, "delta": 513.35, "detail": "opening != prior closing (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "roll-forward (investment)", "account": "CAPITAL", "bank": "Chase", "gl": "H201-09", "expected": 70369.57, "actual": 69856.22, "delta": -513.35, "detail": "opening != prior closing (April 2025)", "sev": "med"}, {"month": "May 2025", "sort_key": "2025-05", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "May 2025", "sort_key": "2025-05", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "June 2025", "sort_key": "2025-06", "check": "investment summary vs cash report (bank)", "account": "investments", "bank": "TD Bank", "gl": "", "expected": 10021216.76, "actual": 12102187.52, "delta": 2080970.76, "detail": "page-3 closing 12,102,187.52 vs page-1 investment ending 10,021,216.76", "sev": "high"}, {"month": "June 2025", "sort_key": "2025-06", "check": "roll-forward (cash)", "account": "GENERAL FUND", "bank": "CLASS", "gl": "A201-01", "expected": 728412.64, "actual": 282729.92, "delta": -445682.72, "detail": "beginning balance != prior ending (May 2025)", "sev": "med"}, {"month": "June 2025", "sort_key": "2025-06", "check": "roll-forward (cash)", "account": "SCHOOL LUNCH FUND", "bank": "Capital One", "gl": "C200-01", "expected": 211766.21, "actual": 217492.23, "delta": 5726.02, "detail": "beginning balance != prior ending (May 2025)", "sev": "med"}, {"month": "June 2025", "sort_key": "2025-06", "check": "roll-forward (cash)", "account": "CAPITAL FUND", "bank": "CLASS", "gl": "H201-12", "expected": 5022135.46, "actual": 5467818.18, "delta": 445682.72, "detail": "beginning balance != prior ending (May 2025)", "sev": "med"}, {"month": "June 2025", "sort_key": "2025-06", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Chase", "gl": "A201-09", "expected": 8027.43, "actual": 11544.83, "delta": 3517.4, "detail": "opening != prior closing (May 2025)", "sev": "med"}, {"month": "June 2025", "sort_key": "2025-06", "check": "roll-forward (investment)", "account": "CAPITAL", "bank": "Chase", "gl": "H201-09", "expected": 69856.22, "actual": 66338.82, "delta": -3517.4, "detail": "opening != prior closing (May 2025)", "sev": "med"}, {"month": "June 2025", "sort_key": "2025-06", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "June 2025", "sort_key": "2025-06", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "July 2025", "sort_key": "2025-07", "check": "account changed sign", "account": "SCHOOL LUNCH FUND", "bank": "Capital One", "gl": "C200-01", "expected": 63462.75, "actual": -6127.65, "delta": -69590.4, "detail": "ending balance flipped sign: 63,462.75 -> -6,127.65", "sev": "high"}, {"month": "July 2025", "sort_key": "2025-07", "check": "recurring deposit-in-transit", "account": "A200-02", "bank": "Capital One", "gl": "", "expected": null, "actual": -207340.2, "delta": null, "detail": "exact amount -207,340.20 recurs in 3 months: May 2025, June 2025, July 2025", "sev": "low"}, {"month": "July 2025", "sort_key": "2025-07", "check": "roll-forward (cash)", "account": "GENERAL FUND", "bank": "Capital One", "gl": "A200-04", "expected": 7437431.85, "actual": 8002628.44, "delta": 565196.59, "detail": "beginning balance != prior ending (June 2025)", "sev": "med"}, {"month": "July 2025", "sort_key": "2025-07", "check": "roll-forward (cash)", "account": "A201-09/A231-12/A231-13/H201-09", "bank": "Chase", "gl": "", "expected": 103047.45, "actual": 102534.1, "delta": -513.35, "detail": "beginning balance != prior ending (June 2025)", "sev": "med"}, {"month": "July 2025", "sort_key": "2025-07", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "TD Bank", "gl": "A201-05", "expected": 6024007.17, "actual": 4983811.1, "delta": -1040196.07, "detail": "opening != prior closing (June 2025)", "sev": "med"}, {"month": "July 2025", "sort_key": "2025-07", "check": "roll-forward (investment)", "account": "GENERAL RESERVES", "bank": "TD Bank", "gl": "A231-05", "expected": 6078180.35, "actual": 5037405.66, "delta": -1040774.69, "detail": "opening != prior closing (June 2025)", "sev": "med"}, {"month": "July 2025", "sort_key": "2025-07", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Chase", "gl": "A201-09", "expected": 11650.44, "actual": 11137.09, "delta": -513.35, "detail": "opening != prior closing (June 2025)", "sev": "med"}, {"month": "July 2025", "sort_key": "2025-07", "check": "within 0.5% of collateral floor", "account": "CONNECT ONE BANK", "bank": "Connect One Bank", "gl": "", "expected": 105.0, "actual": 105.23, "delta": 0.23, "detail": "coverage 105.23% vs required 105.00% (margin +0.23 pts)", "sev": "low"}, {"month": "July 2025", "sort_key": "2025-07", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "August 2025", "sort_key": "2025-08", "check": "account changed sign", "account": "SCHOOL LUNCH FUND", "bank": "Capital One", "gl": "C200-01", "expected": -6127.65, "actual": 63164.31, "delta": 69291.96, "detail": "ending balance flipped sign: -6,127.65 -> 63,164.31", "sev": "high"}, {"month": "August 2025", "sort_key": "2025-08", "check": "roll-forward (cash)", "account": "CAPITAL FUND", "bank": "CLASS", "gl": "H201-12", "expected": 5564286.42, "actual": 5727286.42, "delta": 163000.0, "detail": "beginning balance != prior ending (July 2025)", "sev": "med"}, {"month": "August 2025", "sort_key": "2025-08", "check": "roll-forward (cash)", "account": "A201-09/A231-12/A231-13/H201-09", "bank": "Chase", "gl": "", "expected": 102678.49, "actual": 103191.84, "delta": 513.35, "detail": "beginning balance != prior ending (July 2025)", "sev": "med"}, {"month": "August 2025", "sort_key": "2025-08", "check": "roll-forward (investment)", "account": "GENERAL FUND", "bank": "Chase", "gl": "A201-09", "expected": 11246.37, "actual": 11759.72, "delta": 513.35, "detail": "opening != prior closing (July 2025)", "sev": "med"}, {"month": "August 2025", "sort_key": "2025-08", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.01, "delta": 0.01, "detail": "coverage 105.01% vs required 105.00% (margin +0.01 pts)", "sev": "low"}, {"month": "August 2025", "sort_key": "2025-08", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "September 2025", "sort_key": "2025-09", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.36, "delta": 0.36, "detail": "coverage 102.36% vs required 102.00% (margin +0.36 pts)", "sev": "low"}, {"month": "September 2025", "sort_key": "2025-09", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "September 2025", "sort_key": "2025-09", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "October 2025", "sort_key": "2025-10", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.01, "delta": 0.01, "detail": "coverage 105.01% vs required 105.00% (margin +0.01 pts)", "sev": "low"}, {"month": "October 2025", "sort_key": "2025-10", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "November 2025", "sort_key": "2025-11", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.35, "delta": 0.35, "detail": "coverage 102.35% vs required 102.00% (margin +0.35 pts)", "sev": "low"}, {"month": "November 2025", "sort_key": "2025-11", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "November 2025", "sort_key": "2025-11", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "December 2025", "sort_key": "2025-12", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "December 2025", "sort_key": "2025-12", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "January 2026", "sort_key": "2026-01", "check": "roll-forward (cash)", "account": "TRUST & AGENCY FUND", "bank": "Capital One", "gl": "A200-02", "expected": 1977248.63, "actual": 1977717.15, "delta": 468.52, "detail": "beginning balance != prior ending (December 2025)", "sev": "med"}, {"month": "January 2026", "sort_key": "2026-01", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.29, "delta": 0.29, "detail": "coverage 102.29% vs required 102.00% (margin +0.29 pts)", "sev": "low"}, {"month": "January 2026", "sort_key": "2026-01", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "January 2026", "sort_key": "2026-01", "check": "within 0.5% of collateral floor", "account": "CONNECT ONE BANK", "bank": "Connect One Bank", "gl": "", "expected": 105.0, "actual": 105.49, "delta": 0.49, "detail": "coverage 105.49% vs required 105.00% (margin +0.49 pts)", "sev": "low"}, {"month": "January 2026", "sort_key": "2026-01", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "February 2026", "sort_key": "2026-02", "check": "recurring deposit-in-transit", "account": "A200-02", "bank": "Capital One", "gl": "", "expected": null, "actual": -207340.7, "delta": null, "detail": "exact amount -207,340.70 recurs in 7 months: August 2025, September 2025, October 2025, November 2025, December 2025, January 2026, February 2026", "sev": "low"}, {"month": "February 2026", "sort_key": "2026-02", "check": "recurring deposit-in-transit", "account": "A201-06/A231-14/A231-15", "bank": "Capital One", "gl": "", "expected": null, "actual": -35000.01, "delta": null, "detail": "exact amount -35,000.01 recurs in 6 months: September 2025, October 2025, November 2025, December 2025, January 2026, February 2026", "sev": "low"}, {"month": "February 2026", "sort_key": "2026-02", "check": "within 0.5% of collateral floor", "account": "CHASE", "bank": "Chase", "gl": "", "expected": 102.0, "actual": 102.24, "delta": 0.24, "detail": "coverage 102.24% vs required 102.00% (margin +0.24 pts)", "sev": "low"}, {"month": "February 2026", "sort_key": "2026-02", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "February 2026", "sort_key": "2026-02", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "March 2026", "sort_key": "2026-03", "check": "dormant account (zero every month)", "account": "A201-07/A231-10/V231-03", "bank": "HSBC", "gl": "", "expected": null, "actual": 0.0, "delta": null, "detail": "zero ending balance in all 15 months", "sev": "low"}, {"month": "March 2026", "sort_key": "2026-03", "check": "recurring deposit-in-transit", "account": "CM200-01", "bank": "Capital One", "gl": "", "expected": null, "actual": -840.0, "delta": null, "detail": "exact amount -840.00 recurs in 14 months: January 2025, February 2025, March 2025, April 2025, May 2025, July 2025, August 2025, September 2025, October 2025, November 2025, December 2025, January 2026, February 2026, March 2026", "sev": "low"}, {"month": "March 2026", "sort_key": "2026-03", "check": "within 0.5% of collateral floor", "account": "VALLEY NATIONAL", "bank": "Valley National", "gl": "", "expected": 105.0, "actual": 105.0, "delta": 0.0, "detail": "coverage 105.00% vs required 105.00% (margin +0.00 pts)", "sev": "low"}, {"month": "March 2026", "sort_key": "2026-03", "check": "within 0.5% of collateral floor", "account": "CLASS", "bank": "CLASS", "gl": "", "expected": 102.0, "actual": 102.0, "delta": 0.0, "detail": "coverage 102.00% vs required 102.00% (margin +0.00 pts)", "sev": "low"}, {"month": "(all months)", "sort_key": "9999-99", "check": "GL under multiple bank names", "account": "A231-16", "bank": "First Nat'l Bank of LI / Connect One Bank", "gl": "A231-16", "expected": null, "actual": null, "delta": null, "detail": "GL A231-16 appears under 2 bank names: First Nat'l Bank of LI (36x, e.g. January 2025/cash); Connect One Bank (9x, e.g. July 2025/cash)", "sev": "med"}]};
+const P = {responsive:true, displModeBar:false};
+const LAY = m => Object.assign({
+  margin:{l:52,r:16,t:10,b:70}, paper_bgcolor:'#fff', plot_bgcolor:'#fff',
+  font:{family:'Segoe UI,Roboto,Arial', size:11, color:'#1f2733'},
+  legend:{orientation:'h', y:-0.22, font:{size:10}}, hovermode:'x unified',
+  xaxis:{tickangle:-45, automargin:true}, yaxis:{gridcolor:'#eef2f7'}
+}, m||{});
+const money = v => v==null? '' : (v<0?'-$':'$')+Math.abs(v).toLocaleString('en-US',{maximumFractionDigits:0});
+const shortM = l => l.replace(' 20'," '");
+
+// ---- KPIs ----
+(function(){
+  const k = DATA.kpis;
+  document.getElementById('hsub').textContent =
+     DATA.span + '  ·  ' + DATA.n_months + ' months  ·  as of ' + DATA.as_of;
+  const cards = [
+    ['Total assets ('+DATA.as_of+')', money(k.total_assets),
+       k.assets_delta==null?'':(k.assets_delta>=0?'▲ ':'▼ ')+money(Math.abs(k.assets_delta))+' vs prior month'],
+    ['Accounts tracked', k.n_accounts, DATA.n_months+' months in master'],
+    ['Depositories', k.n_banks, 'active this month'],
+    ['Exceptions flagged', k.n_exceptions, k.n_high+' high severity'],
+  ];
+  document.getElementById('kpis').innerHTML = cards.map(c=>
+    `<div class="kpi"><div class="label">${c[0]}</div><div class="val">${c[1]}</div><div class="foot">${c[2]||''}</div></div>`).join('');
+})();
+
+// ---- charts ----
+function drawFunds(){
+  const t = DATA.funds.map(s=>({x:DATA.labels.map(shortM), y:s.values, name:s.name,
+     type:'scatter', mode:'lines', stackgroup:'one', hovertemplate:'%{y:$,.0f}<extra>'+s.name+'</extra>'}));
+  Plotly.newPlot('c_funds', t, LAY({yaxis:{tickformat:'$,.0s',gridcolor:'#eef2f7'}}), P);
+}
+function drawCashInv(){
+  const mk = (n,c)=>({x:DATA.labels.map(shortM), y:DATA.cashinv[n], name:n, type:'scatter',
+     mode:'lines', stackgroup:'one', line:{color:c}, fillcolor:c,
+     hovertemplate:'%{y:$,.0f}<extra>'+n+'</extra>'});
+  Plotly.newPlot('c_cashinv', [mk('Cash','#4c72b0'), mk('Investments','#dd8452')],
+     LAY({yaxis:{tickformat:'$,.0s',gridcolor:'#eef2f7'}}), P);
+}
+function drawInterest(){
+  const t = DATA.interest.map(s=>({x:DATA.labels.map(shortM), y:s.values, name:s.name,
+     type:'bar', hovertemplate:'%{y:$,.0f}<extra>'+s.name+'</extra>'}));
+  Plotly.newPlot('c_interest', t, LAY({barmode:'group',
+     yaxis:{tickformat:'$,.0s',gridcolor:'#eef2f7'}}), P);
+}
+function drawColl(){
+  const t = DATA.collateral.map(s=>({x:DATA.labels.map(shortM), y:s.values, name:s.name,
+     type:'scatter', mode:'lines+markers', connectgaps:false,
+     hovertemplate:'%{y:.2f}%<extra>'+s.name+'</extra>'}));
+  const shapes = DATA.floors.map(f=>({type:'line', xref:'paper', x0:0, x1:1, y0:f, y1:f,
+     line:{color:'#c0392b', width:1, dash:'dot'}}));
+  const ann = DATA.floors.map(f=>({xref:'paper', x:1, y:f, text:f.toFixed(0)+'% floor',
+     showarrow:false, font:{color:'#c0392b', size:10}, xanchor:'right', yanchor:'bottom'}));
+  Plotly.newPlot('c_coll', t, LAY({shapes:shapes, annotations:ann,
+     yaxis:{ticksuffix:'%', gridcolor:'#eef2f7'}}), P);
+}
+drawFunds(); drawCashInv(); drawInterest(); drawColl();
+
+// ---- exceptions table ----
+const SEVLBL={high:'High',med:'Med',low:'Low'};
+let sortK='month', sortDir=1;
+const tbody = document.querySelector('#etable tbody');
+
+// populate filters
+(function(){
+  const checks=[...new Set(DATA.exceptions.map(e=>e.check))].sort();
+  const months=[...new Set(DATA.exceptions.map(e=>e.month))]
+     .sort((a,b)=>{const A=DATA.exceptions.find(e=>e.month==a).sort_key,
+                         B=DATA.exceptions.find(e=>e.month==b).sort_key; return A<B?-1:1;});
+  const fc=document.getElementById('fcheck'); checks.forEach(c=>fc.add(new Option(c,c)));
+  const fm=document.getElementById('fmonth'); months.forEach(m=>fm.add(new Option(m,m)));
+  // category bars
+  const cc=DATA.check_counts, max=Math.max(...Object.values(cc),1);
+  document.getElementById('checkbars').innerHTML = Object.entries(cc).map(([k,v])=>
+    `<div class="bar-row"><div class="nm" title="${k}">${k}</div>
+     <div class="track"><div class="fill" style="width:${100*v/max}%"></div></div>
+     <div class="n">${v}</div></div>`).join('');
+})();
+
+function filtered(){
+  const sev=fsev.value, ch=fcheck.value, mo=fmonth.value, q=fsearch.value.toLowerCase();
+  return DATA.exceptions.filter(e=>
+    (!sev||e.sev==sev)&&(!ch||e.check==ch)&&(!mo||e.month==mo)&&
+    (!q||[e.account,e.bank,e.gl,e.detail,e.check].join(' ').toLowerCase().includes(q)));
+}
+function render(){
+  let rows=filtered();
+  rows.sort((a,b)=>{
+    let x=a[sortK], y=b[sortK];
+    if(sortK=='month'){x=a.sort_key;y=b.sort_key;}
+    if(x==null)x=-Infinity; if(y==null)y=-Infinity;
+    return (x<y?-1:x>y?1:0)*sortDir;
+  });
+  tbody.innerHTML = rows.map(e=>{
+    const d=e.delta;
+    const dcls = d==null?'':(d<0?'neg':'pos');
+    return `<tr>
+      <td>${shortM(e.month)}</td>
+      <td><span class="pill ${e.sev}">${SEVLBL[e.sev]}</span></td>
+      <td>${e.check}</td>
+      <td>${e.account||''}</td><td>${e.bank||''}</td><td>${e.gl||''}</td>
+      <td class="num">${e.expected==null?'':money(e.expected)}</td>
+      <td class="num">${e.actual==null?'':money(e.actual)}</td>
+      <td class="num ${dcls}">${d==null?'':money(d)}</td>
+      <td class="detail">${e.detail||''}</td></tr>`;
+  }).join('');
+  document.getElementById('ecount').textContent = rows.length+' of '+DATA.exceptions.length+' exceptions';
+}
+['fsev','fcheck','fmonth'].forEach(id=>document.getElementById(id).onchange=render);
+document.getElementById('fsearch').oninput=render;
+document.querySelectorAll('#etable th').forEach(th=>th.onclick=()=>{
+  const k=th.dataset.k; if(k==sortK)sortDir*=-1; else{sortK=k;sortDir=1;} render();
+});
+render();
+
+// ---- tabs ----
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.tab).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+});
+
+document.getElementById('foot').innerHTML =
+  'Generated by the Treasurer\'s Report pipeline · data as of '+DATA.as_of+
+  '. Dashboard regenerates each run; charts are interactive (hover, zoom, toggle series in the legend). '+
+  'Collateral 0%% points (FDIC-insured small balances) are hidden. First Nat\'l / Connect One are shown as one institution.';
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Never commit voter or personal data
+*Voters*
+*voter*
+*.xlsx
+
+# OS noise
+Thumbs.db
+Desktop.ini
