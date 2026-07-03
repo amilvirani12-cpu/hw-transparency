@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HWUFSD Budget at a Glance — March 2026</title>
+<style>
+:root{--ink:#16202e;--mut:#5c6c81;--line:#e2e8f0;--linesoft:#eaeff5;--bg:#eef2f7;--card:#fff;
+--in:#22794c;--out:#1f5da0;--spent:#2565ab;--comm:#9ec2e8;--remain:#e8edf3;
+--recv:#2b8a58;--mk:#d14a12;--cap:#7c8ba1;--neg:#b4451f;--capacc:#7c3aed;--saacc:#0d9488;
+--shadow:0 1px 2px rgba(15,40,68,.05),0 10px 30px -22px rgba(15,40,68,.35)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI Variable Text','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:linear-gradient(180deg,#eaeff6 0%,var(--bg) 260px);line-height:1.5;
+font-size:16.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact;
+-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:980px;margin:0 auto;padding:26px 24px}
+header.page{position:relative;overflow:hidden;color:#fff;border-radius:18px;
+padding:30px 34px;margin-bottom:24px;
+background:radial-gradient(130% 180% at 0% 0%,#20558a 0%,#16406f 48%,#0e2c52 100%);
+box-shadow:0 2px 4px rgba(10,30,55,.18),0 18px 44px -24px rgba(10,30,55,.55)}
+header.page:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+header.page:after{content:'';position:absolute;right:-70px;top:-90px;width:300px;height:300px;
+border-radius:50%;background:radial-gradient(circle,rgba(122,178,235,.22),transparent 65%);pointer-events:none}
+header.page h1{margin:0 0 5px;font-size:31px;font-weight:700;letter-spacing:-.015em;
+font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif}
+header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350;letter-spacing:.01em}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px;position:relative}
+.meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+border-radius:999px;padding:5px 14px;font-size:13px;letter-spacing:.01em;backdrop-filter:blur(2px)}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:22px 26px;margin-bottom:20px;box-shadow:var(--shadow)}
+h2{font-size:22px;margin:0 0 6px;display:flex;align-items:center;gap:11px;
+letter-spacing:-.012em;font-weight:700}
+h3{font-size:13px;color:var(--mut);margin:20px 0 7px;text-transform:uppercase;
+letter-spacing:.09em;font-weight:650}
+.ico{width:13px;height:13px;border-radius:4.5px;display:inline-block;flex:none}
+.ico.in{background:linear-gradient(160deg,#34925e,#1f6a43);box-shadow:0 0 0 3.5px rgba(43,138,88,.14)}
+.ico.out{background:linear-gradient(160deg,#3273bd,#1a4f8c);box-shadow:0 0 0 3.5px rgba(37,101,171,.14)}
+.ico.cap{background:linear-gradient(160deg,#8b5cf6,#6d28d9);box-shadow:0 0 0 3.5px rgba(124,58,237,.14)}
+.ico.sa{background:linear-gradient(160deg,#14b8a6,#0d8478);box-shadow:0 0 0 3.5px rgba(13,148,136,.14)}
+.headline{font-size:18px;margin:.2em 0 1em;color:#2a3850}
+.headline b{color:var(--ink);font-variant-numeric:tabular-nums}
+.headline.adj{font-size:15.5px;margin:-.7em 0 1.15em;color:var(--mut);
+background:linear-gradient(90deg,rgba(43,138,88,.07),transparent 70%);
+border-left:3px solid var(--in);padding:6px 10px;border-radius:0 8px 8px 0}
+.headline.adj b{color:#2a3850}
+table.grid{width:100%;border-collapse:collapse;font-size:16.5px}
+table.grid th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.07em;
+color:var(--mut);border-bottom:2px solid var(--line);padding:7px 8px;font-weight:650}
+table.grid th.r{text-align:right}
+table.grid td{padding:8.5px 8px;border-bottom:1px solid var(--linesoft);vertical-align:middle}
+table.grid tbody tr:hover{background:#f6f9fc}
+table.grid tfoot td{border-top:2px solid var(--line);border-bottom:none}
+table.grid.small{font-size:15.5px}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pctcol{text-align:right;font-weight:650;font-variant-numeric:tabular-nums;color:#243347}
+.lbl{font-weight:600}
+.lbl .sub,.sub{font-weight:400;color:var(--cap);font-size:12px}
+.cap{font-weight:400;color:var(--cap);font-size:13px;margin-top:3px;max-width:46ch;line-height:1.45}
+.barwrap{position:relative;padding-top:2px;width:100%}
+.bar{position:relative;display:flex;height:18px;width:100%;min-width:0;background:var(--remain);
+border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 2.5px rgba(15,40,68,.14)}
+.seg{height:100%}
+.seg+.seg{box-shadow:inset 1.5px 0 0 rgba(255,255,255,.75)}
+.seg.spent{background:linear-gradient(180deg,#3b7cc4 0%,#1e548f 100%)}
+.seg.committed{background:linear-gradient(180deg,#b3cfec 0%,#93b9e2 100%)}
+.seg.recv{background:linear-gradient(180deg,#3a9c66 0%,#227247 100%)}
+.bar-empty{font-size:11px;color:var(--cap);text-align:center;line-height:18px;width:100%}
+.marker{position:absolute;top:-3px;width:2px;height:24px;background:var(--mk);z-index:3;border-radius:1px;
+box-shadow:0 0 0 .5px rgba(255,255,255,.6)}
+.marker:after{content:'';position:absolute;top:-4px;left:-2.5px;width:7px;height:7px;
+background:var(--mk);border-radius:2px;transform:rotate(45deg)}
+.legend{font-size:12px;color:var(--mut);margin:2px 0 13px}
+.key{display:inline-block;width:11px;height:11px;border-radius:3.5px;vertical-align:-1px;margin-right:4px}
+.key.spent{background:linear-gradient(180deg,#3b7cc4,#1e548f)}
+.key.committed{background:linear-gradient(180deg,#b3cfec,#93b9e2)}
+.key.remain{background:var(--remain);border:1px solid var(--line)}
+.key.recv{background:linear-gradient(180deg,#3a9c66,#227247)}.key.mk{background:var(--mk)}
+.note{font-size:15px;color:var(--mut);margin:13px 0 0;background:#f6f9fc;border:1px solid var(--linesoft);
+border-left:3px solid #c9d6e4;padding:9px 13px;border-radius:0 9px 9px 0;line-height:1.5}
+.cards{display:flex;gap:13px;flex-wrap:wrap;margin:12px 0 8px}
+.card{flex:1;min-width:130px;background:linear-gradient(180deg,#fff,#fafcfe);border:1px solid var(--line);
+border-radius:13px;padding:16px 14px 13px;text-align:center;
+box-shadow:0 1px 2px rgba(15,40,68,.05)}
+.card:after{content:'';display:block;width:26px;height:3px;border-radius:2px;
+background:linear-gradient(90deg,#8b5cf6,#6d28d9);margin:9px auto 0;opacity:.75}
+.cardv{font-size:25px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cardl{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.09em;margin-top:4px;font-weight:600}
+.timing{background:#fdf1cf;color:#8a5a06;border:1px solid #f0d894;font-size:10px;padding:1.5px 7px;
+border-radius:999px;text-transform:uppercase;letter-spacing:.06em;font-weight:650}
+.recon{background:linear-gradient(180deg,#fcfdfe,#f8fafc)}
+.audit{list-style:none;padding:0;margin:12px 0 0;font-size:15.5px;columns:2;column-gap:28px}
+.audit li{margin:5px 0;break-inside:avoid}
+.missing{background:#fff8ee;border-color:#f5ddb8}
+footer.page{text-align:center;color:var(--mut);font-size:12.5px;padding:10px 26px 26px;line-height:1.6}
+/* expandable PDF-to-report bridge */
+.dtable{margin-top:4px}
+.dtable.rev{--cols:minmax(70px,1fr) 78px 84px 128px 50px}
+.dtable.spend{--cols:minmax(70px,1fr) 66px 66px 80px 116px 52px}
+.dtable .barcol{min-width:0}
+.hrow{display:grid;grid-template-columns:var(--cols);gap:8px;padding:7px 8px;font-size:11.5px;
+text-transform:uppercase;letter-spacing:.07em;color:var(--mut);border-bottom:2px solid var(--line);font-weight:650}
+.hrow .r{text-align:right}
+.brow{border-bottom:1px solid var(--linesoft)}
+.brow>summary{display:grid;grid-template-columns:var(--cols);gap:8px;align-items:center;
+padding:10px 8px;cursor:pointer;list-style:none;font-size:16.5px;border-radius:8px;
+transition:background .12s ease}
+.brow>summary::-webkit-details-marker{display:none}
+.brow>summary::marker{content:''}
+.brow>summary:hover{background:#f3f7fb}
+.brow[open]>summary{background:#f3f7fb;border-radius:8px 8px 0 0}
+.brow>summary:focus-visible{outline:2px solid var(--out);outline-offset:-2px}
+.brow .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:400}
+.brow .lbl{font-weight:600}
+.brow .lbl .cap{margin-left:18px}
+.car{display:inline-block;width:0;height:0;border:4.5px solid transparent;border-left-color:#9aa9bc;
+margin-right:8px;transition:transform .16s ease;vertical-align:middle}
+.brow[open] .car{transform:rotate(90deg);border-left-color:var(--out)}
+.trace-hint{color:var(--out);font-weight:600}
+.drill{background:#f8fafd;padding:11px 14px 13px 30px;border-top:1px solid var(--linesoft);
+border-left:3px solid #d5e2ef;box-shadow:inset 0 3px 5px -4px rgba(15,40,68,.18);
+animation:drillin .18s ease}
+@keyframes drillin{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.drill .dr{display:grid;gap:8px;padding:5.5px 0;border-bottom:1px solid #e7edf4;font-size:15px}
+.dtable.rev .drill .dr{grid-template-columns:minmax(0,1fr) 130px 130px}
+.dtable.spend .drill .dr{grid-template-columns:minmax(0,1fr) 115px 115px 125px}
+.drill .dh{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);font-weight:650}
+.drill .dn{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.drill .dd .code{color:var(--cap);font-size:11px}
+.drill .subtot{font-weight:700;border-bottom:none;border-top:2px solid var(--line);margin-top:2px}
+.cite{margin-top:10px;font-size:12.5px;color:var(--mut);background:#edf3fa;border:1px solid #dde8f3;
+border-radius:8px;padding:7px 11px;line-height:1.5}
+.srcfile{font-weight:400;color:var(--cap);font-size:11.5px;margin-top:2px}
+.toolbar{margin:0 0 15px}
+.btn{font:inherit;font-size:15px;cursor:pointer;background:#fff;color:var(--out);
+border:1px solid #cfdcea;border-radius:999px;padding:7px 15px;font-weight:600;
+box-shadow:0 1px 2px rgba(15,40,68,.07);transition:box-shadow .12s ease,transform .12s ease,background .12s ease}
+.btn:hover{background:#f2f7fc;box-shadow:0 2px 7px rgba(15,40,68,.12);transform:translateY(-1px)}
+.btn:active{transform:none;box-shadow:0 1px 2px rgba(15,40,68,.08)}
+.btn:focus-visible{outline:2px solid var(--out);outline-offset:2px}
+@media print{body{background:#fff}section{break-inside:avoid;box-shadow:none}
+header.page{box-shadow:none}.brow .drill{display:block;animation:none}
+.trace-hint,.toolbar{display:none}.car{display:none}}
+@media(max-width:640px){.audit{columns:1}.meta{gap:6px}
+.dtable.rev,.dtable.spend{--cols:minmax(0,1fr) 70px 78px}
+.hrow span:nth-child(4),.hrow span:nth-child(5),.hrow span:nth-child(6),
+.brow .barcol,.brow .pctcol{display:none}}
+</style></head>
+<body><div class="wrap">
+<style>.sitenav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;font-size:14px;margin-bottom:14px}.sitenav .brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em;margin-right:8px}.sitenav a{color:var(--mut);text-decoration:none}.sitenav a:hover{color:var(--ink)}.sitenav a.on{color:#1f5da0;font-weight:650}@media print{.sitenav{display:none}}</style>
+<nav class="sitenav"><a class="brand" href="../">HW Fiscal Dashboard</a><a href="../budget/" class="on">Budget</a><a href="../treasurer/">Treasurer</a><a href="../facilities/tours/">Facilities Tours</a><a href="../facilities/bcs/">Building Condition</a></nav>
+<header class="page">
+  <h1>Hewlett-Woodmere UFSD</h1>
+  <p class="sub">Budget at a Glance &mdash; March 2026</p>
+  <div class="meta"><span>As of 03/24/2026</span><span>Fiscal Year 2026 (Jul 2025 – Jun 2026)</span><span>Month 9 of 12</span><span>3 of 6 reports</span></div>
+</header>
+<div class="toolbar"><button class="btn" id="xall" type="button">&#9656; Expand all source detail</button></div>
+<section class='missing'><h2>Reports not included this month</h2><p class='note'>This page was built from the files provided. Missing: <b>Fund A revenue, Fund H revenue, Fund F revenue</b>. Those sections are omitted.</p></section>
+    <section>
+      <h2><span class="ico out"></span>General Fund &mdash; Money Out</h2>
+      <p class="headline">Of <b>$154.0M</b> budgeted to spend, <b>$102.3M</b> is spent and <b>$42.3M</b> is committed &mdash; <b>94%</b> obligated, with <b>73%</b> of the year elapsed.</p>
+      <div class="legend"><span class="key spent"></span>Spent
+        &nbsp;&nbsp;<span class="key committed"></span>Committed (encumbered)
+        &nbsp;&nbsp;<span class="key remain"></span>Unspent
+        &nbsp;&nbsp;<span class="key mk"></span>Year elapsed
+        &nbsp;&nbsp;<span class="trace-hint">&#9656; click any row to trace it to the source PDF</span></div>
+      <div class="dtable spend">
+        <div class="hrow"><span>Category</span><span class="r">Budget</span><span class="r">Spent</span>
+          <span class="r">Committed</span><span>Progress</span><span class="r">Obl.%</span></div>
+        <details class='brow'><summary><span class='lbl'><span class='car'></span>Instruction</span><span class='num' title='$76,464,585.02'>$76.5M</span><span class='num' title='$46,450,415.63'>$46.5M</span><span class='num' title='$25,941,218.13'>$25.9M</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:60.7%"></div><div class="seg committed" style="width:33.9%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>95%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Teaching-Regular School <span class='code'>2110</span></span><span class='dn'>$32,775,808.36</span><span class='dn'>$19,817,964.86</span><span class='dn'>$12,039,168.84</span></div><div class='dr'><span class='dd'>Prg For Sdnts w/Disabil-Med Elgble <span class='code'>2250</span></span><span class='dn'>$22,957,262.63</span><span class='dn'>$13,190,462.55</span><span class='dn'>$8,178,714.50</span></div><div class='dr'><span class='dd'>Computer Assisted Instruction <span class='code'>2630</span></span><span class='dn'>$4,171,156.77</span><span class='dn'>$2,529,720.52</span><span class='dn'>$1,032,715.66</span></div><div class='dr'><span class='dd'>Supervision-Regular School <span class='code'>2020</span></span><span class='dn'>$3,765,775.56</span><span class='dn'>$2,645,638.94</span><span class='dn'>$1,025,833.29</span></div><div class='dr'><span class='dd'>Health Srvcs-Regular School <span class='code'>2815</span></span><span class='dn'>$2,099,324.14</span><span class='dn'>$1,295,965.30</span><span class='dn'>$378,419.51</span></div><div class='dr'><span class='dd'>Guidance-Regular School <span class='code'>2810</span></span><span class='dn'>$1,999,390.05</span><span class='dn'>$1,294,206.32</span><span class='dn'>$696,122.35</span></div><div class='dr'><span class='dd'>Interscholastic Athletics-Reg Schl <span class='code'>2855</span></span><span class='dn'>$1,648,924.03</span><span class='dn'>$1,145,508.17</span><span class='dn'>$438,084.12</span></div><div class='dr'><span class='dd'>Prg for English Language Learners <span class='code'>2259</span></span><span class='dn'>$1,445,886.96</span><span class='dn'>$893,698.59</span><span class='dn'>$552,188.37</span></div><div class='dr'><span class='dd'>Psychological Srvcs-Reg Schl <span class='code'>2820</span></span><span class='dn'>$1,324,494.47</span><span class='dn'>$856,272.40</span><span class='dn'>$454,027.11</span></div><div class='dr'><span class='dd'>Social Work Srvcs-Regular School <span class='code'>2825</span></span><span class='dn'>$791,271.00</span><span class='dn'>$512,675.66</span><span class='dn'>$277,973.15</span></div><div class='dr'><span class='dd'>School Library &amp; AV <span class='code'>2610</span></span><span class='dn'>$770,977.30</span><span class='dn'>$450,525.55</span><span class='dn'>$289,515.76</span></div><div class='dr'><span class='dd'>Co-Curricular Activ-Reg Schl <span class='code'>2850</span></span><span class='dn'>$640,154.31</span><span class='dn'>$378,276.87</span><span class='dn'>$128,217.09</span></div><div class='dr'><span class='dd'>Teaching-Special Schools <span class='code'>2330</span></span><span class='dn'>$569,644.41</span><span class='dn'>$439,765.03</span><span class='dn'>$87,881.27</span></div><div class='dr'><span class='dd'>Inservice Training-Instruction <span class='code'>2070</span></span><span class='dn'>$564,277.15</span><span class='dn'>$361,658.75</span><span class='dn'>$110,196.63</span></div><div class='dr'><span class='dd'>Occupational Education(Grades 9-12) <span class='code'>2280</span></span><span class='dn'>$420,354.00</span><span class='dn'>$319,463.49</span><span class='dn'>$100,890.51</span></div><div class='dr'><span class='dd'>Curriculum Devel and Suprvsn <span class='code'>2010</span></span><span class='dn'>$291,025.08</span><span class='dn'>$174,091.06</span><span class='dn'>$67,748.99</span></div><div class='dr'><span class='dd'>Attendance-Regular School <span class='code'>2805</span></span><span class='dn'>$215,858.80</span><span class='dn'>$133,987.82</span><span class='dn'>$81,370.98</span></div><div class='dr'><span class='dd'>Research, Planning &amp; Evaluation <span class='code'>2060</span></span><span class='dn'>$13,000.00</span><span class='dn'>$10,533.75</span><span class='dn'>$2,150.00</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$76,464,585.02</span><span class='dn'>$46,450,415.63</span><span class='dn'>$25,941,218.13</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Employee Benefits</span><span class='num' title='$31,585,000.00'>$31.6M</span><span class='num' title='$21,384,466.57'>$21.4M</span><span class='num' title='$8,021,039.81'>$8.0M</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:67.7%"></div><div class="seg committed" style="width:25.4%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>93%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Hospital, Medical, Dental Insurance <span class='code'>9060</span></span><span class='dn'>$17,490,000.00</span><span class='dn'>$12,598,913.34</span><span class='dn'>$3,546,556.66</span></div><div class='dr'><span class='dd'>Teachers&#x27; Retirement <span class='code'>9020</span></span><span class='dn'>$5,491,689.75</span><span class='dn'>$3,182,741.17</span><span class='dn'>$1,862,675.68</span></div><div class='dr'><span class='dd'>Social Security <span class='code'>9030</span></span><span class='dn'>$5,400,000.00</span><span class='dn'>$3,386,285.54</span><span class='dn'>$1,847,298.83</span></div><div class='dr'><span class='dd'>State Retirement <span class='code'>9010</span></span><span class='dn'>$2,308,310.25</span><span class='dn'>$1,676,337.58</span><span class='dn'>$653,202.88</span></div><div class='dr'><span class='dd'>Workers&#x27; Compensation <span class='code'>9040</span></span><span class='dn'>$500,000.00</span><span class='dn'>$278,443.47</span><span class='dn'>$45,168.47</span></div><div class='dr'><span class='dd'>Other (specify) <span class='code'>9089</span></span><span class='dn'>$210,000.00</span><span class='dn'>$156,455.80</span><span class='dn'>$24,626.96</span></div><div class='dr'><span class='dd'>Life Insurance <span class='code'>9045</span></span><span class='dn'>$115,000.00</span><span class='dn'>$54,496.62</span><span class='dn'>$22,303.38</span></div><div class='dr'><span class='dd'>Unemployment Insurance <span class='code'>9050</span></span><span class='dn'>$70,000.00</span><span class='dn'>$50,793.05</span><span class='dn'>$19,206.95</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$31,585,000.00</span><span class='dn'>$21,384,466.57</span><span class='dn'>$8,021,039.81</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Transportation</span><span class='num' title='$12,517,290.31'>$12.5M</span><span class='num' title='$7,120,732.59'>$7.1M</span><span class='num' title='$5,039,020.56'>$5.0M</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:56.9%"></div><div class="seg committed" style="width:40.3%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>97%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Contract Transportation-Med Elgble <span class='code'>5540</span></span><span class='dn'>$12,139,354.00</span><span class='dn'>$6,891,874.73</span><span class='dn'>$4,954,582.05</span></div><div class='dr'><span class='dd'>District Transportation Services <span class='code'>5510</span></span><span class='dn'>$372,936.31</span><span class='dn'>$225,400.11</span><span class='dn'>$82,996.26</span></div><div class='dr'><span class='dd'>Public Transportation <span class='code'>5550</span></span><span class='dn'>$5,000.00</span><span class='dn'>$3,457.75</span><span class='dn'>$1,442.25</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$12,517,290.31</span><span class='dn'>$7,120,732.59</span><span class='dn'>$5,039,020.56</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Operations & Maintenance</span><span class='num' title='$10,368,980.95'>$10.4M</span><span class='num' title='$7,054,000.22'>$7.1M</span><span class='num' title='$2,042,375.37'>$2.0M</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:68.0%"></div><div class="seg committed" style="width:19.7%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>88%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Operation of Plant <span class='code'>1620</span></span><span class='dn'>$6,374,195.87</span><span class='dn'>$4,553,649.68</span><span class='dn'>$1,317,554.49</span></div><div class='dr'><span class='dd'>Maintenance of Plant <span class='code'>1621</span></span><span class='dn'>$2,434,788.83</span><span class='dn'>$1,447,190.53</span><span class='dn'>$687,835.75</span></div><div class='dr'><span class='dd'>Security of Plant <span class='code'>1622</span></span><span class='dn'>$1,559,996.25</span><span class='dn'>$1,053,160.01</span><span class='dn'>$36,985.13</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$10,368,980.95</span><span class='dn'>$7,054,000.22</span><span class='dn'>$2,042,375.37</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Administration & General Support</span><span class='num' title='$6,104,029.35'>$6.1M</span><span class='num' title='$4,447,946.57'>$4.4M</span><span class='num' title='$1,224,178.42'>$1.2M</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:72.9%"></div><div class="seg committed" style="width:20.1%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>93%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Business Administration <span class='code'>1310</span></span><span class='dn'>$1,401,141.13</span><span class='dn'>$904,665.88</span><span class='dn'>$335,406.58</span></div><div class='dr'><span class='dd'>Unallocated Insurance <span class='code'>1910</span></span><span class='dn'>$917,846.40</span><span class='dn'>$917,846.40</span><span class='dn'>$0.00</span></div><div class='dr'><span class='dd'>Personnel <span class='code'>1430</span></span><span class='dn'>$626,981.15</span><span class='dn'>$423,777.19</span><span class='dn'>$152,716.73</span></div><div class='dr'><span class='dd'>Chief School Administrator <span class='code'>1240</span></span><span class='dn'>$585,463.44</span><span class='dn'>$438,166.00</span><span class='dn'>$139,696.16</span></div><div class='dr'><span class='dd'>BOCES Administrative Costs <span class='code'>1981</span></span><span class='dn'>$486,000.00</span><span class='dn'>$364,881.17</span><span class='dn'>$96,517.83</span></div><div class='dr'><span class='dd'>Public Information and Services <span class='code'>1480</span></span><span class='dn'>$465,994.00</span><span class='dn'>$346,868.33</span><span class='dn'>$96,491.11</span></div><div class='dr'><span class='dd'>Judgments and Claims <span class='code'>1930</span></span><span class='dn'>$465,320.54</span><span class='dn'>$368,780.62</span><span class='dn'>$96,539.62</span></div><div class='dr'><span class='dd'>Central Printing &amp; Mailing <span class='code'>1670</span></span><span class='dn'>$407,683.00</span><span class='dn'>$233,778.53</span><span class='dn'>$106,742.37</span></div><div class='dr'><span class='dd'>Legal <span class='code'>1420</span></span><span class='dn'>$395,848.00</span><span class='dn'>$258,141.10</span><span class='dn'>$137,706.90</span></div><div class='dr'><span class='dd'>Auditing <span class='code'>1320</span></span><span class='dn'>$102,000.00</span><span class='dn'>$60,441.64</span><span class='dn'>$30,183.36</span></div><div class='dr'><span class='dd'>Board Of Education <span class='code'>1010</span></span><span class='dn'>$99,760.98</span><span class='dn'>$64,652.64</span><span class='dn'>$14,513.73</span></div><div class='dr'><span class='dd'>Treasurer <span class='code'>1325</span></span><span class='dn'>$73,881.71</span><span class='dn'>$27,382.86</span><span class='dn'>$11,216.03</span></div><div class='dr'><span class='dd'>District Clerk <span class='code'>1040</span></span><span class='dn'>$37,649.00</span><span class='dn'>$32,616.63</span><span class='dn'>$200.00</span></div><div class='dr'><span class='dd'>District Meeting <span class='code'>1060</span></span><span class='dn'>$21,460.00</span><span class='dn'>$1,528.00</span><span class='dn'>$6,150.00</span></div><div class='dr'><span class='dd'>Records Management Officer <span class='code'>1460</span></span><span class='dn'>$13,000.00</span><span class='dn'>$1,030.58</span><span class='dn'>$98.00</span></div><div class='dr'><span class='dd'>School Association Dues <span class='code'>1920</span></span><span class='dn'>$4,000.00</span><span class='dn'>$3,389.00</span><span class='dn'>$0.00</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$6,104,029.35</span><span class='dn'>$4,447,946.57</span><span class='dn'>$1,224,178.42</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Community & Recreation</span><span class='num' title='$865,531.51'>$866K</span><span class='num' title='$723,021.26'>$723K</span><span class='num' title='$36,372.12'>$36K</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:83.5%"></div><div class="seg committed" style="width:4.2%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>88%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Recreation <span class='code'>7140</span></span><span class='dn'>$865,531.51</span><span class='dn'>$723,021.26</span><span class='dn'>$36,372.12</span></div><div class='dr'><span class='dd'>Civic Activities <span class='code'>8060</span></span><span class='dn'>$0.00</span><span class='dn'>$0.00</span><span class='dn'>$0.00</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$865,531.51</span><span class='dn'>$723,021.26</span><span class='dn'>$36,372.12</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details><details class='brow'><summary><span class='lbl'><span class='car'></span>Debt & Transfers</span><span class='num' title='$16,053,468.00'>$16.1M</span><span class='num' title='$15,123,558.77'>$15.1M</span><span class='num' title='$0.00'>$0</span><span class='barcol'><div class="barwrap"><div class="bar"><div class="seg spent" style="width:94.2%"></div><div class="seg committed" style="width:0.0%"></div></div><div class="marker" style="left:73.1%" title="73.1% of year elapsed"></div></div></span><span class='pctcol'>94%</span></summary><div class='drill'><div class='dr dh'><span class='dd'>Function line on the PDF</span><span class='dn'>Budget</span><span class='dn'>Spent</span><span class='dn'>Committed</span></div><div class='dr'><span class='dd'>Transfer to Capital Fund <span class='code'>9950</span></span><span class='dn'>$15,879,968.00</span><span class='dn'>$15,123,558.77</span><span class='dn'>$0.00</span></div><div class='dr'><span class='dd'>Transfer to Other Funds <span class='code'>9901</span></span><span class='dn'>$173,500.00</span><span class='dn'>$0.00</span><span class='dn'>$0.00</span></div><div class='dr'><span class='dd'>Tax Anticipation Notes <span class='code'>9760</span></span><span class='dn'>$0.00</span><span class='dn'>$0.00</span><span class='dn'>$0.00</span></div><div class='dr subtot'><span class='dd'>This category total</span><span class='dn'>$16,053,468.00</span><span class='dn'>$15,123,558.77</span><span class='dn'>$0.00</span></div><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_A Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $153,958,885.14, which every category below adds back up to.</div></div></details>
+      </div>
+      <p class="note">&ldquo;Committed&rdquo; is money under contract or purchase order but not yet paid out.
+      Obligated = spent + committed. Comparing obligated&nbsp;% to the share of the year elapsed
+      shows whether spending is on pace.</p>
+      
+    </section>
+    <section>
+      <h2><span class="ico cap"></span>Capital Program</h2>
+      <p class="headline">This is multi-year construction money. A low percent spent in any single
+      month is normal &mdash; projects draw down over several years.</p>
+      <div class="cards"><div class="card"><div class="cardv">$47.5M</div><div class="cardl">Budgeted</div></div><div class="card"><div class="cardv">$16.9M</div><div class="cardl">Spent</div></div><div class="card"><div class="cardv">$2.7M</div><div class="cardl">Committed</div></div><div class="card"><div class="cardv">$27.9M</div><div class="cardl">Remaining</div></div></div>
+      <table class='grid small'><thead><tr><th>Project area</th><th class='r'>Budgeted</th><th class='r'>Spent</th><th class='r'>Committed</th></tr></thead><tbody><tr><td class='lbl'>Operation of Plant</td><td class='num' title='$1,810,189.26'>$1.8M</td><td class='num' title='$510,931.16'>$511K</td><td class='num' title='$14,279.22'>$14K</td></tr><tr><td class='lbl'>Maintenance of Plant</td><td class='num' title='$45,379,497.64'>$45.4M</td><td class='num' title='$16,339,560.93'>$16.3M</td><td class='num' title='$2,732,929.18'>$2.7M</td></tr><tr><td class='lbl'>Furniture, Eq., Textbooks-Regular School</td><td class='num' title='$309,341.78'>$309K</td><td class='num' title='$0.00'>$0</td><td class='num' title='$0.00'>$0</td></tr></tbody></table>
+      
+      <div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_H Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $47,499,028.68, which every category below adds back up to.</div>
+      
+    </section><section><h2><span class="ico sa"></span>Special Aid (Grants)</h2><p class='headline'>Grant-funded programs (IDEA, Pre-K, school-age, Title&nbsp;III and others). These are reimbursed by outside funders, so they don&rsquo;t draw on local taxes.</p><h3>Grant spending</h3><table class='grid small'><thead><tr><th>Program</th><th class='r'>Budget</th><th class='r'>Spent</th></tr></thead><tbody><tr><td class='lbl'>Teaching-Regular School <span class='sub'>2110</span></td><td class='num' title='$550,253.94'>$550K</td><td class='num' title='$288,132.38'>$288K</td></tr><tr><td class='lbl'>Prg For Sdnts w/Disabil-Med Elgble <span class='sub'>2250</span></td><td class='num' title='$1,411,261.00'>$1.4M</td><td class='num' title='$579,518.44'>$580K</td></tr><tr><td class='lbl'>School Age w/Disabil-July/August <span class='sub'>2253</span> <span class='timing'>timing</span></td><td class='num' title='−$1,613,224.92'>−$1.6M</td><td class='num' title='$940,280.24'>$940K</td></tr><tr><td class='lbl'>Tuition for S4201 Bl ind, Deaf <span class='sub'>2254</span></td><td class='num' title='$0.00'>$0</td><td class='num' title='$90,389.52'>$90K</td></tr><tr><td class='lbl'>Pre-Kindergarten Program <span class='sub'>2510</span></td><td class='num' title='$0.00'>$0</td><td class='num' title='$295,330.49'>$295K</td></tr><tr><td class='lbl'>Health Srvcs-Regular School <span class='sub'>2815</span> <span class='timing'>timing</span></td><td class='num' title='−$538.25'>−$538</td><td class='num' title='$0.00'>$0</td></tr></tbody><tfoot><tr><td class='lbl'><b>Total</b></td><td class='num'><b>$348K</b></td><td class='num'><b>$2.2M</b></td></tr></tfoot></table><div class='cite'>Source: <b>2026-04-15_March 2026_Budget Status_F Fund.PDF</b> &middot; As&nbsp;Of 03/24/2026 &middot; WinCap 26.03.03.2289 &middot; this report&rsquo;s printed Total is $347,751.77, which every category below adds back up to.</div><p class='note'><span class='timing'>timing</span> A negative budget is normal grant accounting &mdash; prior-year July/August programs and indirect-cost offsets. It is <b>not</b> a deficit or an overspend.</p></section>
+    <section class="recon">
+      <h2>Reconciliation &amp; Audit</h2>
+      <p class="note">Every category is summed independently and checked against the figure WinCap
+      prints on each report&rsquo;s Total line. Unclassified holds any dollars that didn&rsquo;t fall
+      into a named category &mdash; so nothing is dropped.</p>
+      <table class="grid small">
+        <thead><tr><th>Report</th><th class="r">Category sum</th><th class="r">Printed total</th>
+          <th class="r">Difference</th><th class="r">Unclassified</th><th>Status</th></tr></thead>
+        <tbody><tr><td>Fund A &mdash; budget<div class='srcfile'>2026-04-15_March 2026_Budget Status_A Fund.PDF</div></td><td class='num'>$153,958,885.14</td><td class='num'>$153,958,885.14</td><td class='num'>$0.00</td><td class='num'>$0.00</td><td>&#10003; ties out</td></tr><tr><td>Fund H &mdash; budget<div class='srcfile'>2026-04-15_March 2026_Budget Status_H Fund.PDF</div></td><td class='num'>$47,499,028.68</td><td class='num'>$47,499,028.68</td><td class='num'>$0.00</td><td class='num'>$0.00</td><td>&#10003; ties out</td></tr><tr><td>Fund F &mdash; budget<div class='srcfile'>2026-04-15_March 2026_Budget Status_F Fund.PDF</div></td><td class='num'>$347,751.77</td><td class='num'>$347,751.77</td><td class='num'>$0.00</td><td class='num'>$0.00</td><td>&#10003; ties out</td></tr></tbody>
+      </table>
+      <ul class="audit"><li>&#10003; Fund A budget: categories tie to printed total</li><li>&#10003; Fund A spending: Current = Initial + Adjustments</li><li>&#10003; Fund F budget: categories tie to printed total</li><li>&#10003; Fund F spending: Current = Initial + Adjustments</li><li>&#10003; Fund H budget: categories tie to printed total</li><li>&#10003; Fund H spending: Current = Initial + Adjustments</li></ul>
+    </section>
+<footer class="page">
+<b>Unofficial summary</b> derived from the district&rsquo;s official WinCap Revenue &amp; Budget Status
+Reports; the official reports govern. Figures are rounded on screen &mdash; exact dollars appear on
+hover and inside each expanded row. Every category expands to the exact source lines and names the
+PDF it came from, and each fund is independently reconciled to its printed Total (see the
+Reconciliation &amp; Audit section).</footer>
+</div>
+<script>
+(function(){
+  var rows=function(){return document.querySelectorAll('details.brow');};
+  function setAll(open){rows().forEach(function(d){d.open=open;});}
+  var btn=document.getElementById('xall');
+  if(btn){btn.addEventListener('click',function(){
+    var anyClosed=document.querySelector('details.brow:not([open])')!==null;
+    setAll(anyClosed);
+    btn.innerHTML=(anyClosed?'&#9662; Collapse all source detail':'&#9656; Expand all source detail');
+  });}
+  window.addEventListener('beforeprint',function(){setAll(true);});
+})();
+</script>
+</body></html>

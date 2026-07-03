@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Budget at a Glance — Archive | HW Fiscal Dashboard</title>
+<style>
+:root{--ink:#16202e;--mut:#5c6c81;--line:#e2e8f0;--linesoft:#eaeff5;--bg:#eef2f7;--card:#fff;
+--info:#1f5da0;--shadow:0 1px 2px rgba(15,40,68,.05),0 10px 30px -22px rgba(15,40,68,.35)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI Variable Text','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:linear-gradient(180deg,#eaeff6 0%,var(--bg) 260px);line-height:1.5;
+font-size:16.5px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:26px 24px}
+.sitenav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;font-size:14px;margin-bottom:14px}
+.sitenav .brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em;margin-right:8px}
+.sitenav a{color:var(--mut);text-decoration:none}
+.sitenav a:hover{color:var(--ink)}
+.sitenav a.on{color:var(--info);font-weight:650}
+header.page{position:relative;overflow:hidden;color:#fff;border-radius:18px;
+padding:30px 34px;margin-bottom:24px;
+background:radial-gradient(130% 180% at 0% 0%,#20558a 0%,#16406f 48%,#0e2c52 100%);
+box-shadow:0 2px 4px rgba(10,30,55,.18),0 18px 44px -24px rgba(10,30,55,.55)}
+header.page:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+header.page:after{content:'';position:absolute;right:-70px;top:-90px;width:300px;height:300px;
+border-radius:50%;background:radial-gradient(circle,rgba(122,178,235,.22),transparent 65%);pointer-events:none}
+header.page h1{margin:0 0 5px;font-size:32px;font-weight:700;letter-spacing:-.015em}
+header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px;position:relative}
+.meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+border-radius:999px;padding:5px 14px;font-size:13.5px}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:20px 26px 24px;margin-bottom:20px;box-shadow:var(--shadow)}
+h3.fyhead{font-size:13px;color:var(--mut);margin:22px 0 2px;text-transform:uppercase;
+letter-spacing:.08em;font-weight:650;display:flex;align-items:baseline;gap:10px}
+h3.fyhead:first-child{margin-top:4px}
+.fyspan{text-transform:none;letter-spacing:0;font-weight:400;font-size:13px;color:#8a97a8}
+ul.months{list-style:none;margin:0;padding:0}
+ul.months li{border-bottom:1px solid var(--linesoft)}
+ul.months a{display:flex;justify-content:space-between;align-items:baseline;
+padding:12px 6px;color:var(--ink);text-decoration:none;font-size:17px}
+ul.months a:hover{background:#f6f9fc}
+ul.months .fy{color:var(--mut);font-size:13.5px}
+.badge{font-size:11.5px;font-weight:650;color:#fff;background:linear-gradient(180deg,#2a67ab,#1d4e88);
+border-radius:999px;padding:2px 10px;margin-left:10px}
+.note{font-size:15px;color:var(--mut);background:#f6f9fc;border:1px solid var(--linesoft);
+border-left:3px solid #c9d6e4;padding:10px 13px;border-radius:0 9px 9px 0;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="../">HW Fiscal Dashboard</a>
+  <a href="../budget/" class="on">Budget</a>
+  <a href="../treasurer/">Treasurer</a>
+  <a href="../facilities/tours/">Facilities Tours</a>
+  <a href="../facilities/bcs/">Building Condition</a>
+</nav>
+
+<header class="page">
+  <h1>Budget at a Glance</h1>
+  <p class="sub">One page per board meeting: revenue in, spending out, and where every dollar stands.</p>
+  <div class="meta">
+    <span>32 months &middot; FY 2023&ndash;26</span>
+    <span>Source: WinCap Revenue &amp; Budget Status reports</span>
+    <span>Every figure cites its source PDF</span>
+  </div>
+</header>
+
+<section>
+  <h3 class="fyhead">FY 2025&ndash;26 <span class="fyspan">July 2025 &ndash; June 2026</span></h3>
+  <ul class="months">
+    <li><a href="FY2026-June.html"><span>June 2026<span class="badge">Latest</span></span><span class="fy">month 12 of 12</span></a></li>
+    <li><a href="FY2026-May.html"><span>May 2026</span><span class="fy">month 11 of 12</span></a></li>
+    <li><a href="FY2026-April.html"><span>April 2026</span><span class="fy">month 10 of 12</span></a></li>
+    <li><a href="FY2026-March.html"><span>March 2026</span><span class="fy">month 9 of 12</span></a></li>
+    <li><a href="FY2026-February.html"><span>February 2026</span><span class="fy">month 8 of 12</span></a></li>
+    <li><a href="FY2026-January.html"><span>January 2026</span><span class="fy">month 7 of 12</span></a></li>
+    <li><a href="FY2026-December.html"><span>December 2025</span><span class="fy">month 6 of 12</span></a></li>
+    <li><a href="FY2026-November.html"><span>November 2025</span><span class="fy">month 5 of 12</span></a></li>
+    <li><a href="FY2026-October.html"><span>October 2025</span><span class="fy">month 4 of 12</span></a></li>
+    <li><a href="FY2026-September.html"><span>September 2025</span><span class="fy">month 3 of 12</span></a></li>
+    <li><a href="FY2026-August.html"><span>August 2025</span><span class="fy">month 2 of 12</span></a></li>
+    <li><a href="FY2026-July.html"><span>July 2025</span><span class="fy">month 1 of 12</span></a></li>
+  </ul>
+  <h3 class="fyhead">FY 2024&ndash;25 <span class="fyspan">July 2024 &ndash; June 2025</span></h3>
+  <ul class="months">
+    <li><a href="FY2025-June.html"><span>June 2025</span><span class="fy">month 12 of 12</span></a></li>
+    <li><a href="FY2025-May.html"><span>May 2025</span><span class="fy">month 11 of 12</span></a></li>
+    <li><a href="FY2025-April.html"><span>April 2025</span><span class="fy">month 10 of 12</span></a></li>
+    <li><a href="FY2025-March.html"><span>March 2025</span><span class="fy">month 9 of 12</span></a></li>
+    <li><a href="FY2025-February.html"><span>February 2025</span><span class="fy">month 8 of 12</span></a></li>
+    <li><a href="FY2025-January.html"><span>January 2025</span><span class="fy">month 7 of 12</span></a></li>
+    <li><a href="FY2025-December.html"><span>December 2024</span><span class="fy">month 6 of 12</span></a></li>
+    <li><a href="FY2025-November.html"><span>November 2024</span><span class="fy">month 5 of 12</span></a></li>
+    <li><a href="FY2025-October.html"><span>October 2024</span><span class="fy">month 4 of 12</span></a></li>
+    <li><a href="FY2025-September.html"><span>September 2024</span><span class="fy">month 3 of 12</span></a></li>
+    <li><a href="FY2025-August.html"><span>August 2024</span><span class="fy">month 2 of 12</span></a></li>
+    <li><a href="FY2025-July.html"><span>July 2024</span><span class="fy">month 1 of 12</span></a></li>
+  </ul>
+  <h3 class="fyhead">FY 2023&ndash;24 <span class="fyspan">November 2023 &ndash; June 2024</span></h3>
+  <ul class="months">
+    <li><a href="FY2024-June.html"><span>June 2024</span><span class="fy">month 12 of 12</span></a></li>
+    <li><a href="FY2024-May.html"><span>May 2024</span><span class="fy">month 11 of 12</span></a></li>
+    <li><a href="FY2024-April.html"><span>April 2024</span><span class="fy">month 10 of 12</span></a></li>
+    <li><a href="FY2024-March.html"><span>March 2024</span><span class="fy">month 9 of 12</span></a></li>
+    <li><a href="FY2024-February.html"><span>February 2024</span><span class="fy">month 8 of 12</span></a></li>
+    <li><a href="FY2024-January.html"><span>January 2024</span><span class="fy">month 7 of 12</span></a></li>
+    <li><a href="FY2024-December.html"><span>December 2023</span><span class="fy">month 6 of 12</span></a></li>
+    <li><a href="FY2024-November.html"><span>November 2023</span><span class="fy">month 5 of 12</span></a></li>
+  </ul>
+  <div class="note">Reports parse cleanly from November 2023 onward. A handful of earlier
+  2023 reports use a different WinCap layout and are being added as the parser is tuned to
+  that older format.</div>
+</section>
+
+</div>
+</body>
+</html>

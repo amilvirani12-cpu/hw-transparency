@@ -6,168 +6,145 @@
 <title>Hewlett-Woodmere UFSD — Independent Fiscal Dashboard</title>
 <meta name="description" content="Independent, resident-maintained dashboards tracking the Hewlett-Woodmere school district's budget, treasurer's reports, and facilities — built entirely from public records.">
 <style>
-  :root {
-    --navy: #1a2f4a;
-    --navy-light: #27446b;
-    --accent: #b8860b;
-    --paper: #f7f5f0;
-    --ink: #2a2a2a;
-    --muted: #6b6b6b;
-    --card-border: #e2ddd3;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.6;
-  }
-  header {
-    background: var(--navy);
-    color: #fff;
-    padding: 3rem 1.5rem 2.5rem;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 1.9rem;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.6rem;
-  }
-  header .tagline {
-    color: #c9d4e4;
-    font-size: 1.05rem;
-    max-width: 44rem;
-    margin: 0 auto;
-    font-style: italic;
-  }
-  .rule {
-    width: 60px; height: 3px;
-    background: var(--accent);
-    margin: 1.1rem auto 0;
-  }
-  main {
-    max-width: 62rem;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 1rem;
-  }
-  .intro {
-    max-width: 46rem;
-    margin: 0 auto 2.5rem;
-    text-align: center;
-    color: var(--muted);
-    font-size: 1.02rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.4rem;
-  }
-  .card {
-    background: #fff;
-    border: 1px solid var(--card-border);
-    border-top: 4px solid var(--navy);
-    padding: 1.6rem 1.5rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .card h2 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: var(--navy);
-    margin-bottom: 0.55rem;
-  }
-  .card p {
-    font-size: 0.95rem;
-    color: var(--muted);
-    flex: 1;
-    margin-bottom: 1.1rem;
-  }
-  .card a.button {
-    display: inline-block;
-    align-self: flex-start;
-    background: var(--navy);
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1.1rem;
-    font-size: 0.92rem;
-    font-family: Verdana, Geneva, sans-serif;
-    letter-spacing: 0.02em;
-  }
-  .card a.button:hover { background: var(--navy-light); }
-  .card .secondary {
-    font-size: 0.85rem;
-    margin-top: 0.7rem;
-  }
-  .card .secondary a { color: var(--navy-light); }
-  footer {
-    margin-top: 3rem;
-    border-top: 1px solid var(--card-border);
-    padding: 1.8rem 1.5rem 2.2rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  footer .disclaimer {
-    max-width: 46rem;
-    margin: 0 auto 0.8rem;
-  }
+:root{--ink:#16202e;--mut:#5c6c81;--line:#e2e8f0;--linesoft:#eaeff5;--bg:#eef2f7;--card:#fff;
+--good:#22794c;--info:#1f5da0;--warn:#b45309;--bad:#b4451f;--capacc:#7c3aed;--saacc:#0d9488;
+--shadow:0 1px 2px rgba(15,40,68,.05),0 10px 30px -22px rgba(15,40,68,.35)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI Variable Text','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:linear-gradient(180deg,#eaeff6 0%,var(--bg) 260px);line-height:1.5;
+font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:980px;margin:0 auto;padding:26px 24px}
+.sitenav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;font-size:14px;margin-bottom:14px}
+.sitenav .brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em;margin-right:8px}
+.sitenav a{color:var(--mut);text-decoration:none}
+.sitenav a:hover{color:var(--ink)}
+header.page{position:relative;overflow:hidden;color:#fff;border-radius:18px;
+padding:30px 34px;margin-bottom:24px;
+background:radial-gradient(130% 180% at 0% 0%,#20558a 0%,#16406f 48%,#0e2c52 100%);
+box-shadow:0 2px 4px rgba(10,30,55,.18),0 18px 44px -24px rgba(10,30,55,.55)}
+header.page:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+header.page:after{content:'';position:absolute;right:-70px;top:-90px;width:300px;height:300px;
+border-radius:50%;background:radial-gradient(circle,rgba(122,178,235,.22),transparent 65%);pointer-events:none}
+header.page h1{margin:0 0 5px;font-size:32px;font-weight:700;letter-spacing:-.015em;
+font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif}
+header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350;max-width:56ch}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px;position:relative}
+.meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+border-radius:999px;padding:5px 14px;font-size:13.5px;backdrop-filter:blur(2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:20px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:22px 24px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.tile h2{font-size:20px;margin:0 0 7px;display:flex;align-items:center;gap:11px;
+letter-spacing:-.012em;font-weight:700}
+.ico{width:14px;height:14px;border-radius:4.5px;display:inline-block;flex:none}
+.ico.bud{background:linear-gradient(160deg,#3273bd,#1a4f8c);box-shadow:0 0 0 3.5px rgba(37,101,171,.14)}
+.ico.tre{background:linear-gradient(160deg,#34925e,#1f6a43);box-shadow:0 0 0 3.5px rgba(43,138,88,.14)}
+.ico.tou{background:linear-gradient(160deg,#8b5cf6,#6d28d9);box-shadow:0 0 0 3.5px rgba(124,58,237,.14)}
+.ico.bcs{background:linear-gradient(160deg,#14b8a6,#0d8478);box-shadow:0 0 0 3.5px rgba(13,148,136,.14)}
+.tile p{font-size:16.5px;color:var(--mut);margin:0 0 16px;flex:1;line-height:1.55}
+.tile .act{margin-top:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.tile .go{display:inline-block;background:linear-gradient(180deg,#2a67ab,#1d4e88);
+color:#fff;text-decoration:none;padding:9px 17px;border-radius:9px;font-size:15.5px;font-weight:600;
+box-shadow:0 1px 2px rgba(15,40,68,.2)}
+.tile .go:hover{background:linear-gradient(180deg,#3273bd,#22568f)}
+.tile .also{font-size:14px;color:var(--mut)}
+.tile .also a{color:var(--info)}
+section.stats{background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:22px 26px;margin-bottom:20px;box-shadow:var(--shadow)}
+section.stats h2{font-size:22px;margin:0 0 4px;letter-spacing:-.012em;font-weight:700}
+section.stats .lede{font-size:16.5px;color:var(--mut);margin:0 0 14px}
+.cards{display:flex;gap:13px;flex-wrap:wrap}
+.card{flex:1;min-width:130px;background:linear-gradient(180deg,#fff,#fafcfe);border:1px solid var(--line);
+border-radius:13px;padding:16px 14px 13px;text-align:center;box-shadow:0 1px 2px rgba(15,40,68,.05)}
+.card .n{font-size:27px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.card .l{font-size:13px;color:var(--mut);margin-top:2px}
+footer{font-size:13.5px;color:var(--mut);padding:6px 4px 24px;line-height:1.6}
+footer a{color:var(--info)}
 </style>
 </head>
 <body>
-<header>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="./">HW Fiscal Dashboard</a>
+  <a href="budget/">Budget</a>
+  <a href="treasurer/">Treasurer</a>
+  <a href="facilities/tours/">Facilities Tours</a>
+  <a href="facilities/bcs/">Building Condition</a>
+</nav>
+
+<header class="page">
   <h1>Hewlett-Woodmere UFSD &mdash; Independent Fiscal Dashboard</h1>
-  <p class="tagline">Every number on this site comes from the district's own public records &mdash; presented so any resident can read them in minutes, not hours.</p>
-  <div class="rule"></div>
+  <p class="sub">The district's own public records &mdash; budgets, treasurer's reports, and
+  building condition &mdash; turned into pages any resident can read in minutes.</p>
+  <div class="meta">
+    <span>Independent &amp; resident-maintained</span>
+    <span>Source: BoardDocs public records</span>
+    <span>Checked automatically every morning</span>
+  </div>
 </header>
 
-<main>
-  <p class="intro">
-    The Board of Education publishes hundreds of pages of financial reports before each meeting.
-    These dashboards turn those documents into charts and plain-language summaries, with every
-    figure traceable back to the exact page of the source PDF.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h2>Budget at a Glance</h2>
-      <p>Monthly revenue and budget status for the General Fund, Capital Program, and grants —
-         money in, money out, spent vs. committed, with drill-down to every account line.</p>
-      <a class="button" href="budget/FY2026-June.html">June 2026 (latest)</a>
-      <div class="secondary">Archive: <a href="budget/FY2026-May.html">May 2026</a></div>
-    </div>
-
-    <div class="card">
-      <h2>Treasurer's Reports</h2>
-      <p>Bank accounts, cash balances, investments, and collateral tracked month over month —
-         with an exceptions log of anything that didn't reconcile cleanly.</p>
-      <a class="button" href="treasurer/">View dashboard</a>
-    </div>
-
-    <div class="card">
-      <h2>Facilities Tours</h2>
-      <p>Findings from the Board's building-by-building facilities tours across every school,
-         mapped and tracked across years.</p>
-      <a class="button" href="facilities/tours/">View dashboard</a>
-    </div>
-
-    <div class="card">
-      <h2>Building Condition Survey</h2>
-      <p>The state-mandated Building Condition Survey: system-by-system condition and estimated
-         costs for every district building.</p>
-      <a class="button" href="facilities/bcs/">View dashboard</a>
+<div class="grid">
+  <div class="tile">
+    <h2><span class="ico bud"></span>Budget at a Glance</h2>
+    <p>Monthly revenue and budget status for the General Fund, Capital Program, and grants —
+       money in, money out, spent vs. committed, with drill-down to every account line and
+       a citation to the exact source PDF.</p>
+    <div class="act">
+      <a class="go" href="budget/FY2026-June.html">June 2026 (latest)</a>
+      <span class="also"><a href="budget/">All months</a></span>
     </div>
   </div>
-</main>
+
+  <div class="tile">
+    <h2><span class="ico tre"></span>Treasurer's Reports</h2>
+    <p>Bank accounts, cash balances, investments, and collateral tracked month over month —
+       with an exceptions log of anything that didn't reconcile cleanly.</p>
+    <div class="act">
+      <a class="go" href="treasurer/">View dashboard</a>
+    </div>
+  </div>
+
+  <div class="tile">
+    <h2><span class="ico tou"></span>Facilities Tours</h2>
+    <p>Findings from the Board's building-by-building facilities tours across every school,
+       mapped and tracked across years.</p>
+    <div class="act">
+      <a class="go" href="facilities/tours/">View dashboard</a>
+    </div>
+  </div>
+
+  <div class="tile">
+    <h2><span class="ico bcs"></span>Building Condition Survey</h2>
+    <p>The state-mandated Building Condition Survey: system-by-system condition and estimated
+       costs for every district building.</p>
+    <div class="act">
+      <a class="go" href="facilities/bcs/">View dashboard</a>
+    </div>
+  </div>
+</div>
+
+<section class="stats">
+  <h2>The document archive</h2>
+  <p class="lede">Every source document is collected automatically from BoardDocs each morning and
+     preserved here with its publication history — going back to 2023.</p>
+  <div class="cards">
+    <div class="card"><div class="n">153</div><div class="l">Revenue status reports</div></div>
+    <div class="card"><div class="n">141</div><div class="l">Budget status reports</div></div>
+    <div class="card"><div class="n">78</div><div class="l">Treasurer documents</div></div>
+    <div class="card"><div class="n">19</div><div class="l">Facilities tours</div></div>
+  </div>
+</section>
 
 <footer>
-  <p class="disclaimer">
-    This is an independent, resident-maintained project. It is not affiliated with, endorsed by,
-    or produced by the Hewlett-Woodmere Union Free School District or its Board of Education.
-    All underlying documents are public records available on the district's
-    <a href="https://go.boarddocs.com/ny/hwps/Board.nsf/Public">BoardDocs site</a>.
-  </p>
-  <p>Corrections welcome &mdash; every figure cites its source document.</p>
+  This is an independent, resident-maintained project. It is not affiliated with, endorsed by,
+  or produced by the Hewlett-Woodmere Union Free School District or its Board of Education.
+  All underlying documents are public records available on the district's
+  <a href="https://go.boarddocs.com/ny/hwps/Board.nsf/Public">BoardDocs site</a>.
+  Corrections welcome &mdash; every figure cites its source document.
 </footer>
+
+</div>
 </body>
 </html>
