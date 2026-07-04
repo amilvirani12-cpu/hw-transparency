@@ -2,8 +2,9 @@ name: BoardDocs Watcher
 
 on:
   schedule:
-    - cron: "0 11 * * *"   # daily 7:00 AM ET (11:00 UTC)
-    - cron: "0 13 * * 0"   # extra Sunday 9:00 AM ET pass (district posts Sunday mornings)
+    - cron: "0 11 * * *"        # daily 7:00 AM ET (11:00 UTC)
+    - cron: "0 13,15,17 * * 0"  # Sundays also 9 AM / 11 AM / 1 PM ET — the district
+                                # posts Sunday mornings; commit times pin down when
   workflow_dispatch: {}     # allows manual "Run workflow" button on GitHub
 
 permissions:
