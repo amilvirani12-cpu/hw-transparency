@@ -6,8 +6,78 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### WELCOME AND RECOGNITIONS
+
+
+### PRESENTATIONS AND AWARDS
+
+
+### PROGRAMS AND REPORTS
+
+- Information - Report from Superintendent
+- Information - Report from Student Advisory Council
+- Information - Report from Designated Officers of the District's Employee Organizations
+- Information - Report from PTA Council Presidents
+- Information - Committee Reports from Board of Education Members
+- Information - Other Reports from Board of Education Members
+- Information - Board of Education Communications (if any)
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD - Related to agenda items only
+
+- Information - Speaker Protocols for Visitors and Observers
+
+### ROUTINE RECOMMENDED ACTIONS
+
+- Action - Board of Education Meeting Minutes (DA)
+- Action (Consent) - That the consent agenda, including any addenda items, consisting of Items E.1 through I. 9, be approved as a whole with action recorded as if it had been taken severally.
+
+### CONSENT - INSTRUCTIONAL ACTIONS (SF)
+
+- Action - CSE and CPSE Recommendation
+
+### CONSENT - PERSONNEL ACTIONS (LS)
+
+- Action (Consent) - Personnel Action Report
+- Action (Consent) - Schedule of Substitute Teacher Aides, Cleaners, Clericals, and Food Service Helpers
+- Action (Consent) - Schedule of Annual Coordinator Appointments
+- Action (Consent) - Schedule of Annual Leadership Appointments for 2026-27.
+- Action (Consent) - Schedule of Summer Staffing for Academic Program, Extended School Year Program, and Nurses.
+- Action (Consent) - Resolution and Part-time Business Agreement
+- Action (Consent) - Resolution and Memorandum of Agreement - Assistant Director for Special Education at G.W. Hewlett High School
+- Action (Consent) - Resolution and Memorandum of Understanding Extension with Hofstra University
+- Action (Consent) - Community Education Summer Staff
+- Action (Consent) - Schedule C - Coaches, Volunteer Coaches, and Hewlett Elementary School for 2026-27
+
+### CONSENT - FINANCIAL ACTIONS (RS)
+
+- Reports - Treasurer's Report
+- Action (Consent) - Resolution - Participation in Long Island School Nutrition Directors Cooperative Bid
+- Action (Consent) - Amount to be Raised in Taxes for 2026-2027
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Bids
+- Action (Consent) - Schedule of Gifts
+- Action (Consent) - Transfers of Appropriation
+- Action (Consent) - Surplus Equipment
+- Action (Consent) - Applications for Club Charters
+
+### CONSENT - MISCELLANEOUS ACTIONS
+
+
+### ADOPTION OF POLICIES NEW/REVISED (DA)
+
+- Action - Policy #1336-Fee Policy-Approval
+
+### FUTURE MEETINGS OF THE BOARD OF EDUCATION AT WOODMERE EDUCATION CENTER
+
+- Information - Woodmere Education Center: Wednesday, August 19, 2026 Regular Board Meeting 5:00 PM
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD ON NON-AGENDA ITEMS (TIME PERMITTING)
+
+
+### ADJOURNMENT
+
+- Action - Motion to Adjourn
 
 ## Financial documents captured by the watcher
 
-_None yet — the watcher checks every morning._
+- **treasurer** — [2026-07-08_April 2026_Treasurer Report.pdf](../archive/treasurer/2026-07-08_April%202026_Treasurer%20Report.pdf)

@@ -6,8 +6,66 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Schedule of Board Appointments (RS)
+
+- Action (Consent) - Board Appointments
+
+### Schedule of Annual Appointments of Board Service Personnel (RS)
+
+- Action (Consent) - Annual Appointments of Board Service Personnel
+
+### Schedule of Central Treasurers (RS)
+
+- Action (Consent) - Schedule of Central Treasurers
+
+### Designation of Newspapers for 2026 - 2027 Legal Notices (RS)
+
+- Action (Consent) - Designation of Newspapers for 2026-2027 Legal Notices
+
+### Designation of Banks as Depositories (RS)
+
+- Action (Consent) - Designation of Banks as Depositories
+
+### Designation of Bond Counsel and Financial Advisors (RS)
+
+- Action (Consent) - Designation of Bond Counsel and Financial Advisors
+
+### Authorization to Secure Crime Bonds (RS)
+
+- Action (Consent) - Authorization to Secure Crime Bonds
+
+### Schedule of Additional Authorizations (RS)
+
+- Action (Consent) - Additional Authorizations
+
+### Schedule of Special Education Authorizations (SF)
+
+- Action - Resolution: Board of Education Members Authorized to Appoint Impartial Hearing Officers 2026/2027 School Year
+- Action - Recommendations to the Board of Education for Special Education Committees for the 2026/2027 School
+- Action - Recommendations to the Board of Education for 504 Committees for the 2026/2027 School
+
+### Board of Education Member Accountability Statement, Board of Education Goals, School District Goals and Norms and Protocols (DA)
+
+- Action - Board of Education Accountability Statement 2026 - 2027 School Year
+- Action - Board of Education Goals 2026 - 2027 School Year
+- Action - School District Goals 2026 - 2027 School Year
+- Action - Board of Education Norms and Protocols 2026 - 2027 School Year
+
+### Designation of Board of Education Representation in Committees/Organizations (DA)
+
+- Action - Designation of Board Representation in Committees/Organizations (DA)
+
+### Policy for Approval (DA)
+
+- Action - Policy #6240-Investment Policy-Approval
+
+### Opportunity for the Public to be Heard on Non-Agenda Items (Time Permitting)
+
+
+### Motion to Adjourn
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
-_None yet — the watcher checks every morning._
+- **treasurer** — [2026-07-08_Schedule of Central Treasurers_2026-2027.pdf](../archive/treasurer/2026-07-08_Schedule%20of%20Central%20Treasurers_2026-2027.pdf)

@@ -2345,6 +2345,18 @@
    "item": "Action (Consent) - Annual Appointments of District Clerk, Assistant District Clerk, Interim District Treasurer and Deput",
    "meeting": "DV6SE9724B28",
    "path": "archive/treasurer/2026-07-01_Board Service Personnel - Schedule of Annual Appointments_7.1.2026 Special Meeting.pdf"
+  },
+  "DVELM5572934": {
+   "date": "2026-07-08",
+   "item": "Action (Consent) - Schedule of Central Treasurers",
+   "meeting": "DTLPKG64FE1A",
+   "path": "archive/treasurer/2026-07-08_Schedule of Central Treasurers_2026-2027.pdf"
+  },
+  "DVEMDZ5ACDFE": {
+   "date": "2026-07-08",
+   "item": "Reports - Treasurer&#039;s Report",
+   "meeting": "DTLPRF65DDC1",
+   "path": "archive/treasurer/2026-07-08_April 2026_Treasurer Report.pdf"
   }
  },
  "meetings": {
@@ -3275,7 +3287,7 @@
   },
   "DQQNAV5EFEA1": {
    "date": "2026-05-20",
-   "final": false,
+   "final": true,
    "name": "Board of Education Regular Meeting"
   },
   "DQQNFR5F38C3": {
