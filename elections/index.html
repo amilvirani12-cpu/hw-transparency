@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Election Turnout — HW Fiscal Dashboard</title>
+<title>2026 Budget Vote Turnout — HW Fiscal Dashboard</title>
 <meta name="description" content="Live turnout tracking for Hewlett-Woodmere school district votes — by time of day and by neighborhood. Aggregate counts only.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -55,6 +55,8 @@ transition:height .6s ease;min-height:2px}
 .bubble-label{background:none;border:none;box-shadow:none;font-size:12.5px;font-weight:600;
 color:#2b3648;text-align:center;line-height:1.35;white-space:nowrap;
 text-shadow:0 1px 2px #fff,0 -1px 2px #fff,1px 0 2px #fff,-1px 0 2px #fff}
+.bubble-label::before{display:none!important}   /* no tooltip arrow triangles */
+.leaflet-tooltip-right.bubble-label{text-align:left}
 .note{color:var(--warn);font-size:13.5px;margin-top:10px}
 footer{font-size:13.5px;color:var(--mut);padding:6px 4px 24px;line-height:1.6}
 footer a{color:var(--info)}
@@ -74,9 +76,9 @@ footer a{color:var(--info)}
 </nav>
 
 <header class="page">
-  <h1 id="pageTitle">Election Turnout</h1>
-  <p class="sub">Live turnout for the Hewlett-Woodmere budget vote &mdash; by time of day and
-  by neighborhood. Updated throughout election day as poll lists are pulled.</p>
+  <h1 id="pageTitle">Election Turnout &mdash; 2026 Budget Vote</h1>
+  <p class="sub">Turnout for the Hewlett-Woodmere budget vote (May 19, 2026) &mdash; by time of
+  day and by neighborhood. Updated live on election day as poll lists are pulled.</p>
   <div class="meta">
     <span id="metaStatus">loading&hellip;</span>
     <span>Aggregate counts only &mdash; no individual voter information</span>
@@ -183,6 +185,8 @@ async function refresh(){
     const res=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
     if(!res.ok)throw new Error("HTTP "+res.status);
     const d=await res.json();
+    if(d.election){document.getElementById("pageTitle").textContent=
+      "Election Turnout — "+d.election;}
     document.getElementById("metaStatus").textContent=
       d.final?"Certified final results":"Live — updating through election day";
     document.getElementById("metaUpdated").textContent="Last updated "+d.generated;
