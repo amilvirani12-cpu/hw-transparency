@@ -2,9 +2,12 @@ name: BoardDocs Watcher
 
 on:
   schedule:
-    - cron: "0 11 * * *"        # daily 7:00 AM ET (11:00 UTC)
-    - cron: "0 13,15,17 * * 0"  # Sundays also 9 AM / 11 AM / 1 PM ET — the district
-                                # posts Sunday mornings; commit times pin down when
+    # Every 2 hours at :23. GitHub drops or delays top-of-the-hour crons by
+    # hours (observed: the 11:00 slot fired at 14:53, and Sunday slots were
+    # skipped entirely), so run off-hour and often — a skipped slot then only
+    # costs 2 hours of latency instead of a day. Each run is ~30s and commits
+    # only when the district actually published something.
+    - cron: "23 */2 * * *"
   workflow_dispatch: {}     # allows manual "Run workflow" button on GitHub
 
 permissions:
