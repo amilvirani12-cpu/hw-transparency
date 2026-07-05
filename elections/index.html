@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Election Turnout — HW Fiscal Dashboard</title>
+<meta name="description" content="Live turnout tracking for Hewlett-Woodmere school district votes — by time of day and by neighborhood. Aggregate counts only.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--ink:#16202e;--mut:#5c6c81;--line:#e2e8f0;--linesoft:#eaeff5;--bg:#eef2f7;--card:#fff;
+--good:#22794c;--info:#1f5da0;--warn:#b45309;--bad:#b4451f;
+--shadow:0 1px 2px rgba(15,40,68,.05),0 10px 30px -22px rgba(15,40,68,.35)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI Variable Text','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:linear-gradient(180deg,#eaeff6 0%,var(--bg) 260px);line-height:1.5;
+font-size:16.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:980px;margin:0 auto;padding:26px 24px}
+.sitenav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;font-size:14px;margin-bottom:14px}
+.sitenav .brand{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.01em;margin-right:8px}
+.sitenav a{color:var(--mut);text-decoration:none}
+.sitenav a:hover{color:var(--ink)}
+.sitenav a.here{color:var(--ink);font-weight:600}
+header.page{position:relative;overflow:hidden;color:#fff;border-radius:18px;
+padding:30px 34px;margin-bottom:24px;
+background:radial-gradient(130% 180% at 0% 0%,#20558a 0%,#16406f 48%,#0e2c52 100%);
+box-shadow:0 2px 4px rgba(10,30,55,.18),0 18px 44px -24px rgba(10,30,55,.55)}
+header.page:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+header.page h1{margin:0 0 5px;font-size:32px;font-weight:700;letter-spacing:-.015em;
+font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif}
+header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350;max-width:56ch}
+.meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px;position:relative}
+.meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+border-radius:999px;padding:5px 14px;font-size:13.5px;backdrop-filter:blur(2px)}
+section.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;
+padding:22px 26px;margin-bottom:20px;box-shadow:var(--shadow)}
+section.panel h2{font-size:22px;margin:0 0 4px;letter-spacing:-.012em;font-weight:700}
+section.panel .lede{font-size:15.5px;color:var(--mut);margin:0 0 18px}
+.cards{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:20px}
+.card{flex:1;min-width:130px;background:var(--card);border:1px solid var(--line);
+border-radius:13px;padding:16px 14px 13px;text-align:center;box-shadow:var(--shadow)}
+.card .n{font-size:27px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.card .l{font-size:13px;color:var(--mut);margin-top:2px}
+/* bar chart */
+.chart{display:flex;align-items:flex-end;gap:3%;height:300px;padding:0 4px;
+border-bottom:1px solid var(--line)}
+.colb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.val{font-size:15px;color:var(--ink);font-weight:600;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.bar{width:80%;background:linear-gradient(180deg,#2a67ab,#1d4e88);border-radius:3px 3px 0 0;
+transition:height .6s ease;min-height:2px}
+.xlabels{display:flex;gap:3%;padding:7px 4px 0}
+.xlabels div{flex:1;text-align:center;font-size:11.5px;color:var(--mut)}
+#map{height:520px;border-radius:12px;border:1px solid var(--line)}
+.bubble-label{background:none;border:none;box-shadow:none;font-size:12.5px;font-weight:600;
+color:#2b3648;text-align:center;line-height:1.35;white-space:nowrap;
+text-shadow:0 1px 2px #fff,0 -1px 2px #fff,1px 0 2px #fff,-1px 0 2px #fff}
+.note{color:var(--warn);font-size:13.5px;margin-top:10px}
+footer{font-size:13.5px;color:var(--mut);padding:6px 4px 24px;line-height:1.6}
+footer a{color:var(--info)}
+@media (max-width:700px){.chart{height:200px}.xlabels div{font-size:8px}#map{height:400px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav">
+  <a class="brand" href="../">HW Fiscal Dashboard</a>
+  <a href="../budget/">Budget</a>
+  <a href="../treasurer/">Treasurer</a>
+  <a href="../facilities/tours/">Facilities Tours</a>
+  <a href="../facilities/bcs/">Building Condition</a>
+  <a class="here" href="./">Elections</a>
+</nav>
+
+<header class="page">
+  <h1 id="pageTitle">Election Turnout</h1>
+  <p class="sub">Live turnout for the Hewlett-Woodmere budget vote &mdash; by time of day and
+  by neighborhood. Updated throughout election day as poll lists are pulled.</p>
+  <div class="meta">
+    <span id="metaStatus">loading&hellip;</span>
+    <span>Aggregate counts only &mdash; no individual voter information</span>
+    <span id="metaUpdated"></span>
+  </div>
+</header>
+
+<div class="cards">
+  <div class="card"><div class="n" id="cTotal">–</div><div class="l">Total votes</div></div>
+  <div class="card"><div class="n" id="cStatus">–</div><div class="l" id="cStatusL">status</div></div>
+  <div class="card"><div class="n" id="cAbs">–</div><div class="l">Absentee ballots counted</div></div>
+</div>
+
+<section class="panel">
+  <h2 id="barTitle">Turnout by Time of Day</h2>
+  <p class="lede">Each bar is the number of voters whose ballot was first recorded in that window.</p>
+  <div class="chart" id="chart"></div>
+  <div class="xlabels" id="xlabels"></div>
+</section>
+
+<section class="panel">
+  <h2 id="mapTitle">Turnout by Neighborhood</h2>
+  <p class="lede" id="mapLede">Bubble position marks the neighborhood; the district boundary is outlined.</p>
+  <div id="map"></div>
+  <div class="note" id="note" style="display:none"></div>
+</section>
+
+<footer>
+  This is an independent project maintained by <b>Amil Virani, CPA</b> &mdash; a district resident.
+  It is not affiliated with, endorsed by, or produced by the Hewlett-Woodmere Union Free School
+  District or its Board of Education. Turnout figures are compiled from the district's public
+  poll lists; this page publishes <b>aggregate counts only</b>. The page refreshes automatically
+  during election day.
+</footer>
+
+</div>
+<script>
+let map=null,mapLayers=[];
+function suffix(d){return d.final?" — Final":(d.asof?" — as of "+d.asof:"")}
+
+function renderBars(d){
+  const chart=document.getElementById("chart"),xl=document.getElementById("xlabels");
+  chart.innerHTML="";xl.innerHTML="";
+  const max=Math.max(1,...d.buckets.map(b=>b.count));
+  for(const b of d.buckets){
+    const col=document.createElement("div");col.className="colb";
+    const v=document.createElement("div");v.className="val";v.textContent=b.count;
+    const bar=document.createElement("div");bar.className="bar";
+    bar.style.height=(b.count/max*80)+"%";
+    col.appendChild(v);col.appendChild(bar);chart.appendChild(col);
+    const lab=document.createElement("div");lab.textContent=b.label;xl.appendChild(lab);
+  }
+}
+
+function renderMap(d){
+  if(!map){
+    map=L.map("map",{scrollWheelZoom:false});
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      {attribution:"&copy; OpenStreetMap contributors &copy; CARTO",
+       subdomains:"abcd",maxZoom:19}).addTo(map);
+  }
+  for(const l of mapLayers)map.removeLayer(l);
+  mapLayers=[];
+  if(d.boundary){
+    for(const ring of d.boundary){
+      mapLayers.push(L.polyline(ring.map(p=>[p[0],p[1]]),
+        {color:"#5a6472",weight:2.5,opacity:.4}).addTo(map));
+    }
+  }
+  const maxCt=Math.max(1,...d.areas.map(a=>a.count));
+  const pts=[];
+  for(const a of d.areas){
+    pts.push([a.lat,a.lon]);
+    const r=15+17*Math.sqrt(a.count/maxCt);
+    const c=L.circleMarker([a.lat,a.lon],{radius:r,color:"white",weight:1.5,
+      fillColor:a.color,fillOpacity:.95}).addTo(map);
+    const dir=a.labelSide==="right"?"right":"bottom";
+    c.bindTooltip(a.name+"<br>"+a.count.toLocaleString(),
+      {permanent:true,direction:dir,className:"bubble-label",
+       offset:dir==="right"?[r+4,0]:[0,r+4]});
+    mapLayers.push(c);
+  }
+  let bounds=null;
+  if(d.boundary&&d.boundary.length){
+    bounds=L.polyline(d.boundary[0].map(p=>[p[0],p[1]])).getBounds().pad(.06);
+  }else if(pts.length){
+    bounds=L.latLngBounds(pts).pad(.25);
+  }
+  if(bounds){
+    map.fitBounds(bounds);
+    // re-fit once layout/CSS has fully settled (first fit can happen while the
+    // container is still sizing, which leaves the map zoomed far out)
+    setTimeout(()=>{map.invalidateSize();map.fitBounds(bounds);},350);
+  }
+}
+
+async function refresh(){
+  try{
+    const res=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
+    if(!res.ok)throw new Error("HTTP "+res.status);
+    const d=await res.json();
+    document.getElementById("metaStatus").textContent=
+      d.final?"Certified final results":"Live — updating through election day";
+    document.getElementById("metaUpdated").textContent="Last updated "+d.generated;
+    document.getElementById("cTotal").textContent=d.total.toLocaleString();
+    document.getElementById("cStatus").textContent=d.final?"Final":(d.asof||"–");
+    document.getElementById("cStatusL").textContent=d.final?"certified count":"latest poll pull";
+    const abs=(d.buckets.find(b=>b.label==="Absentee")||{}).count||0;
+    document.getElementById("cAbs").textContent=abs.toLocaleString();
+    document.getElementById("barTitle").textContent="Turnout by Time of Day"+suffix(d);
+    document.getElementById("mapTitle").textContent="Turnout by Neighborhood"+suffix(d);
+    document.getElementById("mapLede").textContent=
+      (abs>0?"In-person tally + absentee ballots. ":"In-person tally. ")+
+      "Bubble position marks the neighborhood; the district boundary is outlined.";
+    renderBars(d);renderMap(d);
+    const note=document.getElementById("note");
+    if(d.unassigned>0){
+      note.textContent=d.unassigned+" voter(s) pending neighborhood review — totals include them.";
+      note.style.display="";
+    }else note.style.display="none";
+  }catch(e){
+    document.getElementById("metaStatus").textContent="Waiting for first data push ("+e.message+")";
+  }
+}
+refresh();
+setInterval(refresh,60000);
+</script>
+</body>
+</html>
