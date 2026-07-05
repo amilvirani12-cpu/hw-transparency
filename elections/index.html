@@ -133,7 +133,9 @@ function renderBars(d){
 
 function renderMap(d){
   if(!map){
-    map=L.map("map",{scrollWheelZoom:false});
+    // zoomSnap 0.25 = the auto-fit can land exactly on the district instead of
+    // rounding down a whole level; zoomDelta 0.5 = gentler +/- buttons
+    map=L.map("map",{scrollWheelZoom:false,zoomSnap:0.25,zoomDelta:0.5});
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
       {attribution:"&copy; OpenStreetMap contributors &copy; CARTO",
        subdomains:"abcd",maxZoom:19}).addTo(map);
@@ -167,6 +169,9 @@ function renderMap(d){
   }
   if(bounds){
     map.fitBounds(bounds);
+    // viewers only care about the district: keep panning near it
+    map.setMaxBounds(bounds.pad(.5));
+    map.setMinZoom(map.getBoundsZoom(bounds.pad(.5)));
     // re-fit once layout/CSS has fully settled (first fit can happen while the
     // container is still sizing, which leaves the map zoomed far out)
     setTimeout(()=>{map.invalidateSize();map.fitBounds(bounds);},350);
