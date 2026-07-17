@@ -171,8 +171,8 @@ function renderMap(d){
     for(const [name,a] of Object.entries(areaShapes)){
       for(const ring of a.rings){
         mapLayers.push(L.polygon(ring.map(p=>[p[0],p[1]]),
-          {color:a.color,weight:1.5,opacity:.55,
-           fillColor:a.color,fillOpacity:.08,interactive:false}).addTo(map));
+          {color:a.color,weight:1.6,opacity:.7,
+           fillColor:a.color,fillOpacity:.17,interactive:false}).addTo(map));
       }
     }
   }
