@@ -117,8 +117,20 @@ footer a{color:var(--info)}
 
 </div>
 <script>
-let map=null,mapLayers=[],areaShapes=null;
+let map=null,mapLayers=[],areaShapes=null,pageTag=null;
 function suffix(d){return d.final?" — Final":(d.asof?" — as of "+d.asof:"")}
+
+// Self-upgrade: if a newer version of this page has been deployed while the
+// tab sits open (or cached), reload once so viewers always run current code.
+async function checkPageVersion(){
+  try{
+    const r=await fetch("index.html",{method:"HEAD",cache:"no-store"});
+    const tag=r.headers.get("etag")||r.headers.get("last-modified");
+    if(!tag)return;
+    if(pageTag===null){pageTag=tag;return;}
+    if(tag!==pageTag){location.reload();}
+  }catch(e){/* offline etc. -- ignore */}
+}
 
 async function loadAreaShapes(){
   if(areaShapes!==null)return areaShapes;
@@ -231,7 +243,9 @@ async function refresh(){
   }
 }
 refresh();
+checkPageVersion();
 setInterval(refresh,60000);
+setInterval(checkPageVersion,120000);
 </script>
 </body>
 </html>
