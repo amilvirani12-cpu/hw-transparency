@@ -52,9 +52,10 @@ transition:height .6s ease;min-height:2px}
 .xlabels{display:flex;gap:3%;padding:7px 4px 0}
 .xlabels div{flex:1;text-align:center;font-size:11.5px;color:var(--mut)}
 #map{height:520px;border-radius:12px;border:1px solid var(--line)}
-.bubble-label{background:none;border:none;box-shadow:none;font-size:12.5px;font-weight:600;
-color:#2b3648;text-align:center;line-height:1.35;white-space:nowrap;
-text-shadow:0 1px 2px #fff,0 -1px 2px #fff,1px 0 2px #fff,-1px 0 2px #fff}
+.bubble-label{background:none;border:none;box-shadow:none;font-size:13.5px;font-weight:650;
+color:#2b3648;text-align:center;line-height:1.4;white-space:nowrap;
+text-shadow:0 1px 3px #fff,0 -1px 3px #fff,1px 0 3px #fff,-1px 0 3px #fff,0 0 6px #fff}
+.bubble-label::before{display:none}
 .bubble-label::before{display:none!important}   /* no tooltip arrow triangles */
 .leaflet-tooltip-right.bubble-label{text-align:left}
 .note{color:var(--warn);font-size:13.5px;margin-top:10px}
@@ -169,18 +170,18 @@ function renderMap(d){
         {color:"#5a6472",weight:2.5,opacity:.4}).addTo(map));
     }
   }
-  const maxCt=Math.max(1,...d.areas.map(a=>a.count));
+  // no bubbles -- the colored polygons carry the identity; just the
+  // name + count centered on each neighborhood's anchor point
   const pts=[];
   for(const a of d.areas){
     pts.push([a.lat,a.lon]);
-    const r=15+17*Math.sqrt(a.count/maxCt);
-    const c=L.circleMarker([a.lat,a.lon],{radius:r,color:"white",weight:1.5,
-      fillColor:a.color,fillOpacity:.95}).addTo(map);
-    const dir=a.labelSide==="right"?"right":"bottom";
-    c.bindTooltip(a.name+"<br>"+a.count.toLocaleString(),
+    const dir=a.labelSide==="right"?"right":"center";
+    mapLayers.push(L.tooltip(
       {permanent:true,direction:dir,className:"bubble-label",
-       offset:dir==="right"?[r+4,0]:[0,r+4]});
-    mapLayers.push(c);
+       offset:dir==="right"?[10,0]:[0,0],interactive:false})
+      .setLatLng([a.lat,a.lon])
+      .setContent(a.name+"<br>"+a.count.toLocaleString())
+      .addTo(map));
   }
   let bounds=null;
   if(d.boundary&&d.boundary.length){
