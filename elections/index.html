@@ -101,7 +101,7 @@ footer a{color:var(--info)}
 
 <section class="panel">
   <h2 id="mapTitle">Turnout by Neighborhood</h2>
-  <p class="lede" id="mapLede">Bubble position marks the neighborhood; the district boundary is outlined.</p>
+  <p class="lede" id="mapLede">Each neighborhood is shaded in its color; the school-district boundary is outlined.</p>
   <div id="map"></div>
   <div class="note" id="note" style="display:none"></div>
 </section>
@@ -116,8 +116,17 @@ footer a{color:var(--info)}
 
 </div>
 <script>
-let map=null,mapLayers=[];
+let map=null,mapLayers=[],areaShapes=null;
 function suffix(d){return d.final?" — Final":(d.asof?" — as of "+d.asof:"")}
+
+async function loadAreaShapes(){
+  if(areaShapes!==null)return areaShapes;
+  try{
+    const r=await fetch("areas.json",{cache:"no-store"});
+    areaShapes=r.ok?await r.json():{};
+  }catch(e){areaShapes={};}
+  return areaShapes;
+}
 
 function renderBars(d){
   const chart=document.getElementById("chart"),xl=document.getElementById("xlabels");
@@ -144,6 +153,16 @@ function renderMap(d){
   }
   for(const l of mapLayers)map.removeLayer(l);
   mapLayers=[];
+  // neighborhood polygons, colored to match their bubbles
+  if(areaShapes){
+    for(const [name,a] of Object.entries(areaShapes)){
+      for(const ring of a.rings){
+        mapLayers.push(L.polygon(ring.map(p=>[p[0],p[1]]),
+          {color:a.color,weight:1.5,opacity:.55,
+           fillColor:a.color,fillOpacity:.08,interactive:false}).addTo(map));
+      }
+    }
+  }
   if(d.boundary){
     for(const ring of d.boundary){
       mapLayers.push(L.polyline(ring.map(p=>[p[0],p[1]]),
@@ -199,8 +218,8 @@ async function refresh(){
     document.getElementById("mapTitle").textContent="Turnout by Neighborhood"+suffix(d);
     document.getElementById("mapLede").textContent=
       (abs>0?"In-person tally + absentee ballots. ":"In-person tally. ")+
-      "Bubble position marks the neighborhood; the district boundary is outlined.";
-    renderBars(d);renderMap(d);
+      "Each neighborhood is shaded in its color; the school-district boundary is outlined.";
+    renderBars(d);await loadAreaShapes();renderMap(d);
     const note=document.getElementById("note");
     if(d.unassigned>0){
       note.textContent=d.unassigned+" voter(s) pending neighborhood review — totals include them.";
