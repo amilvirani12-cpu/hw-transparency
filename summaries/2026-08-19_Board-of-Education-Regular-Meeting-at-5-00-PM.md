@@ -6,7 +6,93 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### PROFESSIONAL RECOGNITIONS
+
+
+### PRESENTATIONS/AWARDS
+
+
+### PROGRAMS AND REPORTS
+
+- Information - Review and Discussion of Agenda Items - Mrs. Sheinin will lead a review of the work meeting agenda items, prior to approval by the Board of Education.
+- Discussion - Tour of Facilities for the 2026-2027 School Year (review and discussion)
+- Information - Report from Superintendent
+- Reports - Report from Student Advisory Council
+- Information - Report from Designated Officers of the District's Employee Organizations
+- Information - Report from PTA Council Presidents
+- Information - Committee Reports from Board of Education Members
+- Reports - Other Reports from Board of Education Members
+- Information - Board of Education Communications (if any)
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD - Related to agenda items only
+
+- Information - Speaker Protocols
+
+### ROUTINE RECOMMENDED ACTIONS
+
+- Action - Acceptance of Meeting Minutes, July 1, 2026, Special Meeting
+- Action - Acceptance of Meeting Minutes, July 8, 2026, Organizational Meeting
+- Action - Acceptance of Meeting Minutes, July 8, 2026, Regular Meeting
+- Action - Acceptance of Meeting Minutes, July 20, 2026, Special Meeting
+- Action (Consent) - Approval of the Consent Agenda
+
+### CONSENT - INSTRUCTIONAL ACTIONS (SF)
+
+- Action - CSE and CPSE Recommendation
+- Action - Resolution Settlement Agreement (SF)
+
+### CONSENT - PERSONNEL ACTIONS (LS)
+
+- Action (Consent) - Personnel Action Report
+- Action (Consent) - Schedule of Permanent Pool Substitutes, Substitute Teachers, Substitute Teacher Aides, Typist Clerks, and Cleaners
+- Action (Consent) - Schedule of Classified Employee Stipends
+- Action (Consent) - It is recommended that the Board of Education approve the attached Schedule C- Coaches and Athletic Supervision.
+- Action (Consent) - Schedule of Summer Staffing for Academic Program, Extended School Year Program, ENL and Art and Music.
+- Action (Consent) - Schedule of Hourly Tutor Appointments
+- Action (Consent) - Community Education Summer Staff
+- Action (Consent) - Resolution and Memorandum of Agreement -High School Interim Assistant Principal
+- Action (Consent) - Resolution and Memorandum of Agreement - Summer Academic Principal and Assistant Principal
+- Action (Consent) - Resolution and memorandum of Agreement - Part-time Business Administrator
+- Action (Consent) - Resolution and Special Education Chairperson Agreement
+- Action (Consent) - Resolution and Salary and Benefits Agreement - District Treasurer
+
+### CONSENT - FINANCIAL ACTIONS (RS)
+
+- Reports - Budget Status Reports
+- Reports - Revenue Status Report
+- Information - Extraclassroom Report
+- Reports - Warrants & Summary of Findings of the Claims Auditor - June 2026
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Bids
+- Action (Consent) - Schedule of Gifts
+- Action (Consent) - Transfers of Appropriation
+- Action (Consent) - Surplus Equipment
+- Reports - Applications for Club Charters
+- Action (Consent) - Nassau BOCES Contract for Cooperative Educational Services (2025-2026)
+- Action (Consent) - Nassau BOCES Contract for Cooperative Educational Services (2026-2027)
+- Action (Consent) - School Lunch Pricing 2026-2027
+- Action (Consent) - Dr. Bert Nelson Fund for Good Deeds Scholarship Application
+- Action (Consent) - Board Service Personnel Schedule of Annual Appointments - Revised
+
+### CONSENT - MISCELLANEOUS ACTIONS (DA)
+
+- Action (Consent) - Organization Chart 2026-2027 School Year (DA)
+- Action (Consent) - Resolution: Authorize District Clerk to Destroy Official Ballots from the May 20, 2025 Election (DA)
+
+### ADOPTION OF POLICIES NEW/REVISED (DA)
+
+- Action - Policy #5100-Attendance-Final Review and Approval
+
+### FUTURE MEETINGS OF THE BOARD OF EDUCATION AT WOODMERE EDUCATION CENTER
+
+- Information - Work Meeting: September 9, 2026 at 7:00 PM / Regular Meeting: September 16, 2026 at 7:30 PM
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD ON NON-AGENDA ITEMS (TIME PERMITTING)
+
+
+### ADJOURNMENT
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
