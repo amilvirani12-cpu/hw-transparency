@@ -3362,12 +3362,12 @@
   },
   "DTLPKG64FE1A": {
    "date": "2026-07-08",
-   "final": false,
+   "final": true,
    "name": "ORGANIZATIONAL MEETING at 5:00 PM"
   },
   "DTLPRF65DDC1": {
    "date": "2026-07-08",
-   "final": false,
+   "final": true,
    "name": "BOARD OF EDUCATION REGULAR MEETING (following the Organization Meeting)"
   },
   "DTLUSC7D70DC": {
