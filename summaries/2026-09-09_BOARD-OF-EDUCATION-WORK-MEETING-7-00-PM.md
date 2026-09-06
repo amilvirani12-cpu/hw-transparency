@@ -6,7 +6,62 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Reports and Presentations
+
+- Information - Summer Playschool Report (BG)
+- Information - MTSS and Academic Intervention Services Plan for 2026-2027 (PF)
+- Information - APPR Training Plan for 2026-2027 (PF)
+- Discussion - District Efficiency Model (DA)
+- Discussion - Administrative Presentations Schedule - Discussion (DA)
+
+### Financial Reports
+
+- Reports - Treasurer's Report
+- Reports - Budget Status Reports
+- Reports - Revenue Status Reports
+- Reports - Warrants & Summary of Findings of the Claims Auditor - July 2026
+
+### Financial Resolutions
+
+
+### Financial Actions
+
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Board Appointments
+- Action (Consent) - Surplus Equipment
+- Action (Consent) - Transfers of Appropriation
+
+### Curriculum / Miscellaneous Actions (DA, PF)
+
+- Action (Consent) - Conference and Travel (PF)
+- Action (Consent) - UPK Allocations 2026-2027 (PF)
+- Information - NYSSBA Proposed Resolutions Book (DA)
+- Action (Consent) - Superintendent Evaluation Model and Goals 2026-2027 School Year (DA)
+
+### Policy Actions (DA)
+
+- Information - Policy #1500-Public Use of School Facilities-Initial Review-Policy Forthcoming
+- Information - Policy #4710-Grading Systems-Initial Review
+- Information - Policy #5280-Interscholastic Athletics-Initial Review
+- Information - Policy #5695-Students and Personal Electronic Devices-Initial Review
+- Information - Policy #6700-Purchasing-Initial Review
+- Information - Policy #8135-Instructional Technology Systems: Disaster Recovery Plan-Initial Review
+- Information - Policy #4327-Homebound Instruction-Final Review
+- Information - Policy #5100-Attendance-Final Review
+- Information - Policy #5280.1-Student Participation on Non-School Sponsored Athletic Teams-Final Review
+- Information - Policy #8635-Information and Data Privacy, Security, Breach and Notification-Final Review
+- Information - Policy #8700-Insurance-Final Review
+
+### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
+
+
+### Future Meeting Dates
+
+- Information - Wednesday, September 16, 2026, 7:30 PM, Regular Meeting, Woodmere Education Center
+
+### Motion to Adjourn
+
+- Information - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
