@@ -8,6 +8,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ### Reports and Presentations
 
+- Presentation - Facilities Update (William Dworsak & SCC)
 - Information - Summer Playschool Report (BG)
 - Information - MTSS and Academic Intervention Services Plan for 2026-2027 (PF)
 - Information - APPR Training Plan for 2026-2027 (PF)
