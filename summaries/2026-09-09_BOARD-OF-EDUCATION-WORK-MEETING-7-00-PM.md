@@ -12,7 +12,6 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 - Information - Summer Playschool Report (BG)
 - Information - MTSS and Academic Intervention Services Plan for 2026-2027 (PF)
 - Information - APPR Training Plan for 2026-2027 (PF)
-- Discussion - District Efficiency Model (DA)
 - Discussion - Administrative Presentations Schedule - Discussion (DA)
 
 ### Financial Reports
@@ -41,7 +40,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ### Policy Actions (DA)
 
-- Information - Policy #1500-Public Use of School Facilities-Initial Review-Policy Forthcoming
+- Information - Policy #1500-Public Use of School Facilities-Initial Review
 - Information - Policy #4710-Grading Systems-Initial Review
 - Information - Policy #5280-Interscholastic Athletics-Initial Review
 - Information - Policy #5695-Students and Personal Electronic Devices-Initial Review
