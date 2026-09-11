@@ -3425,10 +3425,20 @@
    "final": false,
    "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
   },
+  "DWUGSS454061": {
+   "date": "2026-09-16",
+   "final": false,
+   "name": "Board of Education Regular Meeting"
+  },
   "DXBNQH610AE6": {
    "date": "2026-08-31",
    "final": false,
    "name": "Policy Committee Meeting"
+  },
+  "DXTNZP626435": {
+   "date": "2026-09-16",
+   "final": false,
+   "name": "BOARD OF EDUCATION - AUDIT COMMITTEE MEETING, 6:30 PM"
   }
  }
 }
