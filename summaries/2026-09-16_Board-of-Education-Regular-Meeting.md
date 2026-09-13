@@ -6,7 +6,83 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### PROFESSIONAL RECOGNITIONS
+
+- Information - Welcome to Employees New to the District
+
+### PRESENTATIONS/AWARDS
+
+
+### PROGRAMS AND REPORTS
+
+- Information - Report from Superintendent
+- Reports - Report from Student Advisory Council
+- Reports - Report from Ex-Officio Student Board Member
+- Information - Report from Designated Officers of the District's Employee Organizations
+- Information - Report from PTA Council Presidents
+- Information - Committee Reports from Board of Education Members
+- Reports - Other Reports from Board of Education Members
+- Information - Board of Education Communications (if any)
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD - Related to agenda items only
+
+- Information - Speaker Protocols
+
+### ROUTINE RECOMMENDED ACTIONS
+
+- Action - Acceptance of Meeting Minutes, August 19, 2026, Regular Meeting
+- Action - Approval of the Consent Agenda
+
+### CONSENT - INSTRUCTIONAL ACTIONS (SF)
+
+- Action - CSE and CPSE Recommendation
+- - Resolution for Impartial Hearing Officer
+
+### CONSENT - PERSONNEL ACTIONS (LS)
+
+- Action (Consent) - Personnel Action Report
+- Action (Consent) - Schedule of Annual Leadership Stipends
+- Action (Consent) - Schedule of Art/Music Student Workers
+- Action (Consent) - Schedule of Permanent Pool Substitutes, Substitute Teachers, Substitute Teacher Aides, Typist Clerks, and Cleaners
+- Action (Consent) - Schedule of Hourly Tutor Appointments
+- Action (Consent) - Community Education and Services Staffing
+- Action (Consent) - Resolution and Agreement - Part-time Business Administrator
+- Action (Consent) - Resolution and Contract for Superintendent of Schools
+
+### CONSENT - FINANCIAL ACTIONS
+
+- Reports - Treasurer's Report
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Board Appointments
+- Action (Consent) - Surplus Equipment
+- Action (Consent) - Transfers of Appropriation
+
+### CONSENT - MISCELLANEOUS ACTIONS (PF/DA)
+
+- Action (Consent) - Conference and Travel (PF)
+- Action (Consent) - MTSS and Academic Intervention Services Plan for 2026-2027 (PF)
+- Action (Consent) - APPR Training Plan for 2026-2027 (PF)
+- Action (Consent) - UPK Allocations 2026-2027 (PF)
+- Action (Consent) - Superintendent Evaluation Model and Goals 2026-2027 School Year (DA)
+
+### ADOPTION OF POLICIES NEW/REVISED (DA)
+
+- Action - Policy #4327-Homebound Instruction-Approval
+- Action - Policy #5100-Attendance-Approval
+- Action - Policy #5280.1-Student Participation on Non-School Sponsored Athletic Teams-Approval
+- Action - Policy #8635-Information and Data Privacy, Security, Breach and Notification-Approval
+- Action - Policy #8700-Insurance
+
+### FUTURE MEETINGS OF THE BOARD OF EDUCATION AT WOODMERE EDUCATION CENTER
+
+- Information - Work Meeting: October 7, 7:00 PM, WEC / Regular Meeting: October 14, 7:00 PM, WEC
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD ON NON-AGENDA ITEMS (TIME PERMITTING)
+
+
+### ADJOURNMENT
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 

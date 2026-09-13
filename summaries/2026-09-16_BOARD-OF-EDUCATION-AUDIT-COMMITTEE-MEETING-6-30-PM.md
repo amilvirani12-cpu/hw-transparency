@@ -6,7 +6,20 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Opportunity for the Public to be Heard - Related to Agenda Items Only
+
+- Information - Speaker Protocols for Visitors and Observers
+
+### Financial Actions
+
+- Action (Consent) - District's Corrective Action Plan (CAP) and Purchasing Cycle Audit
+
+### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
+
+
+### Meeting Adjournment
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
