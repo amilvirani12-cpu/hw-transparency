@@ -167,6 +167,10 @@ header.page h1{font-size:26px}}
   <h2 id="yoyTitle">Year over Year</h2>
   <p class="lede">Every budget vote on this site, side by side. Colors identify years; hover any mark for its number.</p>
 
+  <h3>Turnout</h3>
+  <p class="sub" id="yoyTurnSub">Certified ballots cast as a share of registered voters. Registered voters are the district's "voted" plus "not yet voted" poll lists pulled at the same moment on election day.</p>
+  <div class="tipwrap"><div class="scrollx" id="yoyTurnout"></div><div class="tip" id="tipTurnout"></div></div>
+
   <h3>Ballots cast, and how the budget fared</h3>
   <p class="sub">Certified totals from the district's tally sheet (Proposition 1, the school budget).</p>
   <div class="legend"><span><i style="background:#2a78d6"></i>Yes on the budget</span><span><i style="background:#e34948"></i>No on the budget</span></div>
@@ -302,6 +306,37 @@ function renderComparison(){
   document.getElementById("yoyLegend").innerHTML=yrs.map(y=>
     `<span><i style="background:${yearColor(years,y.year)}"></i>${y.year}</span>`).join("");
 
+  // ---- 0. turnout %: certified ballots / registered voters ----------------
+  {
+    const rows=yrs.map(y=>{const c=y.certified||{},reg=y.summary.registered;
+      return {year:y.year,reg,tot:c.total||0,pct:(reg&&c.total)?c.total/reg*100:null};});
+    const W=760,H=280,L=52,R=16,T=30,B=34,pw=W-L-R,ph=H-T-B;
+    const maxP=Math.max(...rows.map(r=>r.pct||0),1);
+    const step=niceStep(maxP,4),top=Math.ceil(maxP/step)*step;
+    const sy=v=>T+ph-(v/top)*ph;
+    const bw=Math.min(64,pw/rows.length*0.55),slot=pw/rows.length;
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Turnout percentage by year">`;
+    for(let v=0;v<=top;v+=step){
+      s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/>`;
+      s+=`<text class="tick" x="${L-8}" y="${sy(v)+4}" text-anchor="end">${v}%</text>`;
+    }
+    rows.forEach((r,i)=>{
+      const x=L+slot*i+(slot-bw)/2;
+      if(r.pct==null){
+        s+=`<text class="tick" x="${x+bw/2}" y="${sy(0)-8}" text-anchor="middle">n/a</text>`;
+      }else{
+        const yT=sy(r.pct);
+        const tip=`<b>${r.year}</b> · ${r.tot.toLocaleString()} of ${r.reg.toLocaleString()} registered · ${r.pct.toFixed(1)}%`;
+        s+=`<rect data-tip="${esc(tip)}" x="${x}" y="${yT}" width="${bw}" height="${Math.max(0,sy(0)-yT)}" fill="#2a78d6" rx="4" ry="4"/>`;
+        s+=`<text class="vlab" x="${x+bw/2}" y="${yT-7}" text-anchor="middle">${r.pct.toFixed(1)}%</text>`;
+      }
+      s+=`<text class="tick" x="${x+bw/2}" y="${H-12}" text-anchor="middle" style="fill:var(--ink)">${r.year}</text>`;
+    });
+    s+=`<line class="axis" x1="${L}" x2="${W-R}" y1="${sy(0)}" y2="${sy(0)}"/></svg>`;
+    const el=document.getElementById("yoyTurnout");el.innerHTML=s;
+    wireTips(el.parentElement,document.getElementById("tipTurnout"));
+  }
+
   // ---- 1. ballots cast: stacked yes/no per year -------------------------
   {
     const W=760,H=300,L=52,R=16,T=30,B=34,pw=W-L-R,ph=H-T-B;
@@ -405,9 +440,10 @@ function renderComparison(){
     wireTips(el.parentElement,document.getElementById("tipAreas"));
 
     // ---- tables ----------------------------------------------------------
-    let t1=`<table><thead><tr><th>Year</th><th>Voters on poll lists</th><th>Certified ballots</th><th>Budget yes</th><th>Budget no</th><th>Yes %</th></tr></thead><tbody>`;
-    yrs.forEach(y=>{const c=y.certified||{};const yes=c.yes||0,no=c.no||0;
-      t1+=`<tr><td>${y.year}</td><td>${fmt(y.summary.total)}</td><td>${fmt(c.total)}</td><td>${fmt(c.yes)}</td><td>${fmt(c.no)}</td><td>${yes+no?Math.round(yes/(yes+no)*100)+"%":"–"}</td></tr>`;});
+    let t1=`<table><thead><tr><th>Year</th><th>Registered voters</th><th>Certified ballots</th><th>Turnout</th><th>Budget yes</th><th>Budget no</th><th>Yes %</th><th>Voters on final list</th></tr></thead><tbody>`;
+    yrs.forEach(y=>{const c=y.certified||{};const yes=c.yes||0,no=c.no||0,reg=y.summary.registered;
+      const turn=(reg&&c.total)?(c.total/reg*100).toFixed(1)+"%":"–";
+      t1+=`<tr><td>${y.year}</td><td>${fmt(reg)}</td><td>${fmt(c.total)}</td><td>${turn}</td><td>${fmt(c.yes)}</td><td>${fmt(c.no)}</td><td>${yes+no?Math.round(yes/(yes+no)*100)+"%":"–"}</td><td>${fmt(y.summary.total)}</td></tr>`;});
     t1+=`</tbody></table>`;
     let t2=`<table><thead><tr><th>Neighborhood</th>${yrs.map(y=>`<th>${y.year}</th>`).join("")}</tr></thead><tbody>`;
     areas.forEach(a=>{t2+=`<tr><td>${esc(a)}</td>${yrs.map(y=>`<td>${fmt(y.summary.areas[a]||0)}</td>`).join("")}</tr>`;});
@@ -550,7 +586,8 @@ function renderCards(d,ent){
   if(absB||!cert){
     document.getElementById("cAbs").textContent=fmt(abs);
     document.getElementById("cAbsL").textContent=(absB&&absB.source==="certified")
-      ?"Absentee ballots (certified tally)":"Absentee ballots counted";
+      ?"Absentee ballots (certified tally)":(absB&&absB.source==="list")
+      ?"Absentee ballots on final list":"Absentee ballots counted";
   }else{
     document.getElementById("cAbs").textContent=fmt(cert.absentee);
     document.getElementById("cAbsL").textContent="Absentee ballots (certified tally)";
