@@ -83,6 +83,7 @@ background:repeating-linear-gradient(135deg,#b9c8dc 0 4px,#d7e1ee 4px 8px);borde
 .yoy .lab{font-size:12.5px;fill:var(--ink);font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
 .yoy .rowlab{font-size:13px;fill:var(--ink)}
 .yoy .vlab{font-size:12px;fill:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.yoy .pct{font-size:12.5px;fill:#fff;font-weight:650;font-variant-numeric:tabular-nums}
 .yoy .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut);margin:4px 0 8px}
 .yoy .legend span{display:inline-flex;align-items:center;gap:6px}
 .yoy .legend i{display:inline-block;width:12px;height:12px;border-radius:3px}
@@ -294,6 +295,9 @@ function renderComparison(){
   document.getElementById("yoy").style.display="";
   const years=yrs.map(y=>y.year);
   document.getElementById("yoyTitle").textContent=`Year over Year — ${years[0]} to ${years[years.length-1]}`;
+  const partial=yrs.filter(y=>y.summary.archived&&!y.summary.final);
+  document.getElementById("yoyAreaSub").textContent="Voters on each year's final voter list, absentees included"+
+    (partial.length?"; "+partial.map(y=>`${y.year} covers the day's poll lists through ${y.summary.asof} (no final list yet)`).join("; ")+".":".");
   // legend shared by the pace + neighborhood charts
   document.getElementById("yoyLegend").innerHTML=yrs.map(y=>
     `<span><i style="background:${yearColor(years,y.year)}"></i>${y.year}</span>`).join("");
@@ -316,8 +320,12 @@ function renderComparison(){
       const yTop=sy(yes),nTop=sy(yes+no);
       const tipY=`<b>${y.year}</b> · Yes ${yes.toLocaleString()} (${Math.round(yes/(yes+no)*100)}%)`;
       const tipN=`<b>${y.year}</b> · No ${no.toLocaleString()} (${Math.round(no/(yes+no)*100)}%)`;
-      s+=`<g><rect data-tip="${esc(tipY)}" x="${x}" y="${yTop}" width="${bw}" height="${Math.max(0,sy(0)-yTop)}" fill="${YES_COLOR}" rx="0"/>`;
-      s+=`<rect data-tip="${esc(tipN)}" x="${x}" y="${nTop}" width="${bw}" height="${Math.max(0,yTop-nTop-2)}" fill="${NO_COLOR}" rx="4" ry="4"/>`;
+      const hY=Math.max(0,sy(0)-yTop),hN=Math.max(0,yTop-nTop-2);
+      const pY=Math.round(yes/(yes+no)*100),pN=100-pY;
+      s+=`<g><rect data-tip="${esc(tipY)}" x="${x}" y="${yTop}" width="${bw}" height="${hY}" fill="${YES_COLOR}" rx="0"/>`;
+      s+=`<rect data-tip="${esc(tipN)}" x="${x}" y="${nTop}" width="${bw}" height="${hN}" fill="${NO_COLOR}" rx="4" ry="4"/>`;
+      if(hY>=18)s+=`<text class="pct" x="${x+bw/2}" y="${yTop+hY/2+4.5}" text-anchor="middle" pointer-events="none">${pY}%</text>`;
+      if(hN>=18)s+=`<text class="pct" x="${x+bw/2}" y="${nTop+hN/2+4.5}" text-anchor="middle" pointer-events="none">${pN}%</text>`;
       s+=`<text class="vlab" x="${x+bw/2}" y="${nTop-7}" text-anchor="middle">${tot.toLocaleString()}</text>`;
       s+=`<text class="tick" x="${x+bw/2}" y="${H-12}" text-anchor="middle" style="fill:var(--ink)">${y.year}</text></g>`;
     });
@@ -434,10 +442,9 @@ function renderBars(d){
     xl.appendChild(lab);
   }
   const foot=document.getElementById("barFoot");
-  if(anyEst){
-    foot.innerHTML='<span class="sw"></span>Certified ballots not on any poll-list pull: voters '+
-      'who arrived after the last list was pulled, plus absentee and other ballots counted '+
-      'separately. Their time of day and neighborhood are not known.';
+  const notes=(d.notes||[]).map(esc).join(" ");
+  if(anyEst||notes){
+    foot.innerHTML=(anyEst?'<span class="sw"></span>Estimated from the certified tally (polls close at 10 PM). ':"")+notes;
     foot.style.display="";
   }else foot.style.display="none";
 }
@@ -510,11 +517,12 @@ function renderHeader(d,ent){
   const status=document.getElementById("metaStatus");
   status.className="";
   if(d.archived){
+    const pt=(d.pulls||[]).filter(p=>!p.final).map(p=>p.time).join(", ");
     document.getElementById("pageSub").textContent=
       "Turnout for the Hewlett-Woodmere budget vote"+dateTxt+" — by time of day and by "+
       "neighborhood, reconstructed from the poll lists pulled that day"+
-      (pullTimes?" ("+pullTimes+")":"")+".";
-    status.textContent="Archived — last poll list pulled at "+(d.asof||"–");
+      (pt?" ("+pt+")":"")+(d.final?" and the final voter list.":".");
+    status.textContent=d.final?"Archived — final voter list":"Archived — last poll list pulled at "+(d.asof||"–");
     status.classList.add("arch");
   }else{
     document.getElementById("pageSub").textContent=
@@ -529,10 +537,10 @@ function renderHeader(d,ent){
 function renderCards(d,ent){
   const cert=ent.certified||d.certified||null;
   document.getElementById("cTotal").textContent=fmt(d.total);
-  document.getElementById("cTotalL").textContent=d.archived?"Voters on poll lists":"Total votes";
+  document.getElementById("cTotalL").textContent=d.archived?(d.final?"Voters on final list":"Voters on poll lists"):"Total votes";
   if(d.archived){
-    document.getElementById("cStatus").textContent=d.asof||"–";
-    document.getElementById("cStatusL").textContent="last poll-list pull";
+    document.getElementById("cStatus").textContent=d.final?"Final":(d.asof||"–");
+    document.getElementById("cStatusL").textContent=d.final?"final voter list":"last poll-list pull";
   }else{
     document.getElementById("cStatus").textContent=d.final?"Final":(d.asof||"–");
     document.getElementById("cStatusL").textContent=d.final?"certified count":"latest poll pull";
@@ -541,7 +549,8 @@ function renderCards(d,ent){
   const abs=absB?absB.count:0;
   if(absB||!cert){
     document.getElementById("cAbs").textContent=fmt(abs);
-    document.getElementById("cAbsL").textContent="Absentee ballots counted";
+    document.getElementById("cAbsL").textContent=(absB&&absB.source==="certified")
+      ?"Absentee ballots (certified tally)":"Absentee ballots counted";
   }else{
     document.getElementById("cAbs").textContent=fmt(cert.absentee);
     document.getElementById("cAbsL").textContent="Absentee ballots (certified tally)";
@@ -574,7 +583,7 @@ async function refresh(){
       :"Each bar is the number of voters whose ballot was first recorded in that window.";
     document.getElementById("mapLede").textContent=
       (abs>0?"In-person tally + absentee ballots. ":"In-person tally. ")+
-      (d.archived?"Counts cover the "+fmt(d.total)+" voters on the poll lists. ":"")+
+      (d.archived?"Counts cover the "+fmt(d.total)+" voters on the "+(d.final?"final voter list. ":"poll lists. "):"")+
       "Each neighborhood is shaded in its color; the school-district boundary is outlined.";
     renderBars(d);await loadAreaShapes();renderMap(d);
     const note=document.getElementById("note");

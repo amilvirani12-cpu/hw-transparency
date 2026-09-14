@@ -18,6 +18,7 @@
    "summary": {
     "total": 2010,
     "archived": false,
+    "final": true,
     "asof": "8:30 PM",
     "absentee_on_lists": 101,
     "areas": {
@@ -78,20 +79,21 @@
     "no": 706
    },
    "summary": {
-    "total": 1327,
+    "total": 1877,
     "archived": true,
-    "asof": "7 PM",
-    "absentee_on_lists": 0,
+    "final": true,
+    "asof": "Final",
+    "absentee_on_lists": 114,
     "areas": {
-     "Woodmere": 420,
-     "Hewlett": 411,
-     "Gibson": 192,
-     "North Woodmere": 134,
-     "Hewlett Harbor": 65,
-     "Woodsburgh": 37,
-     "Hewlett Bay Park": 28,
-     "Lynbrook": 21,
-     "Hewlett Neck": 19
+     "Woodmere": 619,
+     "Hewlett": 578,
+     "Gibson": 246,
+     "North Woodmere": 186,
+     "Hewlett Harbor": 90,
+     "Woodsburgh": 46,
+     "Hewlett Bay Park": 46,
+     "Lynbrook": 39,
+     "Hewlett Neck": 26
     },
     "cumulative": [
      [
@@ -113,6 +115,10 @@
      [
       1140,
       1329
+     ],
+     [
+      1320,
+      1763
      ]
     ]
    }
@@ -132,20 +138,21 @@
     "no": 529
    },
    "summary": {
-    "total": 1589,
+    "total": 1794,
     "archived": true,
-    "asof": "9 PM",
-    "absentee_on_lists": 0,
+    "final": true,
+    "asof": "Final",
+    "absentee_on_lists": 97,
     "areas": {
-     "Hewlett": 498,
-     "Woodmere": 488,
-     "Gibson": 186,
-     "North Woodmere": 151,
-     "Hewlett Harbor": 107,
-     "Woodsburgh": 51,
-     "Hewlett Bay Park": 40,
-     "Hewlett Neck": 37,
-     "Lynbrook": 31
+     "Woodmere": 560,
+     "Hewlett": 552,
+     "Gibson": 210,
+     "North Woodmere": 180,
+     "Hewlett Harbor": 111,
+     "Woodsburgh": 57,
+     "Hewlett Bay Park": 48,
+     "Hewlett Neck": 40,
+     "Lynbrook": 36
     },
     "cumulative": [
      [
@@ -175,6 +182,10 @@
      [
       1260,
       1589
+     ],
+     [
+      1320,
+      1697
      ]
     ]
    }
@@ -194,20 +205,21 @@
     "no": 1003
    },
    "summary": {
-    "total": 2353,
+    "total": 2735,
     "archived": true,
-    "asof": "9 PM",
-    "absentee_on_lists": 0,
+    "final": true,
+    "asof": "Final",
+    "absentee_on_lists": 177,
     "areas": {
-     "Woodmere": 766,
-     "Hewlett": 684,
-     "Gibson": 263,
-     "North Woodmere": 245,
-     "Hewlett Harbor": 134,
-     "Woodsburgh": 95,
-     "Hewlett Neck": 67,
-     "Hewlett Bay Park": 61,
-     "Lynbrook": 38
+     "Woodmere": 899,
+     "Hewlett": 801,
+     "Gibson": 299,
+     "North Woodmere": 292,
+     "Hewlett Harbor": 159,
+     "Woodsburgh": 99,
+     "Hewlett Neck": 77,
+     "Hewlett Bay Park": 67,
+     "Lynbrook": 42
     },
     "cumulative": [
      [
@@ -237,6 +249,10 @@
      [
       1260,
       2353
+     ],
+     [
+      1320,
+      2556
      ]
     ]
    }
@@ -256,12 +272,13 @@
     "no": 1616
    },
    "summary": {
-    "total": 3329,
+    "total": 3328,
     "archived": true,
+    "final": false,
     "asof": "9 PM",
     "absentee_on_lists": 0,
     "areas": {
-     "Woodmere": 1244,
+     "Woodmere": 1243,
      "Hewlett": 885,
      "North Woodmere": 324,
      "Gibson": 279,
@@ -322,20 +339,21 @@
     "no": 1009
    },
    "summary": {
-    "total": 2270,
+    "total": 2671,
     "archived": true,
-    "asof": "9 PM",
-    "absentee_on_lists": 0,
+    "final": true,
+    "asof": "Final",
+    "absentee_on_lists": 193,
     "areas": {
-     "Woodmere": 691,
-     "Hewlett": 688,
-     "North Woodmere": 261,
-     "Gibson": 220,
-     "Hewlett Harbor": 157,
-     "Woodsburgh": 99,
-     "Hewlett Neck": 79,
-     "Hewlett Bay Park": 56,
-     "Lynbrook": 19
+     "Woodmere": 814,
+     "Hewlett": 814,
+     "North Woodmere": 317,
+     "Gibson": 252,
+     "Hewlett Harbor": 178,
+     "Woodsburgh": 103,
+     "Hewlett Neck": 90,
+     "Hewlett Bay Park": 74,
+     "Lynbrook": 27
     },
     "cumulative": [
      [
@@ -373,6 +391,10 @@
      [
       1260,
       2269
+     ],
+     [
+      1320,
+      2465
      ]
     ]
    }
