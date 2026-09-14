@@ -306,31 +306,36 @@ function renderComparison(){
   document.getElementById("yoyLegend").innerHTML=yrs.map(y=>
     `<span><i style="background:${yearColor(years,y.year)}"></i>${y.year}</span>`).join("");
 
-  // ---- 0. turnout %: certified ballots / registered voters ----------------
+  // ---- 0. turnout %: certified ballots / registered voters (line) ---------
   {
     const rows=yrs.map(y=>{const c=y.certified||{},reg=y.summary.registered;
       return {year:y.year,reg,tot:c.total||0,pct:(reg&&c.total)?c.total/reg*100:null};});
-    const W=760,H=280,L=52,R=16,T=30,B=34,pw=W-L-R,ph=H-T-B;
+    const W=760,H=280,L=52,R=40,T=30,B=34,pw=W-L-R,ph=H-T-B;
     const maxP=Math.max(...rows.map(r=>r.pct||0),1);
     const step=niceStep(maxP,4),top=Math.ceil(maxP/step)*step;
     const sy=v=>T+ph-(v/top)*ph;
-    const bw=Math.min(64,pw/rows.length*0.55),slot=pw/rows.length;
+    const inset=48;   // keep the end points (and their labels) off the axes
+    const sx=i=>L+inset+(rows.length>1?i/(rows.length-1):0.5)*(pw-2*inset);
     let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Turnout percentage by year">`;
     for(let v=0;v<=top;v+=step){
       s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/>`;
       s+=`<text class="tick" x="${L-8}" y="${sy(v)+4}" text-anchor="end">${v}%</text>`;
     }
+    const pts=rows.map((r,i)=>r.pct==null?null:[sx(i),sy(r.pct)]);
+    const d=pts.map((p,i)=>p?((i&&pts[i-1])?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1):"").join(" ");
+    s+=`<path d="${d}" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
     rows.forEach((r,i)=>{
-      const x=L+slot*i+(slot-bw)/2;
+      const x=sx(i);
       if(r.pct==null){
-        s+=`<text class="tick" x="${x+bw/2}" y="${sy(0)-8}" text-anchor="middle">n/a</text>`;
+        s+=`<text class="tick" x="${x}" y="${sy(0)-8}" text-anchor="middle">n/a</text>`;
       }else{
-        const yT=sy(r.pct);
+        const y=sy(r.pct);
         const tip=`<b>${r.year}</b> · ${r.tot.toLocaleString()} of ${r.reg.toLocaleString()} registered · ${r.pct.toFixed(1)}%`;
-        s+=`<rect data-tip="${esc(tip)}" x="${x}" y="${yT}" width="${bw}" height="${Math.max(0,sy(0)-yT)}" fill="#2a78d6" rx="4" ry="4"/>`;
-        s+=`<text class="vlab" x="${x+bw/2}" y="${yT-7}" text-anchor="middle">${r.pct.toFixed(1)}%</text>`;
+        s+=`<circle cx="${x}" cy="${y}" r="4.5" fill="#2a78d6" stroke="#fff" stroke-width="2"/>`;
+        s+=`<circle class="hit" data-tip="${esc(tip)}" cx="${x}" cy="${y}" r="12"/>`;
+        s+=`<text class="vlab" x="${x}" y="${y-12}" text-anchor="middle">${r.pct.toFixed(1)}%</text>`;
       }
-      s+=`<text class="tick" x="${x+bw/2}" y="${H-12}" text-anchor="middle" style="fill:var(--ink)">${r.year}</text>`;
+      s+=`<text class="tick" x="${x}" y="${H-12}" text-anchor="middle" style="fill:var(--ink)">${r.year}</text>`;
     });
     s+=`<line class="axis" x1="${L}" x2="${W-R}" y1="${sy(0)}" y2="${sy(0)}"/></svg>`;
     const el=document.getElementById("yoyTurnout");el.innerHTML=s;
