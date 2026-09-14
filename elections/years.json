@@ -86,7 +86,7 @@
     "absentee_on_lists": 114,
     "areas": {
      "Woodmere": 619,
-     "Hewlett": 578,
+     "Hewlett": 579,
      "Gibson": 246,
      "North Woodmere": 186,
      "Hewlett Harbor": 90,
@@ -345,7 +345,7 @@
     "asof": "Final",
     "absentee_on_lists": 193,
     "areas": {
-     "Woodmere": 814,
+     "Woodmere": 815,
      "Hewlett": 814,
      "North Woodmere": 317,
      "Gibson": 252,
@@ -353,7 +353,7 @@
      "Woodsburgh": 103,
      "Hewlett Neck": 90,
      "Hewlett Bay Park": 74,
-     "Lynbrook": 27
+     "Lynbrook": 28
     },
     "cumulative": [
      [
