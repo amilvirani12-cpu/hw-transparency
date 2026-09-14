@@ -71,6 +71,35 @@ border:1px solid #9fb2ca;border-bottom:none}
 .foot .sw{display:inline-block;width:14px;height:10px;vertical-align:-1px;margin-right:5px;border-radius:2px;
 background:repeating-linear-gradient(135deg,#b9c8dc 0 4px,#d7e1ee 4px 8px);border:1px solid #9fb2ca}
 #map{height:520px;border-radius:12px;border:1px solid var(--line)}
+/* year-over-year comparison */
+.yoy h3{font-size:17px;margin:22px 0 2px;font-weight:700;letter-spacing:-.01em}
+.yoy h3:first-of-type{margin-top:6px}
+.yoy .sub{font-size:14px;color:var(--mut);margin:0 0 10px}
+.yoy .scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.yoy svg{display:block;width:100%;min-width:620px;height:auto;font-family:inherit}
+.yoy .grid{stroke:var(--linesoft);stroke-width:1}
+.yoy .axis{stroke:var(--line);stroke-width:1}
+.yoy .tick{font-size:12px;fill:var(--mut)}
+.yoy .lab{font-size:12.5px;fill:var(--ink);font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.yoy .rowlab{font-size:13px;fill:var(--ink)}
+.yoy .vlab{font-size:12px;fill:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.yoy .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mut);margin:4px 0 8px}
+.yoy .legend span{display:inline-flex;align-items:center;gap:6px}
+.yoy .legend i{display:inline-block;width:12px;height:12px;border-radius:3px}
+.yoy .hit{fill:transparent;cursor:default}
+.yoy .hit:hover~.mark,.yoy g:hover .mark{opacity:1}
+.yoy .tipwrap{position:relative}
+.yoy .tip{position:absolute;pointer-events:none;background:#16202e;color:#fff;font-size:12.5px;
+line-height:1.35;padding:6px 9px;border-radius:7px;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.2);
+transform:translate(-50%,calc(-100% - 10px));display:none;z-index:5}
+.yoy .tip b{font-weight:650}
+.yoy details{margin-top:14px;font-size:14px}
+.yoy summary{cursor:pointer;color:var(--info);font-weight:600}
+.yoy table{border-collapse:collapse;width:100%;margin-top:10px;font-size:13.5px;font-variant-numeric:tabular-nums}
+.yoy th,.yoy td{padding:5px 8px;border-bottom:1px solid var(--linesoft);text-align:right;white-space:nowrap}
+.yoy th:first-child,.yoy td:first-child{text-align:left}
+.yoy th{color:var(--mut);font-weight:600;border-bottom:1px solid var(--line)}
+.yoy .tblwrap{overflow-x:auto}
 .bubble-label{background:none;border:none;box-shadow:none;font-size:13.5px;font-weight:650;
 color:#2b3648;text-align:center;line-height:1.4;white-space:nowrap;
 text-shadow:0 1px 3px #fff,0 -1px 3px #fff,1px 0 3px #fff,-1px 0 3px #fff,0 0 6px #fff}
@@ -131,6 +160,32 @@ header.page h1{font-size:26px}}
   <p class="lede" id="mapLede">Each neighborhood is shaded in its color; the school-district boundary is outlined.</p>
   <div id="map"></div>
   <div class="note" id="note" style="display:none"></div>
+</section>
+
+<section class="panel yoy" id="yoy" style="display:none">
+  <h2 id="yoyTitle">Year over Year</h2>
+  <p class="lede">Every budget vote on this site, side by side. Colors identify years; hover any mark for its number.</p>
+
+  <h3>Ballots cast, and how the budget fared</h3>
+  <p class="sub">Certified totals from the district's tally sheet (Proposition 1, the school budget).</p>
+  <div class="legend"><span><i style="background:#2a78d6"></i>Yes on the budget</span><span><i style="background:#e34948"></i>No on the budget</span></div>
+  <div class="tipwrap"><div class="scrollx" id="yoyBallots"></div><div class="tip" id="tipBallots"></div></div>
+
+  <div class="legend" id="yoyLegend"></div>
+
+  <h3>Pace of the day</h3>
+  <p class="sub">In-person voters on the poll list at each pull through election day. Each line ends at that year's last list.</p>
+  <div class="tipwrap"><div class="scrollx" id="yoyPace"></div><div class="tip" id="tipPace"></div></div>
+
+  <h3>Turnout by neighborhood, each year</h3>
+  <p class="sub" id="yoyAreaSub">Voters on the poll lists. Prior years cover in-person voters through the last pull; the current year covers the certified voter list including absentees.</p>
+  <div class="tipwrap"><div class="scrollx" id="yoyAreas"></div><div class="tip" id="tipAreas"></div></div>
+
+  <details>
+    <summary>Show the numbers as tables</summary>
+    <div class="tblwrap" id="yoyTable1"></div>
+    <div class="tblwrap" id="yoyTable2"></div>
+  </details>
 </section>
 
 <footer>
@@ -199,6 +254,159 @@ async function loadManifest(){
   const has=manifest.years.find(y=>y.year===want);
   selectYear(has?want:(manifest.current??manifest.years[0].year),false);
   sel.addEventListener("change",()=>selectYear(sel.value==="current"?null:parseInt(sel.value,10),true));
+  try{renderComparison();}catch(e){console.error("comparison",e);}
+}
+
+// ---------------------------------------------------------------------------
+// Year-over-year comparison (reads only years.json summaries)
+// ---------------------------------------------------------------------------
+// Fixed year colors: validated 6-slot categorical palette (dataviz skill),
+// assigned newest-first so the current year is always slot 1 (blue).
+const YEAR_PALETTE=["#2a78d6","#eb6834","#1baf7a","#eda100","#e87ba4","#008300"];
+const YES_COLOR="#2a78d6",NO_COLOR="#e34948";
+function yearColor(years,y){
+  const desc=[...years].sort((a,b)=>b-a);
+  return YEAR_PALETTE[desc.indexOf(y)%YEAR_PALETTE.length];
+}
+function niceStep(max,target){
+  const raw=max/target,p=Math.pow(10,Math.floor(Math.log10(raw)));
+  for(const m of [1,2,2.5,5,10]){if(raw<=m*p)return m*p;}
+  return 10*p;
+}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");}
+function tmins(m){const h=Math.floor(m/60),mm=m%60,mer=h<12?"AM":"PM",h12=h%12||12;
+  return mm?`${h12}:${String(mm).padStart(2,"0")} ${mer}`:`${h12} ${mer}`;}
+function wireTips(container,tip){
+  container.querySelectorAll("[data-tip]").forEach(el=>{
+    el.addEventListener("mouseenter",()=>{
+      tip.innerHTML=el.getAttribute("data-tip");tip.style.display="block";
+      const r=el.getBoundingClientRect(),w=container.getBoundingClientRect();
+      tip.style.left=(r.left+r.width/2-w.left)+"px";
+      tip.style.top=(r.top-w.top)+"px";
+    });
+    el.addEventListener("mouseleave",()=>{tip.style.display="none";});
+  });
+}
+
+function renderComparison(){
+  const yrs=manifest.years.filter(y=>y.year&&y.summary).sort((a,b)=>a.year-b.year);
+  if(yrs.length<2)return;
+  document.getElementById("yoy").style.display="";
+  const years=yrs.map(y=>y.year);
+  document.getElementById("yoyTitle").textContent=`Year over Year — ${years[0]} to ${years[years.length-1]}`;
+  // legend shared by the pace + neighborhood charts
+  document.getElementById("yoyLegend").innerHTML=yrs.map(y=>
+    `<span><i style="background:${yearColor(years,y.year)}"></i>${y.year}</span>`).join("");
+
+  // ---- 1. ballots cast: stacked yes/no per year -------------------------
+  {
+    const W=760,H=300,L=52,R=16,T=30,B=34,pw=W-L-R,ph=H-T-B;
+    const maxV=Math.max(...yrs.map(y=>(y.certified||{}).total||0),1);
+    const step=niceStep(maxV,4),top=Math.ceil(maxV/step)*step;
+    const sy=v=>T+ph-(v/top)*ph;
+    const bw=Math.min(64,pw/yrs.length*0.55),slot=pw/yrs.length;
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Certified ballots cast by year, yes and no">`;
+    for(let v=0;v<=top;v+=step){
+      s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/>`;
+      s+=`<text class="tick" x="${L-8}" y="${sy(v)+4}" text-anchor="end">${v.toLocaleString()}</text>`;
+    }
+    yrs.forEach((y,i)=>{
+      const c=y.certified||{},yes=c.yes||0,no=c.no||0,tot=c.total||(yes+no);
+      const x=L+slot*i+(slot-bw)/2;
+      const yTop=sy(yes),nTop=sy(yes+no);
+      const tipY=`<b>${y.year}</b> · Yes ${yes.toLocaleString()} (${Math.round(yes/(yes+no)*100)}%)`;
+      const tipN=`<b>${y.year}</b> · No ${no.toLocaleString()} (${Math.round(no/(yes+no)*100)}%)`;
+      s+=`<g><rect data-tip="${esc(tipY)}" x="${x}" y="${yTop}" width="${bw}" height="${Math.max(0,sy(0)-yTop)}" fill="${YES_COLOR}" rx="0"/>`;
+      s+=`<rect data-tip="${esc(tipN)}" x="${x}" y="${nTop}" width="${bw}" height="${Math.max(0,yTop-nTop-2)}" fill="${NO_COLOR}" rx="4" ry="4"/>`;
+      s+=`<text class="vlab" x="${x+bw/2}" y="${nTop-7}" text-anchor="middle">${tot.toLocaleString()}</text>`;
+      s+=`<text class="tick" x="${x+bw/2}" y="${H-12}" text-anchor="middle" style="fill:var(--ink)">${y.year}</text></g>`;
+    });
+    s+=`<line class="axis" x1="${L}" x2="${W-R}" y1="${sy(0)}" y2="${sy(0)}"/></svg>`;
+    const el=document.getElementById("yoyBallots");el.innerHTML=s;
+    wireTips(el.parentElement,document.getElementById("tipBallots"));
+  }
+
+  // ---- 2. pace of the day: cumulative in-person voters per pull ----------
+  {
+    const W=760,H=340,L=52,R=54,T=16,B=34,pw=W-L-R,ph=H-T-B;
+    const x0=7*60,x1=22*60;
+    const maxV=Math.max(...yrs.flatMap(y=>y.summary.cumulative.map(p=>p[1])),1);
+    const step=niceStep(maxV,4),top=Math.ceil(maxV/step)*step;
+    const sx=m=>L+(m-x0)/(x1-x0)*pw, sy=v=>T+ph-(v/top)*ph;
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative in-person voters through election day, by year">`;
+    for(let v=0;v<=top;v+=step){
+      s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/>`;
+      s+=`<text class="tick" x="${L-8}" y="${sy(v)+4}" text-anchor="end">${v.toLocaleString()}</text>`;
+    }
+    for(let m=x0;m<=x1;m+=120){
+      s+=`<text class="tick" x="${sx(m)}" y="${H-12}" text-anchor="middle">${tmins(m)}</text>`;
+    }
+    s+=`<text class="tick" x="${sx(x1)}" y="${H-12}" text-anchor="middle">${tmins(x1)}</text>`;
+    s+=`<line class="axis" x1="${L}" x2="${W-R}" y1="${sy(0)}" y2="${sy(0)}"/>`;
+    // end labels, nudged apart so close finishes stay legible
+    const ends=yrs.map(y=>{const p=y.summary.cumulative;const last=p[p.length-1];
+      return {y:y.year,px:sx(last[0]),py:sy(last[1])};}).sort((a,b)=>a.py-b.py);
+    for(let i=1;i<ends.length;i++){if(ends[i].py-ends[i-1].py<14)ends[i].py=ends[i-1].py+14;}
+    const endY=Object.fromEntries(ends.map(e=>[e.y,e.py]));
+    yrs.forEach(y=>{
+      const col=yearColor(years,y.year),cur=y.year===manifest.current;
+      const pts=[[x0,0],...y.summary.cumulative];
+      const d=pts.map((p,i)=>(i?"L":"M")+sx(p[0]).toFixed(1)+" "+sy(p[1]).toFixed(1)).join(" ");
+      s+=`<g><path d="${d}" fill="none" stroke="${col}" stroke-width="${cur?3:2}" stroke-linejoin="round" stroke-linecap="round"/>`;
+      y.summary.cumulative.forEach(p=>{
+        const tip=`<b>${y.year}</b> · ${tmins(p[0])} · ${p[1].toLocaleString()} voters`;
+        s+=`<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="3.5" fill="${col}" stroke="#fff" stroke-width="2"/>`;
+        s+=`<circle class="hit" data-tip="${esc(tip)}" cx="${sx(p[0])}" cy="${sy(p[1])}" r="11"/>`;
+      });
+      const last=y.summary.cumulative[y.summary.cumulative.length-1];
+      s+=`<text class="lab" x="${sx(last[0])+8}" y="${endY[y.year]+4}" fill="${col}" style="fill:${col}">${y.year}</text></g>`;
+    });
+    s+=`</svg>`;
+    const el=document.getElementById("yoyPace");el.innerHTML=s;
+    wireTips(el.parentElement,document.getElementById("tipPace"));
+  }
+
+  // ---- 3. neighborhoods: horizontal grouped bars, one row per area --------
+  {
+    const cur=yrs.find(y=>y.year===manifest.current)||yrs[yrs.length-1];
+    const areaSet=new Set();yrs.forEach(y=>Object.keys(y.summary.areas).forEach(a=>areaSet.add(a)));
+    const areas=[...areaSet].sort((a,b)=>(cur.summary.areas[b]||0)-(cur.summary.areas[a]||0));
+    const bh=7,gap=2,rowGap=16,W=760,L=132,R=44,T=8,B=30;
+    const rowH=yrs.length*(bh+gap)-gap,H=T+areas.length*(rowH+rowGap)-rowGap+B;
+    const pw=W-L-R;
+    const maxV=Math.max(...yrs.flatMap(y=>Object.values(y.summary.areas)),1);
+    const step=niceStep(maxV,4),top=Math.ceil(maxV/step)*step;
+    const sx=v=>L+(v/top)*pw;
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Voters by neighborhood for each year">`;
+    for(let v=0;v<=top;v+=step){
+      s+=`<line class="grid" x1="${sx(v)}" x2="${sx(v)}" y1="${T}" y2="${H-B+4}"/>`;
+      s+=`<text class="tick" x="${sx(v)}" y="${H-10}" text-anchor="middle">${v.toLocaleString()}</text>`;
+    }
+    areas.forEach((a,ai)=>{
+      const y0=T+ai*(rowH+rowGap);
+      s+=`<text class="rowlab" x="${L-10}" y="${y0+rowH/2+4}" text-anchor="end">${esc(a)}</text>`;
+      yrs.forEach((y,yi)=>{
+        const v=y.summary.areas[a]||0,col=yearColor(years,y.year),yy=y0+yi*(bh+gap);
+        const tip=`<b>${y.year}</b> · ${esc(a)} · ${v.toLocaleString()} voters`;
+        s+=`<g><rect data-tip="${esc(tip)}" x="${L}" y="${yy}" width="${Math.max(1,sx(v)-L)}" height="${bh}" fill="${col}" rx="3" ry="3"/>`;
+        s+=`<rect class="hit" data-tip="${esc(tip)}" x="${L}" y="${yy-1}" width="${pw}" height="${bh+2}"/></g>`;
+      });
+    });
+    s+=`<line class="axis" x1="${L}" x2="${L}" y1="${T}" y2="${H-B+4}"/></svg>`;
+    const el=document.getElementById("yoyAreas");el.innerHTML=s;
+    wireTips(el.parentElement,document.getElementById("tipAreas"));
+
+    // ---- tables ----------------------------------------------------------
+    let t1=`<table><thead><tr><th>Year</th><th>Voters on poll lists</th><th>Certified ballots</th><th>Budget yes</th><th>Budget no</th><th>Yes %</th></tr></thead><tbody>`;
+    yrs.forEach(y=>{const c=y.certified||{};const yes=c.yes||0,no=c.no||0;
+      t1+=`<tr><td>${y.year}</td><td>${fmt(y.summary.total)}</td><td>${fmt(c.total)}</td><td>${fmt(c.yes)}</td><td>${fmt(c.no)}</td><td>${yes+no?Math.round(yes/(yes+no)*100)+"%":"–"}</td></tr>`;});
+    t1+=`</tbody></table>`;
+    let t2=`<table><thead><tr><th>Neighborhood</th>${yrs.map(y=>`<th>${y.year}</th>`).join("")}</tr></thead><tbody>`;
+    areas.forEach(a=>{t2+=`<tr><td>${esc(a)}</td>${yrs.map(y=>`<td>${fmt(y.summary.areas[a]||0)}</td>`).join("")}</tr>`;});
+    t2+=`</tbody></table>`;
+    document.getElementById("yoyTable1").innerHTML=t1;
+    document.getElementById("yoyTable2").innerHTML=t2;
+  }
 }
 function yearEntry(){return manifest.years.find(y=>y.year===selectedYear)||manifest.years[0];}
 function selectYear(year,fromUser){
