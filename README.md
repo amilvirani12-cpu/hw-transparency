@@ -13,6 +13,7 @@ public financial documents into readable dashboards. Not affiliated with the dis
 | `treasurer/` | Monthly Treasurer's Reports | `HW-Treasurer-Report` parser |
 | `facilities/tours/` | Board facilities tour documents | `HW-Facilities[Tour]/facility-dashboard` |
 | `facilities/bcs/` | NY State Building Condition Survey | `Budget/bcs_visualizer` |
+| `elections/` | Election-day poll lists (live year) + archived tally reports 2021-2025 | `Claude/election_live/election_pipeline.py` (live) and `build_history.py` (prior years, writes `elections/history/*.json` + `years.json`) |
 
 All source documents are public records from the district's
 [BoardDocs site](https://go.boarddocs.com/ny/hwps/Board.nsf/Public).

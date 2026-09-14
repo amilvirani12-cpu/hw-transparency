@@ -1,0 +1,95 @@
+{
+ "current": 2026,
+ "years": [
+  {
+   "year": 2026,
+   "file": "data.json",
+   "label": "2026 Budget Vote (May 19, 2026)",
+   "certified": {
+    "date": "May 19, 2026",
+    "total": 2001,
+    "machine": 1905,
+    "absentee": 94,
+    "early": 0,
+    "affidavit": 2,
+    "yes": 1200,
+    "no": 801
+   }
+  },
+  {
+   "year": 2025,
+   "file": "history/2025.json",
+   "label": "2025 Budget Vote (May 20, 2025)",
+   "certified": {
+    "date": "May 20, 2025",
+    "total": 1854,
+    "machine": 1740,
+    "absentee": 114,
+    "early": 0,
+    "affidavit": 0,
+    "yes": 1148,
+    "no": 706
+   }
+  },
+  {
+   "year": 2024,
+   "file": "history/2024.json",
+   "label": "2024 Budget Vote (May 21, 2024)",
+   "certified": {
+    "date": "May 21, 2024",
+    "total": 1783,
+    "machine": 1670,
+    "absentee": 97,
+    "early": 16,
+    "affidavit": 0,
+    "yes": 1254,
+    "no": 529
+   }
+  },
+  {
+   "year": 2023,
+   "file": "history/2023.json",
+   "label": "2023 Budget Vote (May 16, 2023)",
+   "certified": {
+    "date": "May 16, 2023",
+    "total": 2703,
+    "machine": 2526,
+    "absentee": 177,
+    "early": 0,
+    "affidavit": 0,
+    "yes": 1700,
+    "no": 1003
+   }
+  },
+  {
+   "year": 2022,
+   "file": "history/2022.json",
+   "label": "2022 Budget Vote (May 17, 2022)",
+   "certified": {
+    "date": "May 17, 2022",
+    "total": 3541,
+    "machine": 3250,
+    "absentee": 291,
+    "early": 0,
+    "affidavit": 0,
+    "yes": 1925,
+    "no": 1616
+   }
+  },
+  {
+   "year": 2021,
+   "file": "history/2021.json",
+   "label": "2021 Budget Vote (May 11, 2021)",
+   "certified": {
+    "date": "May 11, 2021",
+    "total": 2598,
+    "machine": 2405,
+    "absentee": 193,
+    "early": 0,
+    "affidavit": 0,
+    "yes": 1589,
+    "no": 1009
+   }
+  }
+ ]
+}

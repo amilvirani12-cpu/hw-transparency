@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2026 Budget Vote Turnout — HW Fiscal Dashboard</title>
-<meta name="description" content="Live turnout tracking for Hewlett-Woodmere school district votes — by time of day and by neighborhood. Aggregate counts only.">
+<title>Election Turnout — HW Fiscal Dashboard</title>
+<meta name="description" content="Turnout for Hewlett-Woodmere school district budget votes, 2021 to today — by time of day and by neighborhood. Aggregate counts only.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
@@ -27,12 +27,23 @@ background:radial-gradient(130% 180% at 0% 0%,#20558a 0%,#16406f 48%,#0e2c52 100
 box-shadow:0 2px 4px rgba(10,30,55,.18),0 18px 44px -24px rgba(10,30,55,.55)}
 header.page:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
 box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.titlerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;position:relative}
 header.page h1{margin:0 0 5px;font-size:32px;font-weight:700;letter-spacing:-.015em;
 font-family:'Segoe UI Variable Display','Segoe UI',-apple-system,Roboto,Helvetica,Arial,sans-serif}
-header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350;max-width:56ch}
+header.page .sub{font-size:19px;opacity:.9;margin:0;font-weight:350;max-width:56ch;position:relative}
+.yearpick{display:inline-flex;align-items:center;gap:8px;font-size:14px;opacity:.95}
+.yearpick select{font:inherit;font-size:15px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.35);border-radius:10px;padding:7px 34px 7px 12px;cursor:pointer;
+appearance:none;-webkit-appearance:none;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+background-repeat:no-repeat;background-position:right 12px center}
+.yearpick select:focus{outline:2px solid rgba(255,255,255,.6);outline-offset:1px}
+.yearpick select option{color:var(--ink);background:#fff}
 .meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px;position:relative}
 .meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
 border-radius:999px;padding:5px 14px;font-size:13.5px;backdrop-filter:blur(2px)}
+.meta span.live{background:rgba(72,199,116,.18);border-color:rgba(120,230,160,.5)}
+.meta span.arch{background:rgba(255,255,255,.06)}
 section.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;
 padding:22px 26px;margin-bottom:20px;box-shadow:var(--shadow)}
 section.panel h2{font-size:22px;margin:0 0 4px;letter-spacing:-.012em;font-weight:700}
@@ -41,6 +52,7 @@ section.panel .lede{font-size:15.5px;color:var(--mut);margin:0 0 18px}
 .card{flex:1;min-width:130px;background:var(--card);border:1px solid var(--line);
 border-radius:13px;padding:16px 14px 13px;text-align:center;box-shadow:var(--shadow)}
 .card .n{font-size:27px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.card .n.small{font-size:22px}
 .card .l{font-size:13px;color:var(--mut);margin-top:2px}
 /* bar chart */
 .chart{display:flex;align-items:flex-end;gap:3%;height:300px;padding:0 4px;
@@ -49,19 +61,26 @@ border-bottom:1px solid var(--line)}
 .val{font-size:15px;color:var(--ink);font-weight:600;margin-bottom:4px;font-variant-numeric:tabular-nums}
 .bar{width:80%;background:linear-gradient(180deg,#2a67ab,#1d4e88);border-radius:3px 3px 0 0;
 transition:height .6s ease;min-height:2px}
+.bar.est{background:repeating-linear-gradient(135deg,#b9c8dc 0 6px,#d7e1ee 6px 12px);
+border:1px solid #9fb2ca;border-bottom:none}
+.colb.est .val{color:var(--mut);font-weight:500}
 .xlabels{display:flex;gap:3%;padding:7px 4px 0}
 .xlabels div{flex:1;text-align:center;font-size:11.5px;color:var(--mut)}
+.xlabels div.est{font-style:italic}
+.foot{font-size:13px;color:var(--mut);margin-top:12px;line-height:1.5}
+.foot .sw{display:inline-block;width:14px;height:10px;vertical-align:-1px;margin-right:5px;border-radius:2px;
+background:repeating-linear-gradient(135deg,#b9c8dc 0 4px,#d7e1ee 4px 8px);border:1px solid #9fb2ca}
 #map{height:520px;border-radius:12px;border:1px solid var(--line)}
 .bubble-label{background:none;border:none;box-shadow:none;font-size:13.5px;font-weight:650;
 color:#2b3648;text-align:center;line-height:1.4;white-space:nowrap;
 text-shadow:0 1px 3px #fff,0 -1px 3px #fff,1px 0 3px #fff,-1px 0 3px #fff,0 0 6px #fff}
-.bubble-label::before{display:none}
 .bubble-label::before{display:none!important}   /* no tooltip arrow triangles */
 .leaflet-tooltip-right.bubble-label{text-align:left}
 .note{color:var(--warn);font-size:13.5px;margin-top:10px}
 footer{font-size:13.5px;color:var(--mut);padding:6px 4px 24px;line-height:1.6}
 footer a{color:var(--info)}
-@media (max-width:700px){.chart{height:200px}.xlabels div{font-size:8px}#map{height:400px}}
+@media (max-width:700px){.chart{height:200px}.xlabels div{font-size:8px}#map{height:400px}
+header.page h1{font-size:26px}}
 </style>
 </head>
 <body>
@@ -77,9 +96,14 @@ footer a{color:var(--info)}
 </nav>
 
 <header class="page">
-  <h1 id="pageTitle">Election Turnout &mdash; 2026 Budget Vote</h1>
-  <p class="sub">Turnout for the Hewlett-Woodmere budget vote (May 19, 2026) &mdash; by time of
-  day and by neighborhood. Updated live on election day as poll lists are pulled.</p>
+  <div class="titlerow">
+    <h1 id="pageTitle">Election Turnout</h1>
+    <label class="yearpick">Election
+      <select id="yearSel" aria-label="Choose an election year"></select>
+    </label>
+  </div>
+  <p class="sub" id="pageSub">Turnout for the Hewlett-Woodmere budget vote &mdash; by time of
+  day and by neighborhood.</p>
   <div class="meta">
     <span id="metaStatus">loading&hellip;</span>
     <span>Aggregate counts only &mdash; no individual voter information</span>
@@ -88,16 +112,18 @@ footer a{color:var(--info)}
 </header>
 
 <div class="cards">
-  <div class="card"><div class="n" id="cTotal">–</div><div class="l">Total votes</div></div>
+  <div class="card"><div class="n" id="cTotal">–</div><div class="l" id="cTotalL">Voters on poll lists</div></div>
   <div class="card"><div class="n" id="cStatus">–</div><div class="l" id="cStatusL">status</div></div>
-  <div class="card"><div class="n" id="cAbs">–</div><div class="l">Absentee ballots counted</div></div>
+  <div class="card"><div class="n" id="cAbs">–</div><div class="l" id="cAbsL">Absentee ballots</div></div>
+  <div class="card"><div class="n" id="cCert">–</div><div class="l" id="cCertL">Certified ballots cast</div></div>
 </div>
 
 <section class="panel">
   <h2 id="barTitle">Turnout by Time of Day</h2>
-  <p class="lede">Each bar is the number of voters whose ballot was first recorded in that window.</p>
+  <p class="lede" id="barLede">Each bar is the number of voters whose ballot was first recorded in that window.</p>
   <div class="chart" id="chart"></div>
   <div class="xlabels" id="xlabels"></div>
+  <div class="foot" id="barFoot" style="display:none"></div>
 </section>
 
 <section class="panel">
@@ -111,14 +137,26 @@ footer a{color:var(--info)}
   This is an independent project maintained by <b>Amil Virani, CPA</b> &mdash; a district resident.
   It is not affiliated with, endorsed by, or produced by the Hewlett-Woodmere Union Free School
   District or its Board of Education. Turnout figures are compiled from the district's public
-  poll lists; this page publishes <b>aggregate counts only</b>. The page refreshes automatically
-  during election day.
+  poll lists; this page publishes <b>aggregate counts only</b>. Certified ballot counts come from
+  the district's official tally sheet for each vote (Proposition 1, the school budget). Prior years
+  were reconstructed after the fact from poll lists pulled during election day, so their
+  time-of-day windows follow whenever those lists were pulled. The current election refreshes
+  automatically during election day.
 </footer>
 
 </div>
 <script>
 let map=null,mapLayers=[],areaShapes=null,pageTag=null;
+let manifest=null,selectedYear=null,activeFile="data.json";
 function suffix(d){return d.final?" — Final":(d.asof?" — as of "+d.asof:"")}
+function fmt(n){return (n==null)?"–":Number(n).toLocaleString()}
+// "7 AM to 9 AM" -> "7–9 AM", "11 AM to 1:30 PM" -> "11 AM–1:30 PM": keeps ten
+// narrow columns from wrapping mid-label
+function shortLabel(s){
+  const m=/^(\S+) (AM|PM) to (\S+) (AM|PM)$/.exec(s);
+  if(!m)return s;
+  return m[2]===m[4]?`${m[1]}–${m[3]} ${m[2]}`:`${m[1]} ${m[2]}–${m[3]} ${m[4]}`;
+}
 
 // Self-upgrade: if a newer version of this page has been deployed while the
 // tab sits open (or cached), reload once so viewers always run current code.
@@ -141,18 +179,59 @@ async function loadAreaShapes(){
   return areaShapes;
 }
 
+// ---- year drop-down (years.json is written by the history builder) ----
+async function loadManifest(){
+  try{
+    const r=await fetch("years.json?t="+Date.now(),{cache:"no-store"});
+    if(r.ok)manifest=await r.json();
+  }catch(e){}
+  if(!manifest){manifest={current:null,years:[{year:null,file:"data.json",label:"Current election"}]};}
+  const sel=document.getElementById("yearSel");
+  sel.innerHTML="";
+  for(const y of manifest.years){
+    const o=document.createElement("option");
+    o.value=y.year??"current";
+    o.textContent=(y.year??"Current")+(y.year===manifest.current?" (current)":"");
+    sel.appendChild(o);
+  }
+  // deep link:  elections/#2024
+  const want=parseInt((location.hash||"").replace("#",""),10);
+  const has=manifest.years.find(y=>y.year===want);
+  selectYear(has?want:(manifest.current??manifest.years[0].year),false);
+  sel.addEventListener("change",()=>selectYear(sel.value==="current"?null:parseInt(sel.value,10),true));
+}
+function yearEntry(){return manifest.years.find(y=>y.year===selectedYear)||manifest.years[0];}
+function selectYear(year,fromUser){
+  selectedYear=year;
+  const ent=yearEntry();
+  activeFile=ent.file;
+  document.getElementById("yearSel").value=year??"current";
+  if(fromUser&&year!=null){history.replaceState(null,"","#"+year);}
+  refresh();
+}
+
 function renderBars(d){
   const chart=document.getElementById("chart"),xl=document.getElementById("xlabels");
   chart.innerHTML="";xl.innerHTML="";
   const max=Math.max(1,...d.buckets.map(b=>b.count));
+  let anyEst=false;
   for(const b of d.buckets){
-    const col=document.createElement("div");col.className="colb";
-    const v=document.createElement("div");v.className="val";v.textContent=b.count;
-    const bar=document.createElement("div");bar.className="bar";
+    const col=document.createElement("div");col.className="colb"+(b.estimated?" est":"");
+    const v=document.createElement("div");v.className="val";v.textContent=fmt(b.count);
+    const bar=document.createElement("div");bar.className="bar"+(b.estimated?" est":"");
     bar.style.height=(b.count/max*80)+"%";
     col.appendChild(v);col.appendChild(bar);chart.appendChild(col);
-    const lab=document.createElement("div");lab.textContent=b.label;xl.appendChild(lab);
+    const lab=document.createElement("div");lab.textContent=shortLabel(b.label);
+    if(b.estimated){lab.className="est";anyEst=true;}
+    xl.appendChild(lab);
   }
+  const foot=document.getElementById("barFoot");
+  if(anyEst){
+    foot.innerHTML='<span class="sw"></span>Certified ballots not on any poll-list pull: voters '+
+      'who arrived after the last list was pulled, plus absentee and other ballots counted '+
+      'separately. Their time of day and neighborhood are not known.';
+    foot.style.display="";
+  }else foot.style.display="none";
 }
 
 function renderMap(d){
@@ -160,13 +239,15 @@ function renderMap(d){
     // zoomSnap 0.25 = the auto-fit can land exactly on the district instead of
     // rounding down a whole level; zoomDelta 0.5 = gentler +/- buttons
     map=L.map("map",{scrollWheelZoom:false,zoomSnap:0.25,zoomDelta:0.5});
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-      {attribution:"&copy; OpenStreetMap contributors &copy; CARTO",
-       subdomains:"abcd",maxZoom:19}).addTo(map);
+    // Esri's light-gray canvas: a free, keyless basemap with the same quiet
+    // look as CARTO Positron (which now watermarks "API KEY REQUIRED").
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      {attribution:"Tiles &copy; Esri &mdash; Esri, HERE, Garmin, OpenStreetMap contributors",
+       maxZoom:16}).addTo(map);
   }
   for(const l of mapLayers)map.removeLayer(l);
   mapLayers=[];
-  // neighborhood polygons, colored to match their bubbles
+  // neighborhood polygons, colored to match their labels
   if(areaShapes){
     for(const [name,a] of Object.entries(areaShapes)){
       for(const ring of a.rings){
@@ -212,40 +293,102 @@ function renderMap(d){
   }
 }
 
-async function refresh(){
-  try{
-    const res=await fetch("data.json?t="+Date.now(),{cache:"no-store"});
-    if(!res.ok)throw new Error("HTTP "+res.status);
-    const d=await res.json();
-    if(d.election){document.getElementById("pageTitle").textContent=
-      "Election Turnout — "+d.election;}
-    document.getElementById("metaStatus").textContent=
-      d.final?"Certified final results":"Live — updating through election day";
-    document.getElementById("metaUpdated").textContent="Last updated "+d.generated;
-    document.getElementById("cTotal").textContent=d.total.toLocaleString();
+function renderHeader(d,ent){
+  const label=d.election||ent.label||"";
+  document.getElementById("pageTitle").textContent="Election Turnout — "+label;
+  document.title=label+" Turnout — HW Fiscal Dashboard";
+  const dateTxt=(ent.certified&&ent.certified.date)?" ("+ent.certified.date+")":"";
+  const pullTimes=(d.pulls||[]).map(p=>p.time).join(", ");
+  const status=document.getElementById("metaStatus");
+  status.className="";
+  if(d.archived){
+    document.getElementById("pageSub").textContent=
+      "Turnout for the Hewlett-Woodmere budget vote"+dateTxt+" — by time of day and by "+
+      "neighborhood, reconstructed from the poll lists pulled that day"+
+      (pullTimes?" ("+pullTimes+")":"")+".";
+    status.textContent="Archived — last poll list pulled at "+(d.asof||"–");
+    status.classList.add("arch");
+  }else{
+    document.getElementById("pageSub").textContent=
+      "Turnout for the Hewlett-Woodmere budget vote"+dateTxt+" — by time of "+
+      "day and by neighborhood. Updated live on election day as poll lists are pulled.";
+    status.textContent=d.final?"Certified final results":"Live — updating through election day";
+    if(!d.final)status.classList.add("live");
+  }
+  document.getElementById("metaUpdated").textContent="Compiled "+d.generated;
+}
+
+function renderCards(d,ent){
+  const cert=ent.certified||d.certified||null;
+  document.getElementById("cTotal").textContent=fmt(d.total);
+  document.getElementById("cTotalL").textContent=d.archived?"Voters on poll lists":"Total votes";
+  if(d.archived){
+    document.getElementById("cStatus").textContent=d.asof||"–";
+    document.getElementById("cStatusL").textContent="last poll-list pull";
+  }else{
     document.getElementById("cStatus").textContent=d.final?"Final":(d.asof||"–");
     document.getElementById("cStatusL").textContent=d.final?"certified count":"latest poll pull";
-    const abs=(d.buckets.find(b=>b.label==="Absentee")||{}).count||0;
-    document.getElementById("cAbs").textContent=abs.toLocaleString();
+  }
+  const absB=d.buckets.find(b=>b.label==="Absentee");
+  const abs=absB?absB.count:0;
+  if(absB||!cert){
+    document.getElementById("cAbs").textContent=fmt(abs);
+    document.getElementById("cAbsL").textContent="Absentee ballots counted";
+  }else{
+    document.getElementById("cAbs").textContent=fmt(cert.absentee);
+    document.getElementById("cAbsL").textContent="Absentee ballots (certified tally)";
+  }
+  const c=document.getElementById("cCert"),cl=document.getElementById("cCertL");
+  if(cert&&cert.total){
+    c.textContent=fmt(cert.total);
+    cl.textContent=(cert.yes!=null&&cert.no!=null)
+      ?"Certified ballots — budget "+fmt(cert.yes)+" yes / "+fmt(cert.no)+" no"
+      :"Certified ballots cast";
+  }else{c.textContent="–";cl.textContent="Certified ballots cast";}
+  return abs;
+}
+
+async function refresh(){
+  if(!manifest)return;
+  const ent=yearEntry();
+  const file=ent.file;
+  try{
+    const res=await fetch(file+"?t="+Date.now(),{cache:"no-store"});
+    if(!res.ok)throw new Error("HTTP "+res.status);
+    const d=await res.json();
+    if(file!==activeFile)return;         // user switched years while loading
+    renderHeader(d,ent);
+    const abs=renderCards(d,ent);
     document.getElementById("barTitle").textContent="Turnout by Time of Day"+suffix(d);
     document.getElementById("mapTitle").textContent="Turnout by Neighborhood"+suffix(d);
+    document.getElementById("barLede").textContent=d.archived
+      ?"Each bar is the number of voters who first appeared on a poll list pulled at the end of that window."
+      :"Each bar is the number of voters whose ballot was first recorded in that window.";
     document.getElementById("mapLede").textContent=
       (abs>0?"In-person tally + absentee ballots. ":"In-person tally. ")+
+      (d.archived?"Counts cover the "+fmt(d.total)+" voters on the poll lists. ":"")+
       "Each neighborhood is shaded in its color; the school-district boundary is outlined.";
     renderBars(d);await loadAreaShapes();renderMap(d);
     const note=document.getElementById("note");
     if(d.unassigned>0){
-      note.textContent=d.unassigned+" voter(s) pending neighborhood review — totals include them.";
+      note.textContent=d.unassigned+" voter(s) "+(d.archived
+        ?"could not be matched to a neighborhood (address not in the current map) — totals include them."
+        :"pending neighborhood review — totals include them.");
       note.style.display="";
     }else note.style.display="none";
   }catch(e){
     document.getElementById("metaStatus").textContent="Waiting for first data push ("+e.message+")";
   }
 }
-refresh();
+loadManifest();
 checkPageVersion();
-setInterval(refresh,60000);
+// live polling only matters for the current election
+setInterval(()=>{if(manifest&&selectedYear===manifest.current)refresh();},60000);
 setInterval(checkPageVersion,120000);
+window.addEventListener("hashchange",()=>{
+  const want=parseInt((location.hash||"").replace("#",""),10);
+  if(manifest&&manifest.years.find(y=>y.year===want)&&want!==selectedYear)selectYear(want,false);
+});
 </script>
 </body>
 </html>
