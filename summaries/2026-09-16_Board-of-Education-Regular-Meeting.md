@@ -41,6 +41,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 ### CONSENT - PERSONNEL ACTIONS (LS)
 
 - Action (Consent) - Personnel Action Report
+- Action (Consent) - Schedule C for Coaches, Supervision, High School, Middle School, Hewlett Elementary, and Franklin Early Childhood Center
 - Action (Consent) - Schedule of Annual Leadership Stipends
 - Action (Consent) - Schedule of Art/Music Student Workers
 - Action (Consent) - Schedule of Permanent Pool Substitutes, Substitute Teachers, Substitute Teacher Aides, Typist Clerks, and Cleaners
