@@ -76,7 +76,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ### FUTURE MEETINGS OF THE BOARD OF EDUCATION AT WOODMERE EDUCATION CENTER
 
-- Information - Work Meeting: October 7, 7:00 PM, WEC / Regular Meeting: October 14, 7:00 PM, WEC
+- Information - Work Meeting: October 7, 7:00 PM, WEC / Regular Meeting: October 14, 7:30 PM, WEC
 
 ### OPPORTUNITY FOR THE PUBLIC TO BE HEARD ON NON-AGENDA ITEMS (TIME PERMITTING)
 
