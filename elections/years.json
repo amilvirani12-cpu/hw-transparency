@@ -1,9 +1,9 @@
 {
- "current": 2026,
+ "current": null,
  "years": [
   {
    "year": 2026,
-   "file": "data.json",
+   "file": "history/2026.json",
    "label": "2026 Budget Vote (May 19, 2026)",
    "certified": {
     "date": "May 19, 2026",
@@ -16,19 +16,19 @@
     "no": 801
    },
    "summary": {
-    "total": 2010,
+    "total": 2012,
     "registered": 15857,
     "registered_note": "2,010 voted + 13,847 not yet voted on the Final poll lists (2026 All Who Voted-Final.pdf / 2026 All Who Did Not Vote-Final.pdf)",
-    "archived": false,
+    "archived": true,
     "final": true,
-    "asof": "8:30 PM",
+    "asof": "Final",
     "absentee_on_lists": 101,
     "areas": {
      "Woodmere": 690,
-     "Hewlett": 633,
+     "Hewlett": 634,
      "Gibson": 235,
-     "North Woodmere": 174,
-     "Hewlett Harbor": 101,
+     "North Woodmere": 176,
+     "Hewlett Harbor": 100,
      "Hewlett Bay Park": 51,
      "Woodsburgh": 45,
      "Lynbrook": 41,
@@ -41,27 +41,27 @@
      ],
      [
       660,
-      271
+      269
      ],
      [
       810,
-      438
+      434
      ],
      [
       930,
-      614
+      605
      ],
      [
       1080,
-      1083
+      1070
      ],
      [
       1230,
-      1636
+      1737
      ],
      [
       1320,
-      1909
+      1911
      ]
     ]
    }

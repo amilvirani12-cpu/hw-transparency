@@ -168,11 +168,11 @@ header.page h1{font-size:26px}}
   <p class="lede">Every budget vote on this site, side by side. Colors identify years; hover any mark for its number.</p>
 
   <h3>Turnout</h3>
-  <p class="sub" id="yoyTurnSub">Certified ballots cast as a share of registered voters. Registered voters are the district's "voted" plus "not yet voted" poll lists pulled at the same moment on election day.</p>
+  <p class="sub" id="yoyTurnSub">Voters on the district's final poll list as a share of registered voters. Registered voters are the district's "voted" plus "not yet voted" poll lists pulled at the same moment on election day.</p>
   <div class="tipwrap"><div class="scrollx" id="yoyTurnout"></div><div class="tip" id="tipTurnout"></div></div>
 
-  <h3>Ballots cast, and how the budget fared</h3>
-  <p class="sub">Certified totals from the district's tally sheet (Proposition 1, the school budget).</p>
+  <h3>How the budget fared</h3>
+  <p class="sub">Yes and no on Proposition 1 (the school budget) from the district's certified tally sheet, the only source that carries the split.</p>
   <div class="legend"><span><i style="background:#2a78d6"></i>Yes on the budget</span><span><i style="background:#e34948"></i>No on the budget</span></div>
   <div class="tipwrap"><div class="scrollx" id="yoyBallots"></div><div class="tip" id="tipBallots"></div></div>
 
@@ -200,8 +200,8 @@ header.page h1{font-size:26px}}
   poll lists; this page publishes <b>aggregate counts only</b>. Certified ballot counts come from
   the district's official tally sheet for each vote (Proposition 1, the school budget). Prior years
   were reconstructed after the fact from poll lists pulled during election day, so their
-  time-of-day windows follow whenever those lists were pulled. The current election refreshes
-  automatically during election day.
+  time-of-day windows follow whenever those lists were pulled. On election day the current
+  election refreshes automatically as poll lists are pulled.
 </footer>
 
 </div>
@@ -308,8 +308,8 @@ function renderComparison(){
 
   // ---- 0. turnout %: certified ballots / registered voters (line) ---------
   {
-    const rows=yrs.map(y=>{const c=y.certified||{},reg=y.summary.registered;
-      return {year:y.year,reg,tot:c.total||0,pct:(reg&&c.total)?c.total/reg*100:null};});
+    const rows=yrs.map(y=>{const reg=y.summary.registered,tot=y.summary.total||0;
+      return {year:y.year,reg,tot,pct:(reg&&tot)?tot/reg*100:null};});
     const W=760,H=280,L=52,R=40,T=30,B=34,pw=W-L-R,ph=H-T-B;
     const maxP=Math.max(...rows.map(r=>r.pct||0),1);
     const step=niceStep(maxP,4),top=Math.ceil(maxP/step)*step;
@@ -330,7 +330,7 @@ function renderComparison(){
         s+=`<text class="tick" x="${x}" y="${sy(0)-8}" text-anchor="middle">n/a</text>`;
       }else{
         const y=sy(r.pct);
-        const tip=`<b>${r.year}</b> · ${r.tot.toLocaleString()} of ${r.reg.toLocaleString()} registered · ${r.pct.toFixed(1)}%`;
+        const tip=`<b>${r.year}</b> · ${r.tot.toLocaleString()} voters of ${r.reg.toLocaleString()} registered · ${r.pct.toFixed(1)}%`;
         s+=`<circle cx="${x}" cy="${y}" r="4.5" fill="#2a78d6" stroke="#fff" stroke-width="2"/>`;
         s+=`<circle class="hit" data-tip="${esc(tip)}" cx="${x}" cy="${y}" r="12"/>`;
         s+=`<text class="vlab" x="${x}" y="${y-12}" text-anchor="middle">${r.pct.toFixed(1)}%</text>`;
@@ -445,10 +445,10 @@ function renderComparison(){
     wireTips(el.parentElement,document.getElementById("tipAreas"));
 
     // ---- tables ----------------------------------------------------------
-    let t1=`<table><thead><tr><th>Year</th><th>Registered voters</th><th>Certified ballots</th><th>Turnout</th><th>Budget yes</th><th>Budget no</th><th>Yes %</th><th>Voters on final list</th></tr></thead><tbody>`;
-    yrs.forEach(y=>{const c=y.certified||{};const yes=c.yes||0,no=c.no||0,reg=y.summary.registered;
-      const turn=(reg&&c.total)?(c.total/reg*100).toFixed(1)+"%":"–";
-      t1+=`<tr><td>${y.year}</td><td>${fmt(reg)}</td><td>${fmt(c.total)}</td><td>${turn}</td><td>${fmt(c.yes)}</td><td>${fmt(c.no)}</td><td>${yes+no?Math.round(yes/(yes+no)*100)+"%":"–"}</td><td>${fmt(y.summary.total)}</td></tr>`;});
+    let t1=`<table><thead><tr><th>Year</th><th>Registered voters</th><th>Voters on final list</th><th>Turnout</th><th>Certified ballots</th><th>Budget yes</th><th>Budget no</th><th>Yes %</th></tr></thead><tbody>`;
+    yrs.forEach(y=>{const c=y.certified||{};const yes=c.yes||0,no=c.no||0,reg=y.summary.registered,tot=y.summary.total;
+      const turn=(reg&&tot)?(tot/reg*100).toFixed(1)+"%":"–";
+      t1+=`<tr><td>${y.year}</td><td>${fmt(reg)}</td><td>${fmt(tot)}</td><td>${turn}</td><td>${fmt(c.total)}</td><td>${fmt(c.yes)}</td><td>${fmt(c.no)}</td><td>${yes+no?Math.round(yes/(yes+no)*100)+"%":"–"}</td></tr>`;});
     t1+=`</tbody></table>`;
     let t2=`<table><thead><tr><th>Neighborhood</th>${yrs.map(y=>`<th>${y.year}</th>`).join("")}</tr></thead><tbody>`;
     areas.forEach(a=>{t2+=`<tr><td>${esc(a)}</td>${yrs.map(y=>`<td>${fmt(y.summary.areas[a]||0)}</td>`).join("")}</tr>`;});
