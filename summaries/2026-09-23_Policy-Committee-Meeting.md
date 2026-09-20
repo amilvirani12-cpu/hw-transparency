@@ -6,7 +6,60 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Welcome
+
+- Policy - Minutes of August 31, 2026 Policy Committee Meeting
+- Policy - Policy Tracker
+
+### Under Review
+
+- Policy - Policy #1500-Public Use of School Facilities
+- Policy - Policy #4322-Programs for the Gifted and Talented
+- Policy - Policy #4710-Grading Systems
+- Policy - Policy #5280-Interscholastic Athletics
+- Policy - Policy #5695-Students and Personal Electronic Devices
+- Policy - Policy #6700-Purchasing
+- Policy - Policy #8135-Instructional Technology Systems:Disaster Recovery Plan - Annual
+
+### Initial Review
+
+- Policy - Out-of-District Families
+- Policy - Animals in Buildings
+- Policy - HHS Clubs
+- Policy - Scanners in Classrooms
+- Policy - Policy #1400-Public Complaints
+- Policy - Policy #1800-Gifts from the Public
+- Policy - Policy #2075-Maintaining District Neutrality on Non-School Related Matters
+- Policy - Policy #2263-Teacher Advisory Council, Policy #2264, Student Advisory Council, Policy #2266, PTA Advisory Council
+- Policy - Policy #4136-Professional Conferences and Meetings
+- Policy - Policy #4531-Field Trips and Excursions
+- Policy - Policy #4750-Promotion and Retention
+- Policy - Policy #5150-Initial Entrance and Placement in District Schools
+- Policy - Policy #5182-Released Time for Religious Instruction
+- Policy - Policy #5420-Student Health Services
+- Policy - Policy #5422-Diapering and Toileting
+- Policy - Policy #5500-Student Records
+- Policy - Policy #6145-Fund Balance
+- Policy - Policy #6245-Reserve Funds
+
+### Policies for Future Consideration-No Attachments
+
+- Policy - Policy #4200-Curriculum Management
+- Policy - Policy #6110-Budget Planning
+- Policy - Policy #6600-Fiscal Accounting and Reporting
+- Policy - Policy #6660-Independent External/Audits
+- Policy - Policy #6690-Audit Committee
+- Policy - Policy #6900-Disposal of District Property
+- Policy - Policy #6950-Medicaid Confidential Disclosure
+- Policy - Policy #9420-Evaluation of Staff
+- - The District Plan for Special Education
+
+### Adjournment
+
+
+### Next Meeting Date
+
+- Policy - October 26, 1:00 - 3:00 PM
 
 ## Financial documents captured by the watcher
 
