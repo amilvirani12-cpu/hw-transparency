@@ -3435,6 +3435,11 @@
    "final": false,
    "name": "Policy Committee Meeting"
   },
+  "DXRTEN770819": {
+   "date": "2026-10-07",
+   "final": false,
+   "name": "BOARD OF EDUCATION WORK MEETING, 7:00 PM"
+  },
   "DXTK9G50C79A": {
    "date": "2026-09-23",
    "final": false,
@@ -3449,6 +3454,11 @@
    "date": "2026-09-23",
    "final": false,
    "name": "BOARD OF EDUCATION - SPECIAL MEETING at 8:40 AM"
+  },
+  "DYCJV74EFA6E": {
+   "date": "2026-10-07",
+   "final": false,
+   "name": "BOARD OF EDUCATION - SPECIAL MEETING at 7:00 PM"
   }
  }
 }
