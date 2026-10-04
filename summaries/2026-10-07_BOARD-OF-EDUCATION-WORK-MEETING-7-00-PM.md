@@ -6,7 +6,54 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Reports and Presentations
+
+- Presentation - Facilities Update (WD & SCC)
+- Discussion - Maintenance of Geothermal Systems Discussion (DA)
+- Information - Twilight Report (PF)
+- Discussion - Summer 2027 Program Options Discussion (BG)
+- Discussion - Community Garden Discussion (DA)
+
+### Financial Reports (JS/MG)
+
+- Reports - Treasurer's Report
+- Reports - Budget Status Reports
+- Reports - Revenue Status Reports
+- Reports - Warrants & Summary of Findings of the Claims Auditor - August 2026
+
+### Financial Resolutions (JS/MG)
+
+- Action (Consent) - Resolution to Accept the District's Corrective Action Plan (CAP) and Purchasing Cycle Audit
+
+### Financial Actions (JS/MG)
+
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Gifts
+- Action (Consent) - Applications for Club Charters
+- Action (Consent) - Board Service Personnel Schedule of Annual Appointments - REVISED
+
+### Curriculum / Miscellaneous Actions (DA, PF)
+
+- Action (Consent) - Conference and Travel
+- Action (Consent) - Field Trips
+- Action (Consent) - New Textbook Adoption Science for predominantly grades 9 and 10 in Earth and Space
+
+### Policy Actions (DA)
+
+- Information - Policy #1500-Public Use of School Facilities-Initial Review
+- Information - Policy #4327-Homebound Instruction-Initial Review
+- Information - Policy #6700-Purchasing-Initial Review
+
+### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
+
+
+### Future Meeting Dates
+
+- Information - October 14 at Woodmere Education Center, 7:30 PM Regular Meeting
+
+### Motion to Adjourn
+
+- Information - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 

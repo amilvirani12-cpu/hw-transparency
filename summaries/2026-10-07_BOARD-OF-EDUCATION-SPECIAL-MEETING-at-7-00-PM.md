@@ -6,7 +6,24 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Opportunity for the Public to be Heard - Related to Agenda Items Only
+
+- Information - Speaker Protocols for Visitors and Observers
+
+### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
+
+
+### CONSENT - PERSONNEL ACTIONS (LS)
+
+- Action (Consent) - Personnel Action Report
+
+### ADOPTION OF POLICIES (DA)
+
+- Action - Policy #4710-Grading Systems-Approval
+
+### Meeting Adjournment
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
