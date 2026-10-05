@@ -32,7 +32,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 - Action (Consent) - Applications for Club Charters
 - Action (Consent) - Board Service Personnel Schedule of Annual Appointments - REVISED
 
-### Curriculum / Miscellaneous Actions (DA, PF)
+### Curriculum / Miscellaneous Actions (PF)
 
 - Action (Consent) - Conference and Travel
 - Action (Consent) - Field Trips
