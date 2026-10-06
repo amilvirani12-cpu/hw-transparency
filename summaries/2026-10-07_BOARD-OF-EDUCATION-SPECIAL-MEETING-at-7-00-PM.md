@@ -20,6 +20,8 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 ### ADOPTION OF POLICIES (DA)
 
 - Action - Policy #4710-Grading Systems-Approval
+- Action - Policy #5100-Attendance-Approval
+- Action - Policy #5280-Interscholastic Athletics-Approval
 
 ### Meeting Adjournment
 
