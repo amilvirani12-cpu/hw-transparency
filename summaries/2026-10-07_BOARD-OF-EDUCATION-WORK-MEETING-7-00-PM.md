@@ -43,6 +43,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 - Information - Policy #1500-Public Use of School Facilities-Initial Review
 - Information - Policy #4327-Homebound Instruction-Initial Review
 - Information - Policy #6700-Purchasing-Initial Review
+- - Policy #5100-Attendance-Approval
 
 ### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
 
