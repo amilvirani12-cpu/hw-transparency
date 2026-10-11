@@ -6,7 +6,79 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### PROFESSIONAL RECOGNITIONS
+
+
+### PRESENTATIONS/AWARDS
+
+- Information - Mr. John Andruszkiewicz, Principal, will recognize Woodmere Middle School students.
+- Information - Recognition by Dr. Anzalone of the Hewlett-Woodmere Board of Education during the New York State School Board Recognition Week
+
+### PROGRAMS AND REPORTS
+
+- Information - Report from Superintendent
+- Reports - Report from Student Advisory Council
+- Information - Report from Designated Officers of the District's Employee Organizations
+- Information - Report from PTA Council Presidents
+- Reports - Report from Ex-Officio Student Board Member
+- Information - Committee Reports from Board of Education Members
+- Reports - Other Reports from Board of Education Members
+- Information - Board of Education Communications (if any)
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD - Related to agenda items only
+
+- Information - Speaker Protocols
+
+### ROUTINE RECOMMENDED ACTIONS
+
+- Action - Acceptance of Meeting Minutes, September 16, 2026, Regular Meeting
+- Action - Acceptance of Meeting Minutes, September 23, 2026, Special Meeting Meeting
+- Action (Consent) - Approval of the Consent Agenda
+
+### CONSENT - INSTRUCTIONAL ACTIONS (SF)
+
+- Action - CSE and CPSE Recommendation
+- - Resolution for Impartial Hearing Officer (Student #: 30031)
+- Action (Consent) - Resolution for Impartial Hearing Officer (Student #: 31733)
+
+### CONSENT - PERSONNEL ACTIONS (LS)
+
+- Action (Consent) - Personnel Action Report
+- Action (Consent) - Schedule of Permanent Pool Substitutes, Substitute Teachers, Substitute Teacher Aides, Typist Clerks, and Cleaners
+- Action (Consent) - Schedule of Classified Stipends for 2026-27
+- Action (Consent) - Schedule C for Coaches, Supervision, High School, Middle School, Ogden Elementary, Franklin Early Childhood Center, and Music
+- Action (Consent) - Community Education Staffing
+
+### CONSENT - FINANCIAL ACTIONS (JS/MG)
+
+- Reports - Treasurer's Report
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Gifts
+- Action (Consent) - Application for Club Charters
+- Action (Consent) - Board Service Personnel Schedule of Annual Appointments - REVISED
+
+### CONSENT - MISCELLANEOUS ACTIONS (PF)
+
+- Action (Consent) - New Textbook Adoption for Earth and Space Science in grades 9 and 10
+- Action (Consent) - Conference and Travel
+- Action (Consent) - Field Trips
+
+### ADOPTION OF POLICIES NEW/REVISED (DA)
+
+- Action - Policy #1500-Public Use of School Facilities-Approval
+- Action - Policy #4327-Homebound Instruction-Approval
+- Action - Policy #6700-Purchasing-Approval
+
+### FUTURE MEETINGS OF THE BOARD OF EDUCATION AT WOODMERE EDUCATION CENTER
+
+- Information - Audit Committee Meeting: November 4, 6:00 PM; Budget Session: November 4, 6:30 PM, WEC; Work Meeting: November 4, 7:00 PM, WEC; and Regular Meeting: November 18, 7:30 PM, George W. Hewlett High School
+
+### OPPORTUNITY FOR THE PUBLIC TO BE HEARD ON NON-AGENDA ITEMS (TIME PERMITTING)
+
+
+### ADJOURNMENT
+
+- Action - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
