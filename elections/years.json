@@ -81,22 +81,22 @@
     "no": 706
    },
    "summary": {
-    "total": 1881,
+    "total": 1877,
     "registered": 16147,
     "registered_note": "1,329 voted + 14,818 not yet voted on the 7 PM poll lists (PDF_VoterReport -7 PM.pdf / PDF_VoterReport - 7 PM Not Voted.pdf)",
     "archived": true,
     "final": true,
     "asof": "Final",
-    "absentee_on_lists": 122,
+    "absentee_on_lists": 123,
     "areas": {
-     "Woodmere": 620,
-     "Hewlett": 582,
+     "Woodmere": 619,
+     "Hewlett": 580,
      "Gibson": 246,
      "North Woodmere": 186,
      "Hewlett Harbor": 90,
      "Woodsburgh": 46,
      "Hewlett Bay Park": 46,
-     "Lynbrook": 39,
+     "Lynbrook": 38,
      "Hewlett Neck": 26
     },
     "cumulative": [
@@ -142,7 +142,7 @@
     "no": 529
    },
    "summary": {
-    "total": 1799,
+    "total": 1794,
     "registered": 15615,
     "registered_note": "1,589 voted + 14,026 not yet voted on the 9 PM poll lists (9 PM Voted.pdf / 9 PM Not Voted.pdf)",
     "archived": true,
@@ -150,15 +150,15 @@
     "asof": "Final",
     "absentee_on_lists": 116,
     "areas": {
-     "Woodmere": 561,
-     "Hewlett": 555,
-     "Gibson": 211,
+     "Woodmere": 559,
+     "Hewlett": 554,
+     "Gibson": 210,
      "North Woodmere": 179,
      "Hewlett Harbor": 111,
      "Woodsburgh": 57,
      "Hewlett Bay Park": 48,
      "Hewlett Neck": 40,
-     "Lynbrook": 37
+     "Lynbrook": 36
     },
     "cumulative": [
      [
@@ -211,23 +211,23 @@
     "no": 1003
    },
    "summary": {
-    "total": 2740,
+    "total": 2733,
     "registered": 15311,
     "registered_note": "2,353 voted + 12,958 not yet voted on the 9 PM poll lists (PDF_VoterReport as of 9 PM.pdf / PDF_VoterReport not voted as of 9 PM.pdf)",
     "archived": true,
     "final": true,
     "asof": "Final",
-    "absentee_on_lists": 180,
+    "absentee_on_lists": 181,
     "areas": {
-     "Woodmere": 899,
-     "Hewlett": 805,
-     "Gibson": 300,
-     "North Woodmere": 290,
+     "Woodmere": 897,
+     "Hewlett": 803,
+     "Gibson": 297,
+     "North Woodmere": 291,
      "Hewlett Harbor": 159,
      "Woodsburgh": 100,
      "Hewlett Neck": 77,
      "Hewlett Bay Park": 67,
-     "Lynbrook": 43
+     "Lynbrook": 42
     },
     "cumulative": [
      [
@@ -260,7 +260,7 @@
      ],
      [
       1320,
-      2551
+      2552
      ]
     ]
    }
@@ -280,23 +280,23 @@
     "no": 1616
    },
    "summary": {
-    "total": 3649,
+    "total": 3625,
     "registered": 15990,
     "registered_note": "3,330 voted + 12,660 not yet voted on the 9 PM poll lists (All Who Voted 9 PM.pdf / Not voted 9 PM.pdf)",
     "archived": true,
     "final": true,
     "asof": "Final",
-    "absentee_on_lists": 293,
+    "absentee_on_lists": 294,
     "areas": {
-     "Woodmere": 1353,
-     "Hewlett": 963,
-     "North Woodmere": 372,
-     "Gibson": 306,
-     "Hewlett Harbor": 208,
-     "Woodsburgh": 174,
+     "Woodmere": 1344,
+     "Hewlett": 957,
+     "North Woodmere": 373,
+     "Gibson": 302,
+     "Hewlett Harbor": 205,
+     "Woodsburgh": 173,
      "Hewlett Neck": 130,
-     "Hewlett Bay Park": 99,
-     "Lynbrook": 44
+     "Hewlett Bay Park": 98,
+     "Lynbrook": 43
     },
     "cumulative": [
      [
@@ -333,7 +333,7 @@
      ],
      [
       1320,
-      3330
+      3331
      ]
     ]
    }
@@ -353,7 +353,7 @@
     "no": 1009
    },
    "summary": {
-    "total": 2682,
+    "total": 2658,
     "registered": 15562,
     "registered_note": "2,269 voted + 13,293 not yet voted on the 9 PM poll lists (All Who Voted 9 PM.pdf / Not Voted 9 PM.pdf)",
     "archived": true,
@@ -361,15 +361,15 @@
     "asof": "Final",
     "absentee_on_lists": 201,
     "areas": {
-     "Hewlett": 824,
-     "Woodmere": 814,
+     "Hewlett": 814,
+     "Woodmere": 809,
      "North Woodmere": 317,
-     "Gibson": 250,
-     "Hewlett Harbor": 180,
+     "Gibson": 248,
+     "Hewlett Harbor": 177,
      "Woodsburgh": 102,
-     "Hewlett Neck": 93,
+     "Hewlett Neck": 90,
      "Hewlett Bay Park": 73,
-     "Lynbrook": 29
+     "Lynbrook": 28
     },
     "cumulative": [
      [
@@ -410,7 +410,7 @@
      ],
      [
       1320,
-      2455
+      2457
      ]
     ]
    }
