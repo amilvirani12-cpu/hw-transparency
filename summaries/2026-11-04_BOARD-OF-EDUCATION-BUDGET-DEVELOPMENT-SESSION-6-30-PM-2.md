@@ -6,7 +6,9 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Budget Planning for 2026-2027 School Year
+
+- Discussion - Budget Development Presentation
 
 ## Financial documents captured by the watcher
 

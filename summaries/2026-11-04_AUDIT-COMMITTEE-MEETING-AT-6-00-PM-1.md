@@ -6,7 +6,33 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### CALL TO ORDER
+
+
+### MINUTES APPROVAL
+
+- Minutes - Minutes Approval
+
+### R.S. ABRAMS & CO., LLP - REVIEW OF 2025 - 2026 EXTERNAL AUDIT
+
+- Information - Review of the 2025-2026 External Audit
+
+### RECOMMENDATION FOR BOARD APPROVAL - INDEPENDENT AUDITOR'S REPORT AND DISTRICT'S CORRECTIVE ACTION PLAN FOR FISCAL YEAR ENDED JUNE 30, 2026
+
+
+### CONFIRMING PURCHASE ORDERS
+
+- Information - Audit Committee's Review of Confirming Purchase Orders
+
+### ANY OTHER ITEM THE COMMITTEE WOULD LIKE TO DISCUSS
+
+
+### FUTURE MEETINGS
+
+- Information - Future Audit Committee Dates
+
+### ADJOURN
+
 
 ## Financial documents captured by the watcher
 

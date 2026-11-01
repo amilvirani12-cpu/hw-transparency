@@ -6,7 +6,55 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ## Agenda
 
-_No agenda items posted yet._
+### Reports and Presentations
+
+- Presentation - Facilities Update (WD & SCC)
+- Presentation - R.S. Abrams Annual Presentation (JS)
+- Information - Presentation: Review of NYSED 3-8 Test Data and School Report Card (PF/BK/KT)
+- Action (Consent) - Presentation: 2027 Course Handbook for WMS and HHS (JA/AB/MH)
+- Presentation - 5-Year Tax Levies (JS/MG)
+
+### Financial Reports (JS)
+
+- Reports - Treasurer's Report
+- Reports - Budget Status Reports
+- Reports - Revenue Status Reports
+- Reports - Warrants & Summary of Findings of the Claims Auditor - September 2026
+
+### Financial Resolutions (JS)
+
+- Action (Consent) - Resolution - SEQRA Capital Projects
+
+### Financial Actions (JS)
+
+- Action (Consent) - Applications for Club Charters
+- Action (Consent) - Transfers of Appropriation
+- Action (Consent) - Schedule of Contracts
+- Action (Consent) - Schedule of Gifts
+
+### Curriculum / Miscellaneous Actions (PF)
+
+- Action (Consent) - Field Trips - WMS 7th and 8th grade field trips
+
+### Policy Actions (DA)
+
+- Information - Policy #4750-Promotion and Retention-Final Review
+- Information - Policy #5695-Students and Personal Electronic Devices-Final Review
+- Information - Policy #5150-Initial Entrance and Placement in District Schools-Initial Review
+- Information - Policy #5152-Admission of Non-Resident Students-Initial Review
+- Information - Policy #6145-Fund Balance-Initial Review
+- Information - Policy #6245-Reserve Funds-Initial Review
+
+### Opportunity for the Public to be Heard on Non-Agenda Items, Time Permitting
+
+
+### Future Meeting Dates
+
+- Information - November 18 at Ogden Elementary School, Regular Meeting, 7:30 PM
+
+### Motion to Adjourn
+
+- Information - Motion to Adjourn Meeting
 
 ## Financial documents captured by the watcher
 
