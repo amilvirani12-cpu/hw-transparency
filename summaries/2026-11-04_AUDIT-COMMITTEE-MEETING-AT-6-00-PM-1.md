@@ -19,6 +19,7 @@ _Agenda as published on the district's [BoardDocs](https://go.boarddocs.com/ny/h
 
 ### RECOMMENDATION FOR BOARD APPROVAL - INDEPENDENT AUDITOR'S REPORT AND DISTRICT'S CORRECTIVE ACTION PLAN FOR FISCAL YEAR ENDED JUNE 30, 2026
 
+- Action - Review and Provide Recommendation for Approval of Reports to BOE
 
 ### CONFIRMING PURCHASE ORDERS
 
