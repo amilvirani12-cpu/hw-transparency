@@ -10,6 +10,7 @@ Usage:  python watch_boarddocs.py [--dry-run] [--limit N]
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -60,9 +61,34 @@ def post(endpoint, data):
     return r.text
 
 
+class BoardDocsUnavailable(Exception):
+    """BoardDocs answered, but not with the meetings list."""
+
+
 def get_meetings():
-    text = post("BD-GetMeetingsList", {"current_committee_id": COMMITTEE_ID})
-    meetings = json.loads(text)
+    # Since 2026-11-12 BoardDocs' CDN (CloudFront) answers GitHub-hosted
+    # runners with HTTP 200 and a one-character blank body ("X-Cache: Error
+    # from cloudfront") instead of the meetings JSON; the same request from a
+    # home connection still works. Retry a few times in case it is a blip,
+    # then report it as "unavailable" rather than crashing in json.loads.
+    detail = ""
+    for attempt in range(3):
+        if attempt:
+            time.sleep(20)
+        try:
+            text = post("BD-GetMeetingsList", {"current_committee_id": COMMITTEE_ID})
+        except requests.HTTPError as e:
+            if e.response is not None and e.response.status_code in (403, 429):
+                detail = f"HTTP {e.response.status_code}"
+                continue
+            raise
+        try:
+            meetings = json.loads(text)
+            break
+        except ValueError:
+            detail = f"non-JSON body of {len(text)} character(s): {text[:80]!r}"
+    else:
+        raise BoardDocsUnavailable(detail)
     meetings = [
         m for m in meetings
         if m.get("numberdate") and m["numberdate"] >= EARLIEST and m.get("unique")
@@ -198,7 +224,18 @@ def main():
         limit = int(sys.argv[sys.argv.index("--limit") + 1])
 
     state = load_state()
-    meetings = get_meetings()
+    try:
+        meetings = get_meetings()
+    except BoardDocsUnavailable as e:
+        # Not a bug in this script and nothing a re-run fixes, so do not fail
+        # the workflow (GitHub emails on every failure, every 2 hours). Leave
+        # a visible warning on the run instead.
+        msg = (f"BoardDocs did not return the meetings list ({e}). Its CDN "
+               "blocks requests from this network; nothing was checked this run.")
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::warning title=BoardDocs watcher skipped::{msg}")
+        print(msg)
+        return
     print(f"{len(meetings)} meetings on BoardDocs since {EARLIEST}")
 
     today = datetime.now()
